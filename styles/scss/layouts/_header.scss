@@ -1,6 +1,6 @@
 .header{
     position: relative;
-    background-color:#d9d0cb;
+    background-color:$c-banana-mania;
     width:100%;
     height: 90px;
     display: flex; 
@@ -20,7 +20,7 @@
             @include font-family-normal;
             padding: 0;
             margin: 0;
-            color:#5e504c;
+            color:$c-dark-desaturated-blue;
             font-size: 20px;
             font-weight: 900 !important;
             text-transform:capitalize;
@@ -43,13 +43,16 @@
         height: 60px;
         transition: all .5s ease-in-out;
         cursor: pointer;
+        @include laptop-query{
+            display: none;
+        }
         &-burger{
             padding: 0;
             margin: 0;
             position: relative;
             width: 17px;
             height:2px;
-            background-color: #5e504c;
+            background-color: $c-dark-desaturated-blue;
             border-radius: 5px;
             box-shadow:  0 2px 5px rbga(255,101,47,.2);
             transition: all .5s ease-in-out;
@@ -61,7 +64,7 @@
             right: 0;
             width:17px;
             height:2px;
-            background-color: #5e504c;
+            background-color: $c-dark-desaturated-blue;
             box-shadow:  0 2px 5px rbga(255,101,47,.2);
             transition: all .5s ease-in-out;
         }
@@ -94,27 +97,32 @@
     padding: 0;
     top: 100%;
     left:0;
-    background-color:#d9d0cb;
+    background-color:$c-banana-mania;
     height:100vh;
     z-index: 1;
     animation: slideout 1s ease-in-out;
     display: none;
-    // @keyframes slideout {
-    //     from {
-    //         transform: translateX(-600px);
-    //     }
-
-    //     to {
-    //         transform: translateX(-600px);
-    //     }
-    // }
+    @include laptop-query{
+        display: inline-flex;
+        position: static;
+        animation: none;
+        flex-direction: row;
+        height:90px;
+        background-color: transparent;
+    }
     &__list{   
         width: 65%;
         list-style: none;
         padding: $p-base;
         margin-top: $m-base*2;
+        @include laptop-query{
+            display: flex;
+        }
     &__item{
         margin-top: $m-base*2;
+          &:hover  ul{
+              display: block;
+          }
         &-link{
             @include font-family-normal ;
             font-size: 17px;
@@ -143,8 +151,11 @@
     }
     }
     &__submenu{
-        display: inherit;
-       
+        display: none;
+
+    &submenu:hover{
+            display: block;
+        }
         &__item{
             list-style: none;
             padding-top:$p-base*1;
@@ -182,6 +193,9 @@
     display: flex; 
     justify-content: space-between;
     padding: $p-base;
+    @include laptop-query{
+        display: none;
+    }
     }
 }
 .hide {
@@ -221,48 +235,6 @@
         }
     }
 }
-
-// .overlay {
-//     &::before {
-//         content: "";
-//         opacity: 0.77;
-//         width: 46.6%;
-//         height: 100vh;
-//         display: block;
-//         right: 0;
-//         top: 100%;
-//         position: absolute;
-//         background-color: $c-white;
-//         z-index: 5;
-//         animation: slidex .1s ease-in;
-//         @keyframes slidex {
-//             from {
-//                 transform: translateX(-200px);
-//             }
-
-//             to {
-//                 transform: translateX(0px);
-//             }
-//         }
-//         @include tablet-query {
-//             max-width: 100%;
-//             animation: slidexx 1s;
-//             @keyframes slidexx {
-//                 from {
-//                     transform: translateX(0px);
-//                 }
-
-//                 to {
-//                     transform: translateX(0);
-//                 }
-//             }
-
-//             @include laptop-query {
-//                 display: none;
-//             }
-//         }
-//     }
-// }
 .overlay {
     &::before {
         content: "";
@@ -276,7 +248,6 @@
         background: $c-white;
         z-index: 1;
         animation: slidex .50s;
-        
         @keyframes slidex {
             from {
                 transform: translateX(-400px);

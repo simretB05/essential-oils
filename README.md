@@ -1,1 +1,1 @@
-# MY Elephie is a family pijama  selling website 
+# Essential oils is a blog type website for people who would like to know more about Essential oils and their use. also the website can be  used as an e-commerce website. if people are intrested in buying the oils. 

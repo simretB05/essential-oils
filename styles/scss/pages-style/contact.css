@@ -1,5 +1,5 @@
 /* Document
-   ========================================================================== */
+  ========================================================================== */
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -435,7 +435,7 @@ template {
 ************************/
 .header {
   position: relative;
-  background-color: #d9d0cb;
+  background-color: #a68d77;
   width: 100%;
   height: 90px;
   display: flex;
@@ -459,7 +459,7 @@ template {
   font-style: italic;
   padding: 0;
   margin: 0;
-  color: #5e504c;
+  color: hsl(212deg, 27%, 19%);
   font-size: 20px;
   font-weight: 900 !important;
   text-transform: capitalize;
@@ -482,13 +482,18 @@ template {
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
+@media screen and (min-width: 1020px) {
+  .header__toggle {
+    display: none;
+  }
+}
 .header__toggle-burger {
   padding: 0;
   margin: 0;
   position: relative;
   width: 17px;
   height: 2px;
-  background-color: #5e504c;
+  background-color: hsl(212deg, 27%, 19%);
   border-radius: 5px;
   box-shadow: 0 2px 5px rbga(255, 101, 47, 0.2);
   transition: all 0.5s ease-in-out;
@@ -500,7 +505,7 @@ template {
   right: 0;
   width: 17px;
   height: 2px;
-  background-color: #5e504c;
+  background-color: hsl(212deg, 27%, 19%);
   box-shadow: 0 2px 5px rbga(255, 101, 47, 0.2);
   transition: all 0.5s ease-in-out;
 }
@@ -535,12 +540,23 @@ template {
   padding: 0;
   top: 100%;
   left: 0;
-  background-color: #d9d0cb;
+  background-color: #a68d77;
   height: 100vh;
   z-index: 1;
   -webkit-animation: slideout 1s ease-in-out;
           animation: slideout 1s ease-in-out;
   display: none;
+}
+@media screen and (min-width: 1020px) {
+  .navbar {
+    display: inline-flex;
+    position: static;
+    -webkit-animation: none;
+            animation: none;
+    flex-direction: row;
+    height: 90px;
+    background-color: transparent;
+  }
 }
 .navbar__list {
   width: 65%;
@@ -548,8 +564,16 @@ template {
   padding: 1rem;
   margin-top: 2rem;
 }
+@media screen and (min-width: 1020px) {
+  .navbar__list {
+    display: flex;
+  }
+}
 .navbar__list__item {
   margin-top: 2rem;
+}
+.navbar__list__item:hover ul {
+  display: block;
 }
 .navbar__list__item-link {
   font-family: "satisfy-Regular";
@@ -579,7 +603,10 @@ template {
   transform: scaleX(1);
 }
 .navbar__submenu {
-  display: inherit;
+  display: none;
+}
+.navbar__submenusubmenu:hover {
+  display: block;
 }
 .navbar__submenu__item {
   list-style: none;
@@ -619,6 +646,11 @@ template {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+}
+@media screen and (min-width: 1020px) {
+  .navbar__social {
+    display: none;
+  }
 }
 
 .hide {
@@ -723,7 +755,7 @@ template {
   width: 100%;
   height: 200px;
   align-items: center;
-  background-color: rgb(226, 213, 206);
+  background-color: hsl(0deg, 0%, 100%);
 }
 .hero::before {
   content: "";
@@ -732,18 +764,131 @@ template {
   right: 0;
   left: 0;
   bottom: 0;
-  background-image: url(../../../assets/images/Shorts23.jpg);
+  background-image: url(../../../assets/images/images2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  opacity: 0.3;
+  opacity: 0.6;
 }
 .hero__title {
   font-family: "satisfy-Regular";
   font-weight: 900;
   font-style: italic;
+  position: absolute;
+  color: hsl(212deg, 27%, 19%);
+  top: 100%;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.type {
+  width: 100%;
+  height: 100vh;
+}
+.type__body {
+  margin-top: 7rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: #a68d77;
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+}
+.type__card {
+  width: 100%;
+  display: block;
+  margin: 1rem auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.type__card-img {
+  box-shadow: 1px 1px #e6ff00, 0em 0 22.4em olive;
+}
+.type__card-title {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+}
+.type__card-body {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  padding: 0 1rem;
   text-align: center;
   margin: 0;
+}
+
+.card-container {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.card__pure {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  min-height: 117.78px;
+}
+.card__pure:hover {
+  background-color: #a68d77;
+}
+.card__pure__img {
+  width: 100%;
+  max-height: 166.7px;
+}
+.card__pure__img:hover {
+  background-color: #a68d77;
+  opacity: 0.4;
+}
+.card__pure__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #a68d77;
+  max-height: 100%;
+  width: 100%;
+}
+.card__pure__body-title {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+}
+.card__pure__body-copy {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  padding: 0 1rem;
+  text-align: center;
+  margin: 0;
+}
+.card__pure__btn {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 8px;
+  padding: 0.3rem 1rem;
+  position: absolute;
+  top: 41%;
+  left: 15%;
+  display: block;
+  background-color: transparent;
+  color: hsl(212deg, 27%, 19%);
+  font-weight: 700;
+  display: block;
+  z-index: 3;
 }
 
 .images {
@@ -765,4 +910,16 @@ template {
     width: auto;
     flex: 1;
   }
+}
+
+.footer {
+  width: 100%;
+  height: 90px;
+  margin: 0;
+  display: none;
+  background-color: #a68d77;
+}
+
+hr {
+  margin: 0;
 }/*# sourceMappingURL=contact.css.map */
