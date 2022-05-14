@@ -435,7 +435,7 @@ template {
 ************************/
 .header {
   position: relative;
-  background-color: #a68d77;
+  background-color: #bd9764;
   width: 100%;
   height: 90px;
   display: flex;
@@ -448,10 +448,10 @@ template {
   font-family: "Avenir";
   font-weight: 700;
   font-style: normal;
-  position: relative;
   margin: 0;
   padding: 0;
   width: 166px;
+  font-size: 29px !important;
 }
 .header__logo-link {
   font-family: "satisfy-Regular";
@@ -540,9 +540,9 @@ template {
   padding: 0;
   top: 100%;
   left: 0;
-  background-color: #a68d77;
+  background-color: hsl(34.38deg, 40.27%, 56.67%);
   height: 100vh;
-  z-index: 1;
+  z-index: 7;
   -webkit-animation: slideout 1s ease-in-out;
           animation: slideout 1s ease-in-out;
   display: none;
@@ -581,7 +581,7 @@ template {
   font-style: italic;
   font-size: 17px;
   letter-spacing: 1.5px;
-  color: #5e504c;
+  color: hsl(212deg, 27%, 19%);
   text-transform: capitalize;
   text-decoration: none;
   position: relative;
@@ -723,7 +723,7 @@ template {
   top: 100%;
   position: absolute;
   background: hsl(0deg, 0%, 100%);
-  z-index: 1;
+  z-index: 7;
   -webkit-animation: slidex 0.5s;
           animation: slidex 0.5s;
 }
@@ -755,7 +755,7 @@ template {
   width: 100%;
   height: 200px;
   align-items: center;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: rgb(255, 210, 86);
 }
 .hero::before {
   content: "";
@@ -766,30 +766,30 @@ template {
   bottom: 0;
   background-image: url(../../../assets/images/images2.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position: top center;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 .hero__title {
+  position: relative;
+  top: 100%;
   font-family: "satisfy-Regular";
   font-weight: 900;
   font-style: italic;
-  position: absolute;
-  color: hsl(212deg, 27%, 19%);
-  top: 100%;
+  color: #0e0e0e;
   padding: 0 1rem;
   text-align: center;
+  z-index: 2;
 }
 
 .type {
   width: 100%;
-  height: 100vh;
+  margin-top: 10rem;
 }
 .type__body {
   margin-top: 7rem;
   padding: 1rem;
   text-align: center;
-  background-color: #a68d77;
   font-family: "satisfy-Regular";
   font-weight: 900;
   font-style: italic;
@@ -802,9 +802,6 @@ template {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.type__card-img {
-  box-shadow: 1px 1px #e6ff00, 0em 0 22.4em olive;
 }
 .type__card-title {
   font-family: "satisfy-Regular";
@@ -822,10 +819,7 @@ template {
 }
 
 .card-container {
-  height: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
   padding: 2rem 1rem;
 }
 
@@ -835,19 +829,19 @@ template {
   justify-content: space-evenly;
   align-items: center;
   padding: 0;
-  margin: 0 auto;
+  margin: 2rem 0;
   position: relative;
   min-height: 117.78px;
 }
 .card__pure:hover {
-  background-color: #a68d77;
+  background-color: hsl(34.38deg, 40.27%, 56.67%);
 }
 .card__pure__img {
   width: 100%;
   max-height: 166.7px;
 }
 .card__pure__img:hover {
-  background-color: #a68d77;
+  background-color: hsl(34.38deg, 40.27%, 56.67%);
   opacity: 0.4;
 }
 .card__pure__body {
@@ -855,7 +849,7 @@ template {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #a68d77;
+  background-color: hsl(64deg, 51%, 33%);
   max-height: 100%;
   width: 100%;
 }
@@ -864,16 +858,344 @@ template {
   font-weight: 900;
   font-style: italic;
   text-align: center;
+  margin: 0;
+  color: hsl(0deg, 0%, 100%);
+  padding: 0.5rem;
 }
 .card__pure__body-copy {
   font-family: "satisfy-Regular";
   font-weight: 900;
   font-style: italic;
-  padding: 0 1rem;
   text-align: center;
+  padding: 1rem;
+  color: hsl(0deg, 0%, 100%);
   margin: 0;
 }
 .card__pure__btn {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 8px;
+  padding: 0.3rem 1rem;
+  position: absolute;
+  top: 41%;
+  left: 15%;
+  display: block;
+  background-color: transparent;
+  color: hsl(212deg, 27%, 19%);
+  font-weight: 700;
+  display: block;
+  z-index: 3;
+}
+
+.card__lav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 2rem 0;
+  position: relative;
+  min-height: 117.78px;
+}
+.card__lav:hover {
+  background-color: hsl(34.38deg, 40.27%, 56.67%);
+}
+.card__lav__img {
+  width: 100%;
+  max-height: 166.7px;
+}
+.card__lav__img:hover {
+  background-color: hsl(34.38deg, 40.27%, 56.67%);
+  opacity: 0.4;
+}
+.card__lav__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(265.71deg, 36.21%, 45.49%);
+  max-height: 100%;
+  width: 100%;
+}
+.card__lav__body-title {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+  color: hsl(0deg, 0%, 100%);
+  padding: 0.5rem;
+}
+.card__lav__body-copy {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  color: hsl(0deg, 0%, 100%);
+  padding: 0.5rem;
+  margin: 0;
+}
+.card__lav__btn {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 8px;
+  padding: 0.3rem 1rem;
+  position: absolute;
+  top: 41%;
+  left: 15%;
+  display: block;
+  background-color: transparent;
+  color: hsl(212deg, 27%, 19%);
+  font-weight: 700;
+  display: block;
+  z-index: 3;
+}
+
+.card__lemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 2rem 0;
+  position: relative;
+  min-height: 117.78px;
+}
+.card__lemon:hover {
+  background-color: hsl(34.38deg, 40.27%, 56.67%);
+}
+.card__lemon__img {
+  width: 100%;
+  max-height: 166.7px;
+}
+.card__lemon__img:hover {
+  background-color: hsl(34.38deg, 40.27%, 56.67%);
+  opacity: 0.4;
+}
+.card__lemon__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 210, 86);
+  max-height: 100%;
+  width: 100%;
+}
+.card__lemon__body-title {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem;
+}
+.card__lemon__body-copy {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+}
+.card__lemon__btn {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 8px;
+  padding: 0.3rem 1rem;
+  position: absolute;
+  top: 41%;
+  left: 15%;
+  display: block;
+  background-color: transparent;
+  color: hsl(212deg, 27%, 19%);
+  font-weight: 700;
+  display: block;
+  z-index: 3;
+}
+
+.card__pepp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 2rem 0;
+  position: relative;
+  min-height: 117.78px;
+}
+.card__pepp:hover {
+  background-color: hsl(34.38deg, 40.27%, 56.67%);
+}
+.card__pepp__img {
+  width: 100%;
+  max-height: 166.7px;
+}
+.card__pepp__img:hover {
+  background-color: hsl(34.38deg, 40.27%, 56.67%);
+  opacity: 0.4;
+}
+.card__pepp__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(168deg, 34%, 41%);
+  max-height: 100%;
+  width: 100%;
+}
+.card__pepp__body-title {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+  color: hsl(0deg, 0%, 100%);
+  padding: 0.5rem;
+}
+.card__pepp__body-copy {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+  color: hsl(0deg, 0%, 100%);
+  padding: 1rem;
+}
+.card__pepp__btn {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 8px;
+  padding: 0.3rem 1rem;
+  position: absolute;
+  top: 41%;
+  left: 15%;
+  display: block;
+  background-color: transparent;
+  color: hsl(212deg, 27%, 19%);
+  font-weight: 700;
+  display: block;
+  z-index: 3;
+}
+
+.card__thieves {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 2rem 0;
+  position: relative;
+  min-height: 117.78px;
+}
+.card__thieves:hover {
+  background-color: hsl(34.38deg, 40.27%, 56.67%);
+}
+.card__thieves__img {
+  width: 100%;
+  max-height: 166.7px;
+}
+.card__thieves__img:hover {
+  background-color: hsl(34.38deg, 40.27%, 56.67%);
+  opacity: 0.4;
+}
+.card__thieves__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(210deg, 4%, 67%);
+  max-height: 100%;
+  width: 100%;
+}
+.card__thieves__body-title {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem;
+}
+.card__thieves__body-copy {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+  padding: 1rem;
+}
+.card__thieves__btn {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 8px;
+  padding: 0.3rem 1rem;
+  position: absolute;
+  top: 41%;
+  left: 15%;
+  display: block;
+  background-color: transparent;
+  color: hsl(212deg, 27%, 19%);
+  font-weight: 700;
+  display: block;
+  z-index: 3;
+}
+
+.card__tea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 2rem 0;
+  position: relative;
+  min-height: 117.78px;
+}
+.card__tea:hover {
+  background-color: hsl(34.38deg, 40.27%, 56.67%);
+}
+.card__tea__img {
+  width: 100%;
+  max-height: 166.7px;
+}
+.card__tea__img:hover {
+  background-color: hsl(34.38deg, 40.27%, 56.67%);
+  opacity: 0.4;
+}
+.card__tea__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(8deg, 65%, 84%);
+  max-height: 100%;
+  width: 100%;
+}
+.card__tea__body-title {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem;
+}
+.card__tea__body-copy {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+  padding: 1rem;
+}
+.card__tea__btn {
   font-family: "satisfy-Regular";
   font-weight: 900;
   font-style: italic;
@@ -914,12 +1236,17 @@ template {
 
 .footer {
   width: 100%;
-  height: 90px;
-  margin: 0;
-  display: none;
-  background-color: #a68d77;
+  background-color: hsl(34.38deg, 40.27%, 56.67%);
+  padding: 1rem;
 }
-
-hr {
-  margin: 0;
+.footer__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__social-link {
+  padding: 1rem;
+}
+.footer__copy {
+  padding: 1rem;
 }/*# sourceMappingURL=about.css.map */

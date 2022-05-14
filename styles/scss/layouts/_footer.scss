@@ -1,10 +1,15 @@
 .footer{
-  width: 100%;
-  height: 90px;
-  margin: 0;
-  display: none;
-  background-color: $c-banana-mania;
-}
-hr{
-  margin: 0;
+    width: 100%;
+    background-color: $c-banana-mania;
+    padding: $p-base;
+    &__social{
+        display: flex;
+        justify-content: center;align-items: center;
+        &-link{
+        padding: $p-base;
+        }
+    }
+    &__copy{
+        padding: $p-base;
+    }
 }

@@ -1,6 +1,6 @@
 .header{
     position: relative;
-    background-color:$c-banana-mania;
+    background-color:#bd9764;
     width:100%;
     height: 90px;
     display: flex; 
@@ -10,12 +10,13 @@
     padding: $p-base;
     @include tablet-query{
     }
+
     &__logo{
         @include font-family-bolder;
-        position: relative;
         margin: 0;
         padding: 0;
         width: 166px;
+        font-size: 29px !important;
         &-link{
             @include font-family-normal;
             padding: 0;
@@ -26,6 +27,7 @@
             text-transform:capitalize;
             text-decoration: none;
         }
+    
         &-subtitle{
             position: absolute;
             top: 100%;
@@ -46,7 +48,7 @@
         @include laptop-query{
             display: none;
         }
-        &-burger{
+     &-burger{
             padding: 0;
             margin: 0;
             position: relative;
@@ -99,7 +101,7 @@
     left:0;
     background-color:$c-banana-mania;
     height:100vh;
-    z-index: 1;
+    z-index: 7;
     animation: slideout 1s ease-in-out;
     display: none;
     @include laptop-query{
@@ -127,7 +129,7 @@
             @include font-family-normal ;
             font-size: 17px;
             letter-spacing: 1.5px;
-            color: #5e504c;
+            color:$c-dark-desaturated-blue;
             text-transform: capitalize;
             text-decoration:none;
             position: relative;
@@ -246,7 +248,7 @@
         top: 100%;
         position: absolute;
         background: $c-white;
-        z-index: 1;
+        z-index: 7;
         animation: slidex .50s;
         @keyframes slidex {
             from {
@@ -264,6 +266,5 @@
         }
     }
 }
-
 
 
