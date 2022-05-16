@@ -1,11 +1,14 @@
 .hero{
     position: relative;
     display: flex;
-    width: 100%;
+    max-width: 100%;
+    min-height: 180px;
     height: 200px;
     align-items: center;
     background-color: $c-yellow;
-  
+    @include tablet-query{
+        height: 379px;
+    }
     &::before {
         content: "";
         position: absolute;
@@ -16,7 +19,8 @@
         background-image: url(../../../assets/images/images2.jpg);
         background-repeat: no-repeat;
         background-size: 100%;
-        background-position: top center;
+        background-position:center;
+        max-height: 100%;
         opacity: 0.7;
       }
     &__title{
@@ -27,11 +31,19 @@
         padding: 0 $p-base;
         text-align: center;
         z-index: 2;
+        @include tablet-query{
+            top: 69%;
+            margin: 0 auto;
+        }
+        
     }
 }
 .type{
     width: 100%;
     margin-top: $m-base*10;
+    @include tablet-query{
+        margin-top: $m-base*11;
+    }
     &__body{
         margin-top: 7rem;
         padding: 1rem;
@@ -50,23 +62,29 @@
     &-img{
 
          }
-    
     &-title{
         @include font-family-normal;
         text-align: center;
+        @include tablet-query{
+           text-align: center;
+        }
         }
         &-body{
             @include font-family-normal;
             padding: 0 $p-base;
             text-align: center;
             margin: 0;
-
         }
     }
 }
 .card-container{
     width: 100%;
     padding: $p-base*2  $p-base;
+    @include tablet-query{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 .card__pure{
     display: flex;
@@ -80,13 +98,17 @@
     &:hover{
         background-color: $c-banana-mania;
     }
-       
+    @include tablet-query{
+      margin: 0;
+      width:100%;
+      max-height: 200.78px;
+    } 
     &__img{
     width: 100%;
     max-height: 166.7px;
     &:hover{
         background-color: $c-banana-mania;
-        opacity: .4;
+        opacity:0.4;
     }
 }
     &__body{
@@ -121,12 +143,22 @@
         top: 41%;
         left: 15%;
         display: block;
-        background-color:transparent;
-        color: $c-dark-desaturated-blue;
+        background-color:$c-white;
+        color: $c-banana-sim-black;
         font-weight: $fw-bold;
-        display:block;
-        z-index: 3;
+        display:none;
+        z-index: 6;
+      
+        &:hover{
+            background-color: $c-dark-green;
+            color:$c-white;
+        }
     }
+
+}
+.card__pure:hover .card__pure__btn{
+    animation: transform 1s;
+    display:block;
 }
 .card__lav{
     display: flex;
@@ -140,6 +172,11 @@
     &:hover{
         background-color: $c-banana-mania;
     }
+    @include tablet-query{
+        margin: 0;
+        width:100%;
+        max-height: 200.78px;
+      }
     &__img{
     width: 100%;
     max-height: 166.7px;
@@ -180,13 +217,23 @@
         top: 41%;
         left: 15%;
         display: block;
-        background-color:transparent;
-        color: $c-dark-desaturated-blue;
+        background-color:$c-white;
+        color: $c-banana-sim-black;
         font-weight: $fw-bold;
-        display:block;
+        display:none;
         z-index: 3;
-
+      
+        &:hover{
+            background-color: $c-dodgerblue;
+            color:$c-white;
+        }
     }
+
+}
+.card__lav:hover .card__lav__btn{
+    animation: transform 1s;
+    display:block;
+  
 }
 .card__lemon{
     display: flex;
@@ -239,12 +286,21 @@
         top: 41%;
         left: 15%;
         display: block;
-        background-color:transparent;
-        color: $c-dark-desaturated-blue;
+        background-color:$c-white;
+        color: $c-banana-sim-black;
         font-weight: $fw-bold;
-        display:block;
+        display:none;
         z-index: 3;
+        &:hover{
+            background-color: $c-yellow;
+            color:$c-banana-sim-black;
+        }
     }
+
+}
+.card__lemon:hover .card__lemon__btn{
+    animation: transform 1s;
+    display:block;
 }
 .card__pepp{
     display: flex;
@@ -299,12 +355,23 @@
         top: 41%;
         left: 15%;
         display: block;
-        background-color:transparent;
-        color: $c-dark-desaturated-blue;
+        background-color:$c-white;
+        color: $c-banana-sim-black;
         font-weight: $fw-bold;
-        display:block;
+        display:none;
         z-index: 3;
+      
+        &:hover{
+            background-color: $c-dark-moderate-cyan;
+            color:$c-white;
+        }
     }
+
+}
+.card__pepp:hover .card__pepp__btn{
+    animation: transform 1s;
+    display:block;
+  
 }
 .card__thieves{
     display: flex;
@@ -357,12 +424,22 @@
         top: 41%;
         left: 15%;
         display: block;
-        background-color:transparent;
-        color: $c-dark-desaturated-blue;
+        background-color:$c-white;
+        color: $c-banana-sim-black;
         font-weight: $fw-bold;
-        display:block;
+        display:none;
         z-index: 3;
+      
+        &:hover{
+            background-color: $c-grayish-blue;
+            color:$c-white;
+        }
     }
+
+}
+.card__thieves:hover .card__thieves__btn{
+    animation: transform 1s;
+    display:block;
 }
 .card__tea{
     display: flex;
@@ -415,10 +492,20 @@
         top: 41%;
         left: 15%;
         display: block;
-        background-color:transparent;
-        color: $c-dark-desaturated-blue;
+        background-color:$c-white;
+        color: $c-banana-sim-black;
         font-weight: $fw-bold;
-        display:block;
+        display:none;
         z-index: 3;
+        &:hover{
+            background-color: $c-soft-red-bar;
+            color:$c-banana-sim-black;
+        }
     }
+
+}
+.card__tea:hover .card__tea__btn{
+    animation: transform 1s;
+    display:block;
+  
 }

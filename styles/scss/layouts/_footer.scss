@@ -11,5 +11,9 @@
     }
     &__copy{
         padding: $p-base;
+        @include tablet-query{
+            text-align: center;
+        
+        }
     }
 }
