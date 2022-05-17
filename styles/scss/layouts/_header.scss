@@ -54,6 +54,10 @@
             border-radius: 5px;
             box-shadow:  0 2px 5px rbga(255,101,47,.2);
             transition: all .5s ease-in-out;
+            @include laptop-query{
+                display: none;
+            }
+
         }
         &-burger::before,::after{
             content: '';
@@ -78,12 +82,26 @@
     transform: translateX(-50px);
     background-color: transparent;
     box-shadow: none;
+    @include laptop-query{
+        display: none;
+    }
 }
 .header__toggle.open  .header__toggle-burger::before{
-    transform: rotate(45deg) translate(35px, -35px);
+    transform: rotate(45deg)
+     translate(35px, -35px);
+    @include laptop-query{
+        transform: none;
+        display: none;
+        translate: none;
+    }
 }
 .header__toggle.open  .header__toggle-burger::after{
     transform: rotate(-45deg) translate(35px, 35px);
+    @include laptop-query{
+        transform: none;
+        display: none;
+        translate: none;
+    }
 }
 .navbar{
     display: flex;
@@ -97,7 +115,7 @@
     background-color: #bd9764;
     flex-direction: column;
     justify-content: flex-start;
-    transform: translateX(-300px);
+    transform: translateX(-3000px);
     transition: transform .5s ease-in;
     @include laptop-query{
         position: relative;
@@ -108,6 +126,7 @@
         justify-content: center;
         align-items: center;
         transform: none;
+        transition: none;
     }
     &__list{
         display: flex;
@@ -129,34 +148,35 @@
                 margin: 0;
                 opacity: 1;
             }
-            &-link{
-                @include font-family-normal ;
-                font-size: 17px;
-                letter-spacing: 1.5px;
-                color:$c-dark-desaturated-blue;
-                text-transform: capitalize;
-                text-decoration:none;
-                position: relative;
-                padding: $p-base*.5 0;
-                &-link::after{
-                    content:"";
-                    width: 100%;
-                    height: 1px;
-                    background-color: #5e504c;
-                    position: absolute;
-                    left: 0;
-                    transform: scaleX(0);
-                    transition:transform 0.5s;
-                }
-                &-link::after{
-                    bottom: 0;
-                }
-                &-link:hover::after{
-                    transform: scaleX(1);
-                }
-            }
         }
+        &__item-link{
+            @include font-family-normal ;
+            font-size: 17px;
+            letter-spacing: 1.5px;
+            color:$c-dark-desaturated-blue;
+            text-transform: capitalize;
+            text-decoration:none;
+            position: relative;
+            padding: $p-base*.5 0;
+        }
+        &__item-link::after{
+            content:"";
+            width: 100%;
+            height: .5px;
+            background-color: $c-dark-desaturated-blue;
+            position: absolute;
+            left: 0;
+            transform: scaleX(0);
+            transition:transform 0.5s;
+          }
+          &__item-link::after{
+            bottom: 0;
+          }
+          &__item-link:hover::after{
+            transform: scaleX(1);
+          }
     }
+   
     &__social{
         width: 130px;
         display: flex; 
@@ -169,7 +189,6 @@
         &-link img{
             padding: $p-base 0;
         }
-        
     }
 }
 .navbar__submenu{
@@ -183,22 +202,38 @@
 .navToggle-active{
     transform: translateX(0);
     @include laptop-query{
+       
         display: none;
+        transform:none;
+        translate: none;
     }
-
 }
-@keyframes navLinkFade{
 
+@keyframes navLinkFade{
+   
     from{
         opacity: 0;
         transform:translateX(-10px);
+        @include laptop-query{
+       
+           
+            transform:none;
+            translate: none;
+        }
     }to{
         opacity: 1;
         transform:translateX(0);
+        @include laptop-query{
+       
+            transform:none;
+            translate: none;
+        }
 
     }
   
 }
+
+
 // .hide {
 //     display: none;
 //     @include laptop-query{

@@ -2,12 +2,19 @@
     position: relative;
     display: flex;
     max-width: 100%;
-    min-height: 180px;
-    height: 200px;
-    align-items: center;
+    height: 209px;
     background-color: $c-yellow;
+    align-items: center;
     @include tablet-query{
-        height: 379px;
+        height: 359px;
+        margin: $m-base auto;
+        max-width: 89%;
+        justify-content: center;
+        align-items: center;
+        background-color: $c-yellow;
+    }
+    @include laptop-query{
+        
     }
     &::before {
         content: "";
@@ -21,7 +28,9 @@
         background-size: 100%;
         background-position:center;
         max-height: 100%;
+        max-width: 100%;
         opacity: 0.7;
+
       }
     &__title{
         position: relative;
@@ -60,7 +69,10 @@
         align-items: center;
     
     &-img{
-
+@include laptop-query{
+    width:352px;
+    margin: 0 auto;
+}
          }
     &-title{
         @include font-family-normal;
@@ -81,10 +93,11 @@
     width: 100%;
     padding: $p-base*2  $p-base;
     @include tablet-query{
-        display: flex;
         justify-content: center;
         align-items: center;
+       
     }
+    
 }
 .card__pure{
     display: flex;
@@ -98,14 +111,17 @@
     &:hover{
         background-color: $c-banana-mania;
     }
-    @include tablet-query{
-      margin: 0;
-      width:100%;
-      max-height: 200.78px;
-    } 
+    @include laptop-query{
+        flex-direction: row-reverse;
+
+    }
+  
     &__img{
     width: 100%;
-    max-height: 166.7px;
+    max-height: 215.7px;
+    @include laptop-query{
+        margin: $m-base;
+    }
     &:hover{
         background-color: $c-banana-mania;
         opacity:0.4;
@@ -119,6 +135,10 @@
         background-color: $c-dark-green;
         max-height:100%;
         width: 100%;
+        @include laptop-query{
+            height: 215.7px;
+            margin: $m-base;
+        }
         &-title{
             @include font-family-normal;
             text-align: center;
@@ -172,14 +192,17 @@
     &:hover{
         background-color: $c-banana-mania;
     }
-    @include tablet-query{
-        margin: 0;
-        width:100%;
-        max-height: 200.78px;
-      }
+    @include laptop-query{
+        flex-direction: row;
+
+    }
+  
     &__img{
     width: 100%;
-    max-height: 166.7px;
+    max-height: 215.7px;
+    @include laptop-query{
+        margin: $m-base;
+    }
     &:hover{
         background-color: $c-banana-mania;
         opacity: .4;
@@ -193,6 +216,11 @@
         background-color: $c-dodgerblue;
         max-height:100%;
         width: 100%;
+        @include laptop-query{
+            height: 215.7px;
+            margin: $m-base;
+
+        }
         &-title{
             @include font-family-normal;
             text-align: center;
@@ -247,10 +275,17 @@
     &:hover{
         background-color: $c-banana-mania;
     }
+    @include laptop-query{
+        flex-direction: row-reverse;
+
+    }
        
     &__img{
     width: 100%;
-    max-height: 166.7px;
+    height: 215.7px;
+    @include laptop-query{
+        margin: $m-base;
+    }
     &:hover{
         background-color: $c-banana-mania;
         opacity: .4;
@@ -264,6 +299,10 @@
         background-color: $c-yellow;
         max-height:100%;
         width: 100%;
+        @include laptop-query{
+            height: 215.7px;
+            margin: $m-base;
+        }
         &-title{
             @include font-family-normal;
             text-align: center;
@@ -314,10 +353,17 @@
     &:hover{
         background-color: $c-banana-mania;
     }
+    @include laptop-query{
+        flex-direction: row;
+
+    }
        
     &__img{
     width: 100%;
-    max-height: 166.7px;
+    height: 215.7px;
+    @include laptop-query{
+        margin: $m-base;
+    }
     &:hover{
         background-color: $c-banana-mania;
         opacity: .4;
@@ -331,6 +377,10 @@
         background-color: $c-dark-moderate-cyan;
         max-height:100%;
         width: 100%;
+        @include laptop-query{
+            height: 215.7px;
+            margin: $m-base;
+        }
         &-title{
             @include font-family-normal;
             text-align: center;
@@ -360,7 +410,6 @@
         font-weight: $fw-bold;
         display:none;
         z-index: 3;
-      
         &:hover{
             background-color: $c-dark-moderate-cyan;
             color:$c-white;
@@ -385,10 +434,18 @@
     &:hover{
         background-color: $c-banana-mania;
     }
+    @include laptop-query{
+        flex-direction: row-reverse;
+        justify-content: space-around;
+
+    }
        
     &__img{
     width: 100%;
-    max-height: 166.7px;
+    height: 215.7px;
+    @include laptop-query{
+        margin: $m-base;
+    }
     &:hover{
         background-color: $c-banana-mania;
         opacity: .4;
@@ -402,6 +459,10 @@
         background-color: $c-grayish-blue;
         max-height:100%;
         width: 100%;
+        @include laptop-query{
+            height: 215.7px;
+            margin: $m-base;
+        }
         &-title{
             @include font-family-normal;
             text-align: center;
@@ -453,10 +514,17 @@
     &:hover{
         background-color: $c-banana-mania;
     }
+    @include laptop-query{
+        flex-direction: row;
+
+    }
        
     &__img{
     width: 100%;
-    max-height: 166.7px;
+    height: 215.7px;
+    @include laptop-query{
+        margin: $m-base;
+    }
     &:hover{
         background-color: $c-banana-mania;
         opacity: .4;
@@ -470,6 +538,10 @@
         background-color: $c-soft-red-bar;
         max-height:100%;
         width: 100%;
+        @include laptop-query{
+            margin: $m-base;
+            height: 215.7px;
+        }
         &-title{
             @include font-family-normal;
             text-align: center;
