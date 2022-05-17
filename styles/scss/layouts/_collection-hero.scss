@@ -1,3 +1,116 @@
-.collection-hero{
-  
+.pure{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    &__title{
+        text-align: center;
+        @include font-family-normal;
+    }
+}
+
+.pure-card{
+        flex-direction: row;
+        justify-content: space-between;
+        &__img{
+            margin: 0 auto;
+            width: 100%;
+            padding: $p-base;           
+        &-container{
+            margin: 0 auto;
+            width: 100%;
+            border: 1px solid $c-banana-sim-black;
+        }
+        }
+        &__container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__copy{
+            @include font-family-normal;
+            width: 59%;
+        }
+    
+    &__table{
+        @include font-family-normal;
+        text-transform: capitalize;
+    
+     }
+     &__table-data{
+        border: 1px solid black;
+    }
+}
+.counter-section {
+    margin: $m-base;
+    display: flex;
+    flex-direction: column;
+    @include laptop-query {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.counter {
+    width: 36%;
+    border-radius: 10px;
+    height: 80px;
+    border: 1px solid $c-Light-grayish-blue;
+    background-color: $c-Light-grayish-blue;
+    @include laptop-query {
+        width: 20%;
+        margin: 0 21rem 0 0;
+    }
+    @include laptop-l-query {
+        width: 20%;
+        margin: 0 29rem 0 0;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+    &__text {
+        color: $c-banana-sim-black;
+        font-weight: $fw-bold;
+    }
+    &__btn-minus {
+        border: none;
+        background-color: transparent;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+    &__btn-plus {
+        border: none;
+        background-color: transparent;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+.cart {
+    background-color: $c-banana-mania;
+    border: none;
+    margin: 1rem 0;
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 56px;
+
+    &:hover {
+        opacity: 0.5;
+    }
+    @include laptop-query {
+        margin: 0;
+        width: 11%;
+    }
+    @include laptop-l-query {
+        width: 11%;
+    }
 }
