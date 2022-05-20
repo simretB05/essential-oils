@@ -1,21 +1,31 @@
 .hero{
     position: relative;
     display: flex;
-    max-width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
     height: 200px;
     background-color: $c-yellow;
     align-items: center;
+    filter: grayscale(100%);
+    padding: $p-base*.5 0;
+    background-color: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    border: 2px solid $c-white;
+    &:hover{
+        filter: grayscale(0);
+    }
     @include tablet-query{
         height: 359px;
-        max-width: 89%;
+        max-width: 79%;
         margin: $m-base auto;
         justify-content: center;
         align-items: center;
         background-color: $c-yellow;
     }
     @include laptop-query{
-        max-width: 79%;
+        max-width: 59%;
         height: 450px;
+
     }
     &::before {
         content: "";
@@ -24,13 +34,14 @@
         right: 0;
         left: 0;
         bottom: 0;
-        background-image: url(../../../assets/images/images2.jpg);
+        background-image: url(../../../assets/images/images10.jpg);
         background-repeat: no-repeat;
         background-size: 100%;
         background-position:center;
         max-height: 100%;
         max-width: 100%;
         opacity: 0.7;
+
 
       }
     &__title{
@@ -41,6 +52,10 @@
         padding: 0 $p-base;
         text-align: center;
         z-index: 2;
+        padding: $p-base*.1;
+        background-color: transparent;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+        border: 2px solid $c-white;
         @include tablet-query{
             top: 69%;
             margin: 0 auto;
@@ -52,6 +67,7 @@
 .type{
     width: 100%;
     margin-top: $m-base*10;
+    
     @include tablet-query{
         margin-top: $m-base*11;
     }
@@ -59,6 +75,10 @@
         margin-top: 7rem;
         padding: 1rem;
         text-align: center;
+        padding: $p-base*.5 0;
+        background-color: transparent;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+        border: 2px solid $c-white;
         @include font-family-normal
     }
     &__card{
@@ -71,9 +91,14 @@
         align-items: center;
     
     &-img{
+        filter: grayscale(100%);
+        &:hover{
+            filter: grayscale(0);
+        }
 @include laptop-query{
     width:352px;
     margin: 0 auto;
+   
 }
          }
     &-title{
@@ -91,6 +116,9 @@
             padding: 0 $p-base;
             text-align: center;
             margin: 0;
+            border-radius: 0.3rem;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+            border: 2px solid $c-white;
             @include laptop-query{
                 font-size: 18px;
                 width: 660px;
@@ -104,11 +132,9 @@
     @include tablet-query{
         justify-content: center;
         align-items: center;
-       
     }
-    
 }
-.card__pure{
+.card{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -119,8 +145,6 @@
     min-height: 117.78px;
     filter: grayscale(100%);
     &:hover{
-        background-color: $c-banana-mania;
-
         filter: grayscale(0%);
     }
     @include tablet-query{
@@ -129,19 +153,21 @@
     }
     @include laptop-query{
         flex-direction: row-reverse;
-      
-
+        &:nth-child(even){
+            flex-direction: row;
+        }
     }
     &__img{
     width: 100%;
     max-height: 215.7px;
-    filter: grayscale(100%);
-    background-color: $c-banana-mania;
+    border-radius: 0.3rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    border: 2px solid $c-white;
+   
     @include laptop-query{
         margin: $m-base;
     }
     &:hover{
-        opacity:0.4;
         filter: grayscale(0%);
     }
 }
@@ -153,6 +179,9 @@
         background-color: $c-dark-green;
         max-height:100%;
         width: 100%;
+        border-radius: 0.3rem;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+        border: 2px solid $c-white;
         @include laptop-query{
             height: 215.7px;
             margin: $m-base;
@@ -178,467 +207,30 @@
         border-radius: 8px;
         padding:$p-base*.3 $p-base;
         position: absolute;
-        top: 41%;
+        top: 57%;
         left: 15%;
         display: block;
         background-color:$c-white;
         color: $c-banana-sim-black;
         font-weight: $fw-bold;
-        display:none;
-        z-index: 6;
-        @include laptop-query{
-            top: 69%;
-            left: 84%;
+        z-index: 3;
+        &:hover{
+            color: $c-dark-green;
         }
       
-        &:hover{
-            background-color: $c-dark-green;
-            color:$c-white;
-        }
-    }
-
-}
-.card__pure:hover .card__pure__btn{
-    animation: transform 1s;
-    display:block;
-}
-.card__lav{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    padding:0;
-    margin: $m-base*2 0;
-    position: relative;
-    min-height: 117.78px;
-    &:hover{
-        background-color: $c-banana-mania;
-    }
-    @include tablet-query{
-        width: 75%;
-        margin: $m-base auto;
-    }
-    @include laptop-query{
-        flex-direction: row;
-
-    }
-  
-    &__img{
-    width: 100%;
-    max-height: 215.7px;
-    @include laptop-query{
-        margin: $m-base;
-    }
-    &:hover{
-        background-color: $c-banana-mania;
-        opacity: .4;
-    }
-}
-    &__body{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: $c-dodgerblue;
-        max-height:100%;
-        width: 100%;
-        @include laptop-query{
-            height: 215.7px;
-            margin: $m-base;
-
-        }
-        &-title{
-            @include font-family-normal;
-            text-align: center;
-            margin: 0;
-            color:$c-white;
-            padding: $p-base*.5;
-        }
-        &-copy{
-            @include font-family-normal;
-            text-align: center;
-            color:$c-white;
-            padding: $p-base*.5;
-            margin: 0;
-        }
-    }
-    &__btn{
-        @include font-family-normal;
-        border: 1px solid $c-white;
-        border-radius: 8px;
-        padding:$p-base*.3 $p-base;
-        position: absolute;
-        top: 41%;
-        left: 15%;
-        display: block;
-        background-color:$c-white;
-        color: $c-banana-sim-black;
-        font-weight: $fw-bold;
-        display:none;
-        z-index: 3;
         @include laptop-query{
             top: 69%;
             left: 4%;
+            &:nth-child(2){
+                top: 69%;
+                left: 84%;
+            }
         }
-        &:hover{
-            background-color: $c-dodgerblue;
-            color:$c-white;
-        }
+            &-link{
+                text-decoration: none;
+                color: $c-banana-sim-black;
+                text-transform: capitalize;
+            }
     }
-
-}
-.card__lav:hover .card__lav__btn{
-    animation: transform 1s;
-    display:block;
-  
-}
-.card__lemon{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    padding:0;
-    margin: $m-base*2 0;
-    position: relative;
-    min-height: 117.78px;
-    &:hover{
-        background-color: $c-banana-mania;
-    }
-    @include laptop-query{
-        flex-direction: row-reverse;
-
-    }
-    @include tablet-query{
-        width: 75%;
-        margin: $m-base auto;
-    }
-       
-    &__img{
-    width: 100%;
-    height: 215.7px;
-    @include laptop-query{
-        margin: $m-base;
-    }
-    &:hover{
-        background-color: $c-banana-mania;
-        opacity: .4;
-    }
-}
-    &__body{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: $c-yellow;
-        max-height:100%;
-        width: 100%;
-        @include laptop-query{
-            height: 215.7px;
-            margin: $m-base;
-        }
-        &-title{
-            @include font-family-normal;
-            text-align: center;
-            margin: 0;
-            padding: $p-base*.5;
-        }
-        &-copy{
-            @include font-family-normal;
-            text-align: center;
-            padding: $p-base;
-            margin: 0;
-        }
-    }
-    &__btn{
-        @include font-family-normal;
-        border: 1px solid $c-white;
-        border-radius: 8px;
-        padding:$p-base*.3 $p-base;
-        position: absolute;
-        top: 41%;
-        left: 15%;
-        display: block;
-        background-color:$c-white;
-        color: $c-banana-sim-black;
-        font-weight: $fw-bold;
-        display:none;
-        z-index: 3;
-
-        @include laptop-query{
-            top: 69%;
-            left: 84%;
-        }
-        &:hover{
-            background-color: $c-yellow;
-            color:$c-banana-sim-black;
-        }
-    }
-
-}
-.card__lemon:hover .card__lemon__btn{
-    animation: transform 1s;
-    display:block;
-}
-.card__pepp{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    padding:0;
-    margin: $m-base*2 0;
-    position: relative;
-    min-height: 117.78px;
-    &:hover{
-        background-color: $c-banana-mania;
-    }
-    @include tablet-query{
-        width: 75%;
-        margin: $m-base auto;
-    }
-    @include laptop-query{
-        flex-direction: row;
-    }
-       
-    &__img{
-    width: 100%;
-    height: 215.7px;
-    @include laptop-query{
-        margin: $m-base;
-    }
-    &:hover{
-        background-color: $c-banana-mania;
-        opacity: .4;
-    }
-}
-    &__body{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: $c-dark-moderate-cyan;
-        max-height:100%;
-        width: 100%;
-        @include laptop-query{
-            height: 215.7px;
-            margin: $m-base;
-        }
-        &-title{
-            @include font-family-normal;
-            text-align: center;
-            margin: 0;
-            color:$c-white;
-            padding: $p-base*.5;
-        }
-        &-copy{
-            @include font-family-normal;
-            text-align: center;
-            margin: 0;
-            color:$c-white;
-            padding: $p-base;
-        }
-    }
-    &__btn{
-        @include font-family-normal;
-        border: 1px solid $c-white;
-        border-radius: 8px;
-        padding:$p-base*.3 $p-base;
-        position: absolute;
-        top: 41%;
-        left: 15%;
-        display: block;
-        background-color:$c-white;
-        color: $c-banana-sim-black;
-        font-weight: $fw-bold;
-        display:none;
-        z-index: 3;
-        @include laptop-query{
-            top: 69%;
-            left: 4%;
-        }
-        &:hover{
-            background-color: $c-dark-moderate-cyan;
-            color:$c-white;
-        }
-    }
-
-}
-.card__pepp:hover .card__pepp__btn{
-    animation: transform 1s;
-    display:block;
-  
-}
-.card__thieves{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    padding:0;
-    margin: $m-base*2 0;
-    position: relative;
-    min-height: 117.78px;
-    &:hover{
-        background-color: $c-banana-mania;
-    }
-    @include tablet-query{
-        width: 75%;
-        margin: $m-base auto;
-    }
-    @include laptop-query{
-        flex-direction: row-reverse;
-        justify-content: space-around;
-
-    }
-       
-    &__img{
-    width: 100%;
-    height: 215.7px;
-    @include laptop-query{
-        margin: $m-base;
-    }
-    &:hover{
-        background-color: $c-banana-mania;
-        opacity: .4;
-    }
-}
-    &__body{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: $c-grayish-blue;
-        max-height:100%;
-        width: 100%;
-        @include laptop-query{
-            height: 215.7px;
-            margin: $m-base;
-        }
-        &-title{
-            @include font-family-normal;
-            text-align: center;
-            margin: 0;
-            padding: $p-base*.5;
-        }
-        &-copy{
-            @include font-family-normal;
-            text-align: center;
-            margin: 0;
-            padding: $p-base;
-        }
-    }
-    &__btn{
-        @include font-family-normal;
-        border: 1px solid $c-white;
-        border-radius: 8px;
-        padding:$p-base*.3 $p-base;
-        position: absolute;
-        top: 41%;
-        left: 15%;
-        display: block;
-        background-color:$c-white;
-        color: $c-banana-sim-black;
-        font-weight: $fw-bold;
-        display:none;
-        z-index: 3;
-        @include laptop-query{
-            top: 69%;
-            left: 84%;
-        }
-      
-        &:hover{
-            background-color: $c-grayish-blue;
-            color:$c-white;
-        }
-    }
-
-}
-.card__thieves:hover .card__thieves__btn{
-    animation: transform 1s;
-    display:block;
-}
-.card__tea{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    padding:0;
-    margin: $m-base*2 0;
-    position: relative;
-    min-height: 117.78px;
-    &:hover{
-        background-color: $c-banana-mania;
-    }
-    @include tablet-query{
-        width: 75%;
-        margin: $m-base auto;
-    }
-    @include laptop-query{
-        flex-direction: row;
-
-    }
-       
-    &__img{
-    width: 100%;
-    height: 215.7px;
-    @include laptop-query{
-        margin: $m-base;
-    }
-    &:hover{
-        background-color: $c-banana-mania;
-        opacity: .4;
-    }
-}
-    &__body{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: $c-soft-red-bar;
-        max-height:100%;
-        width: 100%;
-        @include laptop-query{
-            margin: $m-base;
-            height: 215.7px;
-        }
-        &-title{
-            @include font-family-normal;
-            text-align: center;
-            margin: 0;
-            padding: $p-base*.5;
-        }
-        &-copy{
-            @include font-family-normal;
-            text-align: center;
-            margin: 0;
-            padding: $p-base;
-        }
-    }
-    &__btn{
-        @include font-family-normal;
-        border: 1px solid $c-white;
-        border-radius: 8px;
-        padding:$p-base*.3 $p-base;
-        position: absolute;
-        top: 41%;
-        left: 15%;
-        display: block;
-        background-color:$c-white;
-        color: $c-banana-sim-black;
-        font-weight: $fw-bold;
-        display:none;
-        z-index: 3;
-        @include laptop-query{
-            top: 69%;
-            left: 4%;
-        }
-        &:hover{
-            background-color: $c-soft-red-bar;
-            color:$c-banana-sim-black;
-        }
-    }
-
-}
-.card__tea:hover .card__tea__btn{
-    animation: transform 1s;
-    display:block;
-  
+   
 }

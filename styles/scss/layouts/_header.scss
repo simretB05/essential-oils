@@ -1,5 +1,5 @@
 .header{
-    background-color: $c-banana-mania;
+    background-color: $c-white;
     position: relative;
     background-color:c-banana-mania;
     width:100%;
@@ -20,6 +20,11 @@
         padding: 0;
         width: 166px;
         font-size: 29px !important;
+        transition: all .5s ease-in-out; background-color: transparent;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+        border: 2px solid $c-white;
+        text-align: center;
+
         &-link{
         @include font-family-normal;
         padding: 0;
@@ -29,17 +34,24 @@
         font-weight: 900 !important;
         text-transform:capitalize;
         text-decoration: none;
+        border-radius: 5px;
+        box-shadow:  0 2px 5px rbga(255,101,47,.2);
+        border: 2px solid $c-white;
+
         }
     }
     &__toggle{
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        background-color: transparent;
         border: none;
         width: 35px;
-        height: 60px;
+        height: 36px;
         padding: 0;
+        padding: $p-base*.5 0;
+        background-color: transparent;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+        border: 2px solid $c-white;
         transition: all .5s ease-in-out;
         cursor: pointer;
         @include laptop-query{
@@ -52,13 +64,9 @@
             width: 17px;
             height:2px;
             background-color: $c-dark-desaturated-blue;
-            border-radius: 5px;
-            box-shadow:  0 2px 5px rbga(255,101,47,.2);
-            transition: all .5s ease-in-out;
             @include laptop-query{
                 display: none;
             }
-
         }
         &-burger::before,::after{
             content: '';
@@ -77,6 +85,12 @@
         &-burger::after{
             transform: translateY(5px);
         }
+    }
+    &__cart{
+        width: 40px;
+        text-align: center;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+        border: 2px solid $c-white;
     }
 }
 
@@ -114,7 +128,7 @@
     width: 160px;
     height: 100vh;
     padding: $p-base;
-    background-color: $c-banana-mania;
+    background-color: $c-white;
     flex-direction: column;
     justify-content: flex-start;
     transform: translateX(-500px);
@@ -135,7 +149,7 @@
         flex-direction: column;
         justify-content: flex-end;
         padding: 0;
-        margin-bottom: $m-base*9;
+        margin-bottom: $m-base*4;
         @include laptop-query{
             width: 50%;
             flex-direction: row;
@@ -146,6 +160,7 @@
             list-style: none;
             margin-top: $m-base*4;
             opacity: 0;
+            width: 400px;
             @include laptop-query{
                 margin: 0;
                 opacity: 1;
@@ -155,21 +170,24 @@
             @include font-family-normal ;
             font-size: 17px;
             letter-spacing: 1.5px;
-            color:$c-dark-desaturated-blue;
+            color:$c-banana-sim-black;
             text-transform: capitalize;
             text-decoration:none;
             position: relative;
-            padding: $p-base*.5 0;
+            padding: $p-base*0;
+            background-color: transparent;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+            border: 2px solid $c-white;
         }
         &__item-link::after{
             content:"";
             width: 100%;
-            height: .5px;
+            height: .6px;
             background-color: $c-dark-desaturated-blue;
             position: absolute;
             left: 0;
             transform: scaleX(0);
-            transition:transform 0.5s;
+            transition:transform ease ;
           }
           &__item-link::after{
             bottom: 0;
@@ -179,34 +197,48 @@
           }
     }
     &__login{
-        width:130px;
+        width:150px;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
         
-        &-btn{
-            background-color: transparent;
+        &-btn{ 
+            width:100px;
+            background-color: gray;
+            border-radius: 0.3rem;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+            border: 2px solid $c-white;
             @include font-family-normal;
-            color: $c-dark-desaturated-blue;
+            color: $c-white;
             font-size: 16px;
-            padding: 1rem;
+            padding: $p-base*.4;
             text-transform: capitalize;
             border: none;
             cursor: pointer;
+            &:hover{
+                background-color: $c-dark-green;
+            }
+
             
         }
         &-img{
             width:30px;
             height:30px;
             border-radius: 50px;
+            display: none;
+
+            @include laptop-query{
+                display: block;
+            }
         }
       }
-   
     &__social{
         width: 130px;
         display: flex; 
         justify-content: space-around;
         padding: $p-base 0;
+        background-color: grey;
+        display: none;
         @include laptop-query{
         display: none;
         width: 200px;
@@ -215,6 +247,7 @@
             padding: $p-base 0;
         }
     }
+
 }
 .navbar__submenu{
     list-style: none;

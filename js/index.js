@@ -1,3 +1,26 @@
+// gsap.rregisterPlugin(scrollTrigger)
+
+// function init() {
+//     gsap.from{
+//         '#bannerSection', {
+
+//         }
+//     }
+// }
+gsap.registerPlugin(ScrollTrigger)
+
+gsap.from(".card", {
+    scrollTrigger: {
+        trigger: ".type__card-body",
+        start: "top top",
+        end: "+=100",
+        markers: false,
+        scrub: 1,
+    },
+    stagger: { amount: 0.5 },
+    scale: 0, duration: 1,
+
+});
 // targets the humburger menue and the button which contains it
 
 // const toggleBtn = document.querySelector('.header__toggle')
@@ -12,7 +35,7 @@
 
 //     toggleOpen = true;
 //     } else {
-//      
+//
 
 // navBtn.classList.add('move-in')
 // navBtn.classList.remove('move-out')
@@ -22,6 +45,9 @@
 //     }
 // });
 // another cool way
+
+
+
 const toggle = () => {
     const toggleBtn = document.querySelector('.header__toggle-burger');
     const toggleBurger = document.querySelector('.header__toggle')
