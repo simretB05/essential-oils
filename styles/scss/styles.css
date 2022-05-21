@@ -532,6 +532,7 @@ template {
 .header__cart {
   width: 40px;
   text-align: center;
+  background-color: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   border: 2px solid hsl(0deg, 0%, 100%);
 }
@@ -665,12 +666,13 @@ template {
   width: 100px;
   background-color: gray;
   border-radius: 0.3rem;
+  background-color: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   border: 2px solid hsl(0deg, 0%, 100%);
   font-family: "satisfy-Regular";
   font-weight: 900;
   font-style: italic;
-  color: hsl(0deg, 0%, 100%);
+  color: #0e0e0e;
   font-size: 16px;
   padding: 0.4rem;
   text-transform: capitalize;
@@ -679,6 +681,7 @@ template {
 }
 .navbar__login-btn:hover {
   background-color: hsl(64deg, 51%, 33%);
+  color: hsl(0deg, 0%, 100%);
 }
 .navbar__login-img {
   width: 30px;
@@ -940,6 +943,7 @@ template {
   text-align: center;
   margin: 0;
   border-radius: 0.3rem;
+  background-color: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   border: 2px solid hsl(0deg, 0%, 100%);
 }
@@ -993,6 +997,7 @@ template {
   width: 100%;
   max-height: 215.7px;
   border-radius: 0.3rem;
+  background-color: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   border: 2px solid hsl(0deg, 0%, 100%);
 }
@@ -1097,21 +1102,30 @@ template {
 }
 
 .footer {
-  width: 100%;
-  background-color: hsl(0deg, 0%, 100%);
-  padding: 1rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 200px;
+  align-items: center;
+  padding: 2rem 0;
+  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: 11px 0px 4px rgba(10, 10, 10, 0.2);
 }
 .footer::before {
   content: "";
   position: absolute;
-  top: 0%;
+  top: 0;
+  right: 0%;
+  left: 0;
+  bottom: 0;
   background-image: url(../../../assets/images/images14.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: center;
-  max-height: 100%;
-  max-width: 100%;
+  background-position: bottom;
+  max-height: 700px;
+  max-width: 200px;
   opacity: 0.7;
 }
 .footer__social {
@@ -1120,10 +1134,11 @@ template {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0.3rem;
+  background-color: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   border: 2px solid hsl(0deg, 0%, 100%);
-  background-color: grey;
+  z-index: 5;
+  background-color: hsl(64deg, 51%, 33%);
 }
 .footer__social:hover {
   background-color: hsl(64deg, 51%, 33%);
@@ -1133,11 +1148,16 @@ template {
 }
 .footer__copy {
   padding: 1rem;
+  z-index: 6;
 }
 @media screen and (min-width: 768px) {
   .footer__copy {
     text-align: center;
   }
+}
+
+.main {
+  margin: 5rem auto;
 }
 
 .pure {
@@ -1157,14 +1177,25 @@ template {
   justify-content: space-between;
 }
 .pure-card__img {
+  width: 70%;
   margin: 0 auto;
-  width: 100%;
-  padding: 1rem;
+}
+@media screen and (min-width: 1020px) {
+  .pure-card__img {
+    width: 70%;
+    height: 79%;
+  }
 }
 .pure-card__img-container {
   margin: 0 auto;
   width: 100%;
   border: 1px solid #0e0e0e;
+}
+@media screen and (min-width: 1020px) {
+  .pure-card__img-container {
+    width: 100%;
+    height: 79%;
+  }
 }
 .pure-card__container {
   width: 100%;
@@ -1269,6 +1300,47 @@ template {
   .cart {
     width: 11%;
   }
+}
+
+.section {
+  width: 100%;
+  height: 800px;
+  margin: 8rem;
+}
+
+.form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 7rem;
+  background-color: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  border: 2px solid hsl(0deg, 0%, 100%);
+}
+.form__topic {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2rem;
+  margin: 2rem;
+  text-align: center;
+}
+.form__input-box {
+  padding: 2rem 0;
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+}
+.form__input-box-text {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+}
+.form__message-box {
+  font-family: "satisfy-Regular";
+  font-weight: 900;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
 }
 
 .about {

@@ -1,0 +1,32 @@
+.section{
+  width: 100%;
+  height: 800px;
+  margin: $p-base*8;
+}
+.form{
+  width: 50%;
+  margin: 0 auto;
+  padding: $p-base*7;
+  @include paperStyleShadow;
+  &__topic{
+    @include font-family-normal;
+    font-size:2rem;
+    margin: $m-base*2;
+    text-align: center;
+  }
+  &__input-box{
+    padding:$p-base*2 0;
+    @include font-family-normal;
+
+  }
+  &__input-box-text{
+    @include font-family-normal;
+
+  }
+  &__message-box{
+    @include font-family-normal;
+    display: flex;
+    flex-direction: column;
+
+  }
+}

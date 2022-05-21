@@ -58,6 +58,11 @@
     padding: 2rem;
     margin: auto;
  }
+  @mixin paperStyleShadow{
+    background-color: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    border: 2px solid $c-white;
+  }
     //    @include laptop-query{
          
     

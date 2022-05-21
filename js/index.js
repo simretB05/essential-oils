@@ -18,7 +18,10 @@ gsap.from(".card", {
         scrub: 1,
     },
     stagger: { amount: 0.5 },
-    scale: 0, duration: 1,
+    scale: 0, duration: 9,
+    y: -6,
+    x: -7,
+    opacity: 1
 
 });
 // targets the humburger menue and the button which contains it

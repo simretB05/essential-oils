@@ -1,19 +1,29 @@
 .footer{
-    width: 100%;
-    background-color: $c-white;
-    padding: $p-base;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 200px;
+    align-items: center;
+    padding: $p-base*2 0;
+    background-color: $c-white;
+    box-shadow: 11px 0px 4px rgba(10, 10, 10, 0.2);
     &::before{
         content: "";
         position: absolute;
-        top: 0%;
+        top: 0;
+        right: 0%;
+        left: 0;
+        bottom: 0;
         background-image: url(../../../assets/images/images14.jpg);
         background-repeat: no-repeat;
         background-size: 100%;
-        background-position:center;
-        max-height: 100%;
-        max-width: 100%;
+        background-position:bottom;
+        max-height: 700px;
+        max-width: 200px;
         opacity: 0.7;
+
     }
     &__social{
         width: 200px;
@@ -21,10 +31,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 0.3rem;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-        border: 2px solid $c-white;
-        background-color: grey;
+        @include paperStyleShadow; 
+        z-index: 5;
+        background-color:$c-dark-green ;
         &:hover{
             background-color: $c-dark-green;
         }
@@ -34,6 +43,7 @@
     }
     &__copy{
         padding: $p-base;
+        z-index: 6;
         @include tablet-query{
             text-align: center;
         

@@ -8,9 +8,7 @@
     align-items: center;
     filter: grayscale(100%);
     padding: $p-base*.5 0;
-    background-color: transparent;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-    border: 2px solid $c-white;
+  @include paperStyleShadow;
     &:hover{
         filter: grayscale(0);
     }
@@ -53,9 +51,7 @@
         text-align: center;
         z-index: 2;
         padding: $p-base*.1;
-        background-color: transparent;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-        border: 2px solid $c-white;
+       @include paperStyleShadow;
         @include tablet-query{
             top: 69%;
             margin: 0 auto;
@@ -76,9 +72,7 @@
         padding: 1rem;
         text-align: center;
         padding: $p-base*.5 0;
-        background-color: transparent;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-        border: 2px solid $c-white;
+        @include paperStyleShadow;
         @include font-family-normal
     }
     &__card{
@@ -117,8 +111,7 @@
             text-align: center;
             margin: 0;
             border-radius: 0.3rem;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-            border: 2px solid $c-white;
+            @include paperStyleShadow;
             @include laptop-query{
                 font-size: 18px;
                 width: 660px;
@@ -161,9 +154,7 @@
     width: 100%;
     max-height: 215.7px;
     border-radius: 0.3rem;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-    border: 2px solid $c-white;
-   
+    @include paperStyleShadow;
     @include laptop-query{
         margin: $m-base;
     }
