@@ -68,15 +68,22 @@ transform: translateX(0);
 &__check-box{
     margin: $m-base;
 }
-&__check-span{
+&__check-span--login{
  color: $c-banana-sim-black;
  font-size:12px;
  position: absolute;
- bottom: 59px;
+ bottom: 43px;
+ left:18%;
 }
+&__check-span--registration{
+    color: $c-banana-sim-black;
+    font-size:12px;
+    position: absolute;
+    bottom: 56px;
+   }
 &__submit-btn{
     width:85%;
-    padding: 10px 30px;
+    padding: 10px 10px;
     cursor: pointer;
     display: block;
     margin: auto;
@@ -91,10 +98,10 @@ transform: translateX(0);
    
 }
 #regiter-btn{
-    left: 450px;
+    left: 420px;
 }
 .move-out{
-    transform: translateX(-400px) ease-out;
+    transform: translateX(-300px) ease-out;
     opacity: 0;
 }
 .move-in{

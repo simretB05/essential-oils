@@ -204,8 +204,10 @@
             border: none;
             background-color: $c-dark-green;
             cursor: pointer;
+            background: linear-gradient(to right,$c-dark-light-green,$c-dark-green);
+
             &:hover{
-                background-color: $c-white;
+                background: linear-gradient(to right,$c-white,$c-white);
                 border:2px solid $c-dark-green;
                 color: $c-dark-green;
             }

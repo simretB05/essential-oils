@@ -662,9 +662,10 @@ template {
   border: none;
   background-color: hsl(64deg, 51%, 33%);
   cursor: pointer;
+  background: linear-gradient(to right, hsl(64deg, 53%, 66%), hsl(64deg, 51%, 33%));
 }
 .navbar__login-btn:hover {
-  background-color: hsl(0deg, 0%, 100%);
+  background: linear-gradient(to right, hsl(0deg, 0%, 100%), hsl(0deg, 0%, 100%));
   border: 2px solid hsl(64deg, 51%, 33%);
   color: hsl(64deg, 51%, 33%);
 }
@@ -1427,15 +1428,22 @@ template {
 .form-input__check-box {
   margin: 1rem;
 }
-.form-input__check-span {
+.form-input__check-span--login {
   color: #0e0e0e;
   font-size: 12px;
   position: absolute;
-  bottom: 59px;
+  bottom: 43px;
+  left: 18%;
+}
+.form-input__check-span--registration {
+  color: #0e0e0e;
+  font-size: 12px;
+  position: absolute;
+  bottom: 56px;
 }
 .form-input__submit-btn {
   width: 85%;
-  padding: 10px 30px;
+  padding: 10px 10px;
   cursor: pointer;
   display: block;
   margin: auto;
@@ -1450,11 +1458,11 @@ template {
 }
 
 #regiter-btn {
-  left: 450px;
+  left: 420px;
 }
 
 .move-out {
-  transform: translateX(-400px) ease-out;
+  transform: translateX(-300px) ease-out;
   opacity: 0;
 }
 

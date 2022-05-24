@@ -662,9 +662,10 @@ template {
   border: none;
   background-color: hsl(64deg, 51%, 33%);
   cursor: pointer;
+  background: linear-gradient(to right, hsl(64deg, 53%, 66%), hsl(64deg, 51%, 33%));
 }
 .navbar__login-btn:hover {
-  background-color: hsl(0deg, 0%, 100%);
+  background: linear-gradient(to right, hsl(0deg, 0%, 100%), hsl(0deg, 0%, 100%));
   border: 2px solid hsl(64deg, 51%, 33%);
   color: hsl(64deg, 51%, 33%);
 }
