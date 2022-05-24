@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/scss/pages-style/login.css">
+  <title>log-in page</title>
+</head>
+<body>
+  <header class="header">
+    <button class="header__toggle" aria-label="Open menu">
+      <div class="header__toggle-burger"></div>
+    </button>
+    <h2 class="header__logo"><a class="header__logo-link" href="../home.html">essential oils</a></h2>
+    <nav class="navbar">
+      <ul class="navbar__list">
+        <li class="navbar__list__item"><a  class="navbar__list__item-link" href="./collection.html">collection</a></li>
+        <li class="navbar__list__item"><a  class="navbar__list__item-link" href="./about-us.html">about</a></li>
+        <li class="navbar__list__item"><a  class="navbar__list__item-link" href="./contact-us.html">contact us</a></li>
+      </ul>
+      <!-- <div class="navbar__login">
+        <button class="navbar__login-btn">log in</button>
+        <img class="navbar__login-img" src="../assets/images/avator-image.png" alt="">
+      </div> -->
+      <div class="navbar__social">
+        <a  class="navbar__social-link" href="https://www.facebook.com/"><img src="../assets/icons/Icon-facebook.svg" alt="facebook icon"></a>
+        <a  class="navbar__social-link"href="https://www.facebook.com/"><img src="../assets/icons/Icon-instagram.svg" alt="instagram icon"></a>
+        <a class="navbar__social-link" href="https://www.facebook.com/"><img src="../assets/icons/Icon-twitter.svg" alt="twitter icon"></a>
+      </div>
+    </nav>
+    <div class="header__cart">
+      <img class="header__cart-img" src="../assets/icons/icon-cart.svg" alt="">
+  </div>
+  </header>
+    <section class="main-login">
+        <div class="login-form">
+            <div class="login-form__box">
+                <div class="login-form__boxCard">
+                    <div class="login-form__boxBtn"></div>
+                    <button type="button" class="login-form__toggleLogin-btn">Log In</button>
+                    <button type="button" class="login-form__toggleRegister-btn">Register</button>
+                </div>
+            </div>
+            <form id="login-btn" class="form-input">
+               <input type="text" class="form-input__filed" placeholder="user Id" required>
+               <input type="text" class="form-input__filed" placeholder="Enter password" required>
+               <input type="checkbox" class="form-input__check-box"><span class="form-input__check-span">Remember Password</span>
+               <button type="submit" class="form-input__submit-btn">Log in</button>
+            </form>
+            <form  id="regiter-btn" class="form-input">
+                <input type="text" class="form-input__filed" placeholder="user Id" required>
+                <input type="email" class="form-input__filed" placeholder="Email Id" required>
+                <input type="text" class="form-input__filed" placeholder="Enter password" required>
+
+                <input type="checkbox" class="form-input__check-box"><span class="form-input__check-span">I agree to the terms & conditions</span>
+                <button type="submit" class="form-input__submit-btn">Log in</button>
+             </form>
+        </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__social">
+            <a  class="footer__social-link" href="https://www.facebook.com/"><img src="../assets/icons/Icon-facebook.svg" alt="facebook icon"></a>
+            <a  class="footer__social-link"href="https://www.facebook.com/"><img src="../assets/icons/Icon-instagram.svg" alt="instagram icon"></a>
+            <a class="footer__social-link" href="https://www.facebook.com/"><img src="../assets/icons/Icon-twitter.svg" alt="twitter icon"></a>
+        </div>
+        <p class="footer__copy">© simret Design 2022  | Photography, design and website construction by simret Design 2022</p>
+    </footer> 
+    <script src="../js/index.js"></script>
+</body>
+</html>

@@ -444,6 +444,8 @@ template {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  border: 2px solid hsl(0deg, 0%, 100%);
 }
 @media screen and (min-width: 1020px) {
   .header {
@@ -459,15 +461,11 @@ template {
   width: 166px;
   font-size: 29px !important;
   transition: all 0.5s ease-in-out;
-  background-color: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-  border: 2px solid hsl(0deg, 0%, 100%);
   text-align: center;
 }
 .header__logo-link {
-  font-family: "satisfy-Regular";
-  font-weight: 900;
-  font-style: italic;
+  font-family: "Avenir";
+  font-weight: 100;
   padding: 0;
   margin: 0;
   color: hsl(212deg, 27%, 19%);
@@ -475,9 +473,6 @@ template {
   font-weight: 900 !important;
   text-transform: capitalize;
   text-decoration: none;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rbga(255, 101, 47, 0.2);
-  border: 2px solid hsl(0deg, 0%, 100%);
 }
 .header__toggle {
   display: flex;
@@ -488,9 +483,6 @@ template {
   height: 36px;
   padding: 0;
   padding: 0.5rem 0;
-  background-color: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-  border: 2px solid hsl(0deg, 0%, 100%);
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
@@ -532,9 +524,6 @@ template {
 .header__cart {
   width: 40px;
   text-align: center;
-  background-color: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-  border: 2px solid hsl(0deg, 0%, 100%);
 }
 
 .header__toggle.open .header__toggle-burger {
@@ -607,9 +596,9 @@ template {
 }
 @media screen and (min-width: 1020px) {
   .navbar__list {
-    width: 50%;
+    width: 70%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 0;
   }
 }
@@ -626,9 +615,8 @@ template {
   }
 }
 .navbar__list__item-link {
-  font-family: "satisfy-Regular";
-  font-weight: 900;
-  font-style: italic;
+  font-family: "Avenir";
+  font-weight: 100;
   font-size: 17px;
   letter-spacing: 1.5px;
   color: #0e0e0e;
@@ -636,9 +624,6 @@ template {
   text-decoration: none;
   position: relative;
   padding: 0rem;
-  background-color: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-  border: 2px solid hsl(0deg, 0%, 100%);
 }
 .navbar__list__item-link::after {
   content: "";
@@ -664,24 +649,24 @@ template {
 }
 .navbar__login-btn {
   width: 100px;
-  background-color: gray;
   border-radius: 0.3rem;
   background-color: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
   border: 2px solid hsl(0deg, 0%, 100%);
-  font-family: "satisfy-Regular";
-  font-weight: 900;
-  font-style: italic;
+  font-family: "Avenir";
+  font-weight: 100;
   color: #0e0e0e;
   font-size: 16px;
   padding: 0.4rem;
   text-transform: capitalize;
   border: none;
+  background-color: hsl(64deg, 51%, 33%);
   cursor: pointer;
 }
 .navbar__login-btn:hover {
-  background-color: hsl(64deg, 51%, 33%);
-  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0deg, 0%, 100%);
+  border: 2px solid hsl(64deg, 51%, 33%);
+  color: hsl(64deg, 51%, 33%);
 }
 .navbar__login-img {
   width: 30px;
@@ -807,6 +792,16 @@ template {
   }
 }
 
+.hide-scroll {
+  overflow: hidden;
+  height: 50%;
+}
+@media screen and (min-width: 1020px) {
+  .hide-scroll {
+    overflow: auto;
+  }
+}
+
 .hero {
   position: relative;
   display: flex;
@@ -818,7 +813,7 @@ template {
   filter: grayscale(100%);
   padding: 0.5rem 0;
   background-color: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
   border: 2px solid hsl(0deg, 0%, 100%);
 }
 .hero:hover {
@@ -858,16 +853,15 @@ template {
 .hero__title {
   position: relative;
   top: 100%;
-  font-family: "satisfy-Regular";
-  font-weight: 900;
-  font-style: italic;
+  font-family: "Avenir";
+  font-weight: 100;
   color: #0e0e0e;
   padding: 0 1rem;
   text-align: center;
   z-index: 2;
   padding: 0.1rem;
   background-color: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
   border: 2px solid hsl(0deg, 0%, 100%);
 }
 @media screen and (min-width: 768px) {
@@ -892,11 +886,10 @@ template {
   text-align: center;
   padding: 0.5rem 0;
   background-color: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
   border: 2px solid hsl(0deg, 0%, 100%);
-  font-family: "satisfy-Regular";
-  font-weight: 900;
-  font-style: italic;
+  font-family: "Avenir";
+  font-weight: 100;
 }
 .type__card {
   width: 100%;
@@ -920,9 +913,8 @@ template {
   }
 }
 .type__card-title {
-  font-family: "satisfy-Regular";
-  font-weight: 900;
-  font-style: italic;
+  font-family: "Avenir";
+  font-weight: 100;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
@@ -936,15 +928,14 @@ template {
   }
 }
 .type__card-body {
-  font-family: "satisfy-Regular";
-  font-weight: 900;
-  font-style: italic;
+  font-family: "Avenir";
+  font-weight: 100;
   padding: 0 1rem;
   text-align: center;
   margin: 0;
   border-radius: 0.3rem;
   background-color: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
   border: 2px solid hsl(0deg, 0%, 100%);
 }
 @media screen and (min-width: 1020px) {
@@ -998,7 +989,7 @@ template {
   max-height: 215.7px;
   border-radius: 0.3rem;
   background-color: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
   border: 2px solid hsl(0deg, 0%, 100%);
 }
 @media screen and (min-width: 1020px) {
@@ -1028,27 +1019,24 @@ template {
   }
 }
 .card__body-title {
-  font-family: "satisfy-Regular";
-  font-weight: 900;
-  font-style: italic;
+  font-family: "Avenir";
+  font-weight: 100;
   text-align: center;
   margin: 0;
   color: hsl(0deg, 0%, 100%);
   padding: 0.5rem;
 }
 .card__body-copy {
-  font-family: "satisfy-Regular";
-  font-weight: 900;
-  font-style: italic;
+  font-family: "Avenir";
+  font-weight: 100;
   text-align: center;
   padding: 1rem;
   color: hsl(0deg, 0%, 100%);
   margin: 0;
 }
 .card__btn {
-  font-family: "satisfy-Regular";
-  font-weight: 900;
-  font-style: italic;
+  font-family: "Avenir";
+  font-weight: 100;
   border: 1px solid hsl(0deg, 0%, 100%);
   border-radius: 8px;
   padding: 0.3rem 1rem;
@@ -1134,14 +1122,9 @@ template {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-  border: 2px solid hsl(0deg, 0%, 100%);
   z-index: 5;
   background-color: hsl(64deg, 51%, 33%);
-}
-.footer__social:hover {
-  background-color: hsl(64deg, 51%, 33%);
+  border-radius: 15px;
 }
 .footer__social-link {
   padding: 1rem;
@@ -1167,9 +1150,8 @@ template {
 }
 .pure__title {
   text-align: center;
-  font-family: "satisfy-Regular";
-  font-weight: 900;
-  font-style: italic;
+  font-family: "Avenir";
+  font-weight: 100;
 }
 
 .pure-card {
@@ -1204,15 +1186,13 @@ template {
   align-items: center;
 }
 .pure-card__copy {
-  font-family: "satisfy-Regular";
-  font-weight: 900;
-  font-style: italic;
+  font-family: "Avenir";
+  font-weight: 100;
   width: 59%;
 }
 .pure-card__table {
-  font-family: "satisfy-Regular";
-  font-weight: 900;
-  font-style: italic;
+  font-family: "Avenir";
+  font-weight: 100;
   text-transform: capitalize;
 }
 .pure-card__table-data {
@@ -1305,49 +1285,71 @@ template {
 .section {
   width: 100%;
   height: 800px;
-  margin: 8rem;
 }
 
 .form {
-  width: 50%;
-  margin: 0 auto;
-  padding: 7rem;
-  background-color: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-  border: 2px solid hsl(0deg, 0%, 100%);
+  width: 88%;
+  margin: 4rem auto;
+  padding: 2rem 2rem;
+  border: 1px solid #0e0e0e;
 }
 .form__topic {
-  font-family: "satisfy-Regular";
-  font-weight: 900;
-  font-style: italic;
+  font-family: "Avenir";
+  font-weight: 100;
   font-size: 2rem;
   margin: 2rem;
   text-align: center;
 }
 .form__input-box {
   padding: 2rem 0;
-  font-family: "satisfy-Regular";
-  font-weight: 900;
-  font-style: italic;
+  font-family: "Avenir";
+  font-weight: 100;
 }
 .form__input-box-text {
-  font-family: "satisfy-Regular";
-  font-weight: 900;
-  font-style: italic;
+  padding: 1rem;
+  font-family: "Avenir";
+  font-weight: 100;
 }
 .form__message-box {
-  font-family: "satisfy-Regular";
-  font-weight: 900;
-  font-style: italic;
+  font-family: "Avenir";
+  font-weight: 100;
   display: flex;
   flex-direction: column;
 }
+.form__input-text {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.form__submit-btn {
+  width: 100px;
+  border-radius: 0.3rem;
+  background-color: transparent;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  border: 2px solid hsl(0deg, 0%, 100%);
+  font-family: "Avenir";
+  font-weight: 100;
+  font-size: 12px;
+  padding: 0;
+  text-transform: capitalize;
+  border: none;
+  background-color: hsl(64deg, 51%, 33%);
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  padding: 0.6rem 0.6rem;
+}
+.form__submit-btn:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  border: 2px solid hsl(64deg, 51%, 33%);
+  color: hsl(64deg, 51%, 33%);
+}
 
 .about {
-  font-family: "satisfy-Regular";
-  font-weight: 900;
-  font-style: italic;
-  height: 100vh;
+  font-family: "Avenir";
+  font-weight: 100;
   margin: 1rem;
   font-size: 20px;
+}
+.about-main {
+  height: 100%;
 }/*# sourceMappingURL=styles.css.map */

@@ -31,12 +31,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        @include paperStyleShadow; 
         z-index: 5;
-        background-color:$c-dark-green ;
-        &:hover{
-            background-color: $c-dark-green;
-        }
+        background-color: $c-dark-green;
+        border-radius: 15px;
         &-link{
         padding: $p-base;
         }

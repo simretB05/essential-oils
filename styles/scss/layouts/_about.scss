@@ -1,6 +1,8 @@
 .about{
   @include font-family-normal;
-  height: 100vh;
   margin: 1rem;
   font-size: 20px;
+  &-main{
+    height: 100%;
+  }
 }

@@ -29,9 +29,8 @@
 // font face mixins
 
 @mixin font-family-normal {
-    font-family: "satisfy-Regular";
-    font-weight: 900;
-    font-style:italic;
+    font-family: "Avenir";
+    font-weight: 100;
     @content;
 }
 
@@ -60,7 +59,7 @@
  }
   @mixin paperStyleShadow{
     background-color: transparent;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
     border: 2px solid $c-white;
   }
     //    @include laptop-query{

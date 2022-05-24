@@ -7,23 +7,25 @@
 //         }
 //     }
 // }
-gsap.registerPlugin(ScrollTrigger)
+// gsap.registerPlugin(ScrollTrigger)
 
-gsap.from(".card", {
-    scrollTrigger: {
-        trigger: ".type__card-body",
-        start: "top top",
-        end: "+=100",
-        markers: false,
-        scrub: 1,
-    },
-    stagger: { amount: 0.5 },
-    scale: 0, duration: 9,
-    y: -6,
-    x: -7,
-    opacity: 1
+// gsap.from(".card", {
+//     scrollTrigger: {
+//         trigger: ".type__card-body",
+//         start: "top top",
+//         end: "+=100",
+//         markers: false,
+//         scrub: 1,
+//     },
+//     stagger: { amount: 0.5 },
+//     // scaleY: 0, duration: 9,
+//     y: 700,  // to drop the ball i.e transform: translateY(200px)
+//     // duration: 1.5, // duration of the animation
+//     // repeat: -1, // to repeat infinite times
+//     // ease: "bounce.out",// to give the bounce effect,
+//     opacity: 1
 
-});
+// });
 // targets the humburger menue and the button which contains it
 
 // const toggleBtn = document.querySelector('.header__toggle')
@@ -49,7 +51,24 @@ gsap.from(".card", {
 // });
 // another cool way
 
+// login and register toggling
+const loginRegister = document.querySelector('.login-form__toggleRegister-btn')
+const login = document.querySelector('.login-form__toggleLogin-btn')
+const loginForm = document.getElementById('login-btn')
+const registerForm = document.getElementById('regiter-btn')
+const loginBtn = document.querySelector('.login-form__boxBtn')
 
+loginRegister?.addEventListener('click', () => {
+    registerForm.classList.add('move-in')
+    loginForm.classList.add('move-out')
+    loginBtn.classList.add('slide')
+
+});
+login?.addEventListener('click', () => {
+    registerForm.classList.remove('move-in')
+    loginForm.classList.remove('move-out')
+    loginBtn.classList.remove('slide')
+});
 
 const toggle = () => {
     const toggleBtn = document.querySelector('.header__toggle-burger');
@@ -63,7 +82,7 @@ const toggle = () => {
     //toggle navbars
     toggleBtn.addEventListener('click', () => {
         navBtn.classList.toggle('navToggle-active')
-
+        toggleScroll();
 
         if (!toggleOpen) {
             toggleBurger.classList.add('open');
@@ -92,3 +111,7 @@ const toggle = () => {
 
 
 toggle();
+const toggleScroll = () => {
+    document.body.classList.toggle('hide-scroll')
+
+}
