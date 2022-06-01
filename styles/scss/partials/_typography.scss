@@ -29,6 +29,7 @@ src: url(../../../assets/fonts/Satisfy-Regular.ttf);
 font-weight:normal ;
 font-weight: 700;
 }
+
 @font-face {
   font-family: "Avenir";
   src: url(../../../assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype");
@@ -38,11 +39,18 @@ font-weight: 700;
 }
 // @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 // $ff-Roboto: font-family: 'Roboto', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;500;600&display=swap");
 
-
+@font-face {
+  font-family: 'Kumbh';
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/kumbhsans/v11/c4mw1n92AsfhuCq6tVsaoIx1CHIi4kToNopqShNBVo0iPw.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
 // /***********************
 // * TYPOGRAPHY
 // ************************/
 $fw-semi-bold: 600;
+$fw-normal: 300;
 $fw-bold: 700;
 $fw-black: 900;

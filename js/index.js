@@ -71,28 +71,38 @@ login?.addEventListener('click', () => {
 });
 
 const toggle = () => {
-    const toggleBtn = document.querySelector('.header__toggle-burger');
-    const toggleBurger = document.querySelector('.header__toggle')
-    const navBtn = document.querySelector('.navbar');
-    const header = document.querySelector('.header');
+    const toggleBtn = document.querySelector('.header-nav__toggle-burger');
+    const toggleBurger = document.querySelector('.header-nav__toggle')
+    const navBtn = document.querySelector('.navbar__list');
+    const headerBar = document.querySelector('.header');
     const navLinks = document.querySelectorAll('.navbar__list li');
     let toggleOpen = false;
 
 
     //toggle navbars
     toggleBtn.addEventListener('click', () => {
-        navBtn.classList.toggle('navToggle-active')
         toggleScroll();
 
         if (!toggleOpen) {
             toggleBurger.classList.add('open');
-            header.classList.toggle('overlay');
+            headerBar.classList.add('overlay');
+            navBtn.classList.add('navToggle-active')
+            navBtn.classList.remove('navToggle-nonActive')
+            headerBar.classList.toggle('overlay-remove');
+
+
+
             toggleOpen = true;
 
         } else {
 
             toggleBurger.classList.remove('open');
-            header.classList.remove('overlay');
+            headerBar.classList.toggle('overlay');
+            navBtn.classList.remove('navToggle-active')
+            headerBar.classList.add('overlay-remove');
+
+            navBtn.classList.add('navToggle-nonActive')
+
             toggleOpen = false;
         }
         // toggleBtn.classList.remove('open');
@@ -109,9 +119,82 @@ const toggle = () => {
 
 }
 
-
 toggle();
 const toggleScroll = () => {
     document.body.classList.toggle('hide-scroll')
 
+}
+const sliderImages = document.querySelector(".slider").children;
+const prev = document.querySelector(".hero__prev-btn");
+const next = document.querySelector(".hero__next-btn");
+const testimonials = document.querySelector(".main-testimonials").children;
+const angleRight = document.querySelector(".testimonials-nav__angle-right")
+const angleLeft = document.querySelector(".testimonials-nav__angle-left")
+const totalComments = testimonials.length
+/************adding next and previous ******/
+const totalImages = sliderImages.length;
+let index = 0;
+prev.addEventListener('click', (e) => {
+    // console.log(e)
+    nextImage('next');
+
+});
+next.addEventListener('click', (e) => {
+    e.preventDefault();
+    nextImage('next');
+});
+
+
+function nextImage(direction) {
+    console.log(direction);
+    if (direction == 'next') {
+        index++;
+        if (index == totalImages) {
+            index = 0;
+        }
+    } else {
+        if (index == 0) {
+            index = totalImages - 1;
+
+        } else {
+            index--;
+        }
+    }
+    for (let i = 0; i < sliderImages.length; i++) {
+        sliderImages[i].classList.remove('show');
+
+    }
+    sliderImages[index].classList.add('show');
+}
+
+//toggling comments
+angleLeft.addEventListener('click', (e) => {
+    nextComment('next');
+
+});
+angleRight.addEventListener('click', (e) => {
+    nextComment('next');
+});
+
+
+function nextComment(direction) {
+    console.log(direction);
+    if (direction == 'next') {
+        index++;
+        if (index == totalComments) {
+            index = 0;
+        }
+    } else {
+        if (index == 0) {
+            index = totalComments - 1;
+
+        } else {
+            index--;
+        }
+    }
+    for (let j = 0; j < testimonials.length; j++) {
+        testimonials[j].classList.remove('showComments');
+
+    }
+    testimonials[index].classList.add('showComments');
 }

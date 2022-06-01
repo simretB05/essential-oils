@@ -10,10 +10,12 @@
 </head>
 <body>
     <header class="header">
-        <button class="header__toggle" aria-label="Open menu">
-            <div class="header__toggle-burger"></div>
-        </button>
-        <h2 class="header__logo"><a class="header__logo-link" href="./home.html">essential oils</a></h2>
+        <div class="header-nav">
+            <button class="header-nav__toggle" aria-label="Open menu">
+                <div class="header-nav__toggle-burger"></div>
+            </button>
+            <h2 class="header-nav__logo"><a class="header-nav__logo-link" href="./home.html">essential oils</a></h2>
+        </div>
         <nav class="navbar">
             <ul class="navbar__list">
                 <li class="navbar__list__item"><a class="navbar__list__item-link" href="./pages/collection.html">collection</a></li>
@@ -24,100 +26,181 @@
                         <li id="#family" class="navbar__submenu__item"><a class="navbar__submenu__item-link" href="./pages/collection.html">peppermint-oil</a></li>
                         <li id="#family" class="navbar__submenu__item"><a class="navbar__submenu__item-link" href="./pages/collection.html">thieve-oil</a></li>
                         <li id="#family" class="navbar__submenu__item"><a class="navbar__submenu__item-link" href="./pages/collection.html">tea tree-oil</a></li>
-
                     </ul>
-                <li class="navbar__list__item"><a class="navbar__list__item-link" href="/pages/about-us.html">about</a></li>
                 <li class="navbar__list__item"><a class="navbar__list__item-link" href="./pages/contact-us.html">contact us</a></li>
+                <li class="navbar__list__item"><a class="navbar__list__item-link" href="./pages/about-us.html">About-us</a></li>
+
+                <li class="navbar__list__item navbar__list__item-login"><a class="navbar__list__item-link--rose" href="./pages/page-login.html">log-in</a></li>
+                <li class="navbar__list__item navbar__list__item-imgCard"><img class="navbar__list__item-img"src="./assets/images/avator-image.png" alt=""></li>
             </ul>
-            <div class="navbar__login">
-                <button  class="navbar__login-btn"><a href="./pages/page-login.html">log in</a></button>
-                <img class="navbar__login-img" src="./assets/images/avator-image.png" alt="">
+            <!-- <div class="navbar__social">
+                <a  class="navbar__social-link" href="https://www.facebook.com/"><img src="../assets/icons/Icon-facebook.svg" alt="facebook icon"></a>
+                <a  class="navbar__social-link"href="https://www.facebook.com/"><img src="../assets/icons/Icon-instagram.svg" alt="instagram icon"></a>
+                <a class="navbar__social-link" href="https://www.facebook.com/"><img src="../assets/icons/Icon-twitter.svg" alt="twitter icon"></a>
+              </div> -->
+             <div class="navbar__cart">
+                <img class="navbar__cart-img" src="./assets/icons/icon-cart.svg" alt="">
             </div>
-        <div class="navbar__social">
-            <a  class="navbar__social-link" href="https://www.facebook.com/"><img src="./assets/icons/Icon-facebook.svg" alt="facebook icon"></a>
-            <a  class="navbar__social-link"href="https://www.facebook.com/"><img src="./assets/icons/Icon-instagram.svg" alt="instagram icon"></a>
-            <a class="navbar__social-link" href="https://www.facebook.com/"><img src="./assets/icons/Icon-twitter.svg" alt="twitter icon"></a>
-        </div>
         </nav>
-        <div class="header__cart">
-            <img class="header__cart-img" src="./assets/icons/icon-cart.svg" alt="">
-        </div>
     </header>
-    <section class="hero">
-            <h1 class="hero__title"> luxuries & quality essential oils <span> @ an affordable price</span></h1>
-    </section>
-    <section class="main">
-        <div class="type">
-            <div class="type__card">
-                <div class="type__card-img">
-                    <img class="type__card-img" src="./assets/images/img1.jpg" alt="">
+        <section class="content">
+            <div class="main-content">
+                <div class="hero">
+                    <div class="hero__navigation">
+                        <button class="hero__prev-btn"><img src="./assets/icons/icon-previous.svg" alt="">
+                        </button>
+                        <button class="hero__next-btn"><img src="./assets/icons/icon-next.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="slider-container">
+                        <ul class="slider">
+                            <li class="slider__list show">
+                                <img class="slider__list-img" src="./assets/images/essential-oils-hero-1.jpg" alt="">
+                            </li>
+                            <li  class="slider__list">
+                                <img class="slider__list-img" src="./assets/images/whole-foods-essential-oils-0._TTW_._CR100,0,4390,2470_._SR1500,844_._QL100_.jpg" alt="">
+                            </li>
+                            <li  class="slider__list">
+                                <img class=" slider__list-img" src="./assets/images/7-Essentail-Oils-for-Sleep-Blog-Pic.jpg" alt="">
+                            </li>
+                            <li  class="slider__list">
+                                <img class="slider__list-img" src="./assets/images/images3.jpg" alt="">
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <h2 class="type__card-title">New to essential oils?</h2>
-                <p class="type__card-body">Essential oils are aromatic, concentrated plant extracts that are carefully obtained through steam distillation, cold pressing or resin tapping. We offer essential oils, blends and oil-infused products with the optimal levels of specific, naturally occurring essential oil constituents to maximize their potency.</p>
-                    <div id="bannerSection" class="card-container">
-                        <div id="service"class="card .ser1">
-                                <img class="card__img" src="./assets/images/images4.jpg" alt="">
-                            <div class="card__body">
-                                <h3 class="card__body-title">purification</h3>
-                                <p class="card__body-copy">kick the worst odours to the curb</p>
+                <div class="main-hero">
+                    <h1 class="hero__title"> learn about Our services </h1>
+                    <p class="hero__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed minima, odit et numquam fugit deserunt dicta excepturi aperiam quibusdam, cupiditate quam tempore consequuntur magnam.</p>
+                    <div class="service__container">
+                            <div class="service-card">
+                                <i class="fa-solid fa-capsules"></i>                    
+                                <h3 class="service-card__title">oils & medicen</h3>
+                                <p class="service-card__body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, eum, Laudantium nisi harum voluptatem</p>
                             </div>
-                            <button class="card__btn card__btn--pure"> <a class="card__btn-link card__btn-link--pure" href="./pages/collection.html#pure">learn more</a></button>
+                            <div class="service-card">
+                                <i class="fa-solid fa-solar-panel"></i>
+                                <h3 class="service-card__title">green energy</h3>
+                                <p class="service-card__body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, eum, Laudantium nisi harum voluptatem</p>
+                            </div>
+                            <div class="service-card">
+                                <i class="fa-solid fa-hands-holding-child"></i>
+                                <h3 class="service-card__title">support</h3>
+                                <p class="service-card__body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, eum, Laudantium nisi harum voluptatem</p>
+                            </div>
+                            <div class="service-card">
+                                <i class="fa-solid fa-briefcase"></i>                   
+                                <h3 class="service-card__title">Agency business</h3>
+                                <p class="service-card__body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, eum, Laudantium nisi harum voluptatem</p>
+                            </div>
+                    </div>
+                </div>
+                <div class="type">
+                        <div class="type__picture-container">
+                            <img class="type__card-img" src="./assets/images/image-per.jpg" alt="">
                         </div>
-                        <div class="card">
-                                <img class="card__img" src="./assets/images/images6.jpg" alt="">
-                            <div class="card__body">
-                                <h3 class="card__body-title">Lavender</h3>
-                                <p class="card__body-copy">find calm in a bottle</p>
-                            </div>
-                            <button class="card__btn card__btn--lav"><a  class="card__btn-link card__btn-link--lav" href="./pages/collection.html#lav">learn more</a></button>
+                        <div class="type__body-container">
+                            <h2 class="type__title">New to essential oils?</h2>
+                            <p class="type__copy">Essential oils are aromatic, concentrated plant extracts that are carefully obtained through steam distillation, cold pressing or resin tapping. We offer essential oils, blends and oil-infused products with the optimal levels of specific, naturally occurring essential oil constituents to maximize their potency.</p>
+                    </div>
+                </div>   
+                <div id="bannerSection" class="card-container">
+                    <div id="service"class="card .ser1">
+                            <img class="card__img" src="./assets/images/images4.jpg" alt="">
+                        <div class="card__body">
+                            <h3 class="card__body-title">purification</h3>
+                            <p class="card__body-copy">kick the worst odours to the curb</p>
                         </div>
-                        <div class="card">
-                            <img class="card__img" src="./assets/images/images5.jpg" alt="">
-                            <div class="card__body">
-                                <h3 class="card__body-title">Lemon</h3>
-                                <p class="card__body-copy">a bright brust of fresh-squezed</p>
-                            </div>
-                            <button class="card__btn card__btn--lemon"><a  class="card__btn-link card__btn-link--lemon" href="./pages/collection.html#lemon">learn more</a></button>
+                        <button class="card__btn card__btn--pure"> <a class="card__btn-link card__btn-link--pure" href="./pages/collection.html#pure">learn more</a></button>
+                    </div>
+                    <div class="card">
+                            <img class="card__img" src="./assets/images/images6.jpg" alt="">
+                        <div class="card__body">
+                            <h3 class="card__body-title">Lavender</h3>
+                            <p class="card__body-copy">find calm in a bottle</p>
                         </div>
-                        <div class="card">
-                            <img class="card__img" src="./assets/images/images7.jpg" alt="">
-                            <div class="card__body">
-                                <h3 class="card__body-title">peppermint</h3>
-                                <p class="card__body-copy">a break cool-down when you need it most</p>
-                            </div>
-                            <button class="card__btn card__btn--pepp "> <a  class="card__btn-link card__btn-link--pepp" href="./pages/collection.html#peppermint">learn more</a></button>
+                        <button class="card__btn card__btn--lav"><a  class="card__btn-link card__btn-link--lav" href="./pages/collection.html#lav">learn more</a></button>
+                    </div>
+                    <div class="card">
+                        <img class="card__img" src="./assets/images/images5.jpg" alt="">
+                        <div class="card__body">
+                            <h3 class="card__body-title">Lemon</h3>
+                            <p class="card__body-copy">a bright brust of fresh-squezed</p>
                         </div>
-                        <div class="card">
-                            <img class="card__img" src="./assets/images/images11.jpg" alt="">
-                            <div class="card__body">
-                                <h3 class="card__body-title">thieves</h3>
-                                <p class="card__body-copy">add a boost of warmth to your home with thieves</p>
-                            </div>
-                            <button class="card__btn card__btn--thieves"> <a  class="card__btn-link card__btn-link--thieves" href="./pages/collection.html#thieves">learn more</a></button>
+                        <button class="card__btn card__btn--lemon"><a  class="card__btn-link card__btn-link--lemon" href="./pages/collection.html#lemon">learn more</a></button>
+                    </div>
+                    <div class="card">
+                        <img class="card__img" src="./assets/images/images7.jpg" alt="">
+                        <div class="card__body">
+                            <h3 class="card__body-title">peppermint</h3>
+                            <p class="card__body-copy">a break cool-down when you need it most</p>
                         </div>
-                        <div class="card">
-                            <img class="card__img" src="./assets/images/images12.jpg" alt="">
-                            <div class="card__body">
-                                <h3 class="card__body-title">tea tree</h3>
-                                <p class="card__body-copy">a fast healing with cleanness</p>
+                        <button class="card__btn card__btn--pepp "> <a  class="card__btn-link card__btn-link--pepp" href="./pages/collection.html#peppermint">learn more</a></button>
+                    </div>
+                    <div class="card">
+                        <img class="card__img" src="./assets/images/images11.jpg" alt="">
+                        <div class="card__body">
+                            <h3 class="card__body-title">thieves</h3>
+                            <p class="card__body-copy">add a boost of warmth to your home with thieves</p>
+                        </div>
+                        <button class="card__btn card__btn--thieves"> <a  class="card__btn-link card__btn-link--thieves" href="./pages/collection.html#thieves">learn more</a></button>
+                    </div>
+                    <div class="card">
+                        <img class="card__img" src="./assets/images/images12.jpg" alt="">
+                        <div class="card__body">
+                            <h3 class="card__body-title">tea tree</h3>
+                            <p class="card__body-copy">a fast healing with cleanness</p>
+                        </div>
+                        <button class="card__btn card__btn--teaTree"> <a  class="card__btn-link card__btn-link--teaTree" href="./pages/collection.html#teaTree">learn more</a></button>
+                    </div>
+                </div>
+                <div class="testimonials">
+                    <h3 class="testimonials__title">Testimonials</h3>
+
+                    <div class="main-testimonials">
+                        <div class="main-testimonials__card showComments">
+                            <div class="main-testimonials__card-holder"><img class="main-testimonials__card-img" src="./assets/images/image-thomas.jpg" alt=""></div>
+                            <div class="main-testimonials__card-cont">
+                                <h3 class="main-testimonials__card-name">Thomas</h3>
+                                <p class="main-testimonials__card-copy">Lorem,  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam asperiores, cupiditate maxime sunt fugiat esse nostrum, quia harum vitae amet nesciunt et! In obcaecati, voluptate provident recusandae esse velit illum! ipsum dolor sit amet consectetur adipisicing elit. Doloribus harum debitis perferendis ut aliquam vel,</p>
                             </div>
-                            <button class="card__btn card__btn--teaTree"> <a  class="card__btn-link card__btn-link--teaTree" href="./pages/collection.html#teaTree">learn more</a></button>
+                        </div>
+                        <div class="main-testimonials__card">
+                            <div class="main-testimonials__card-holder"><img class="main-testimonials__card-img" src="./assets/images/image-emily.jpg" alt=""></div>
+                            <div class="main-testimonials__card-cont">
+                                <h3 class="main-testimonials__card-name">Emily</h3>
+                                <p class="main-testimonials__card-copy">Lorem,Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quia nulla voluptate cumque vel tempore minus odio ad vitae quidem explicabo numquam sint nisi ducimus, dolor, cupiditate fugit natus dicta.</p>
+                            </div>
+                        </div>
+
+                        <div class="main-testimonials__card">
+                            <div class="main-testimonials__card-holder"><img class="main-testimonials__card-img" src="./assets/images/image-jennie.jpg" alt=""></div>
+                            <div class="main-testimonials__card-cont">
+                                <h3 class="main-testimonials__card-name">Jennie</h3>
+                                <p class="main-testimonials__card-copy">Lorem,Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptatem esse minus laudantium dignissimos, sed quasi deserunt harum dicta natus cupiditate accusantium atque aut nisi, veritatis qui assumenda. Sed, ut. ipsum</p>
+                            </div>
                         </div>
                     </div>
-                  
+                    <div class="testimonials-nav">
+                        <button class="testimonials-nav__angle-left"><img class="testimonials-nav__icon-left" src="./assets/icons/icon-previous.svg" alt="">
+                        </button>
+                        <button class="testimonials-nav__angle-right"><img class="testimonials-nav__icon-right" src="./assets/icons/icon-next.svg" alt="">
+                        </button>
+                    </div>
+                    <button class="testimonials-btn"> <a href="./pages/collection.html"> reviwe our products here!</a> </button>
+                </div>
             </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="footer__social">
-            <a  class="footer__social-link" href="https://www.facebook.com/"><img src="./assets/icons/Icon-facebook.svg" alt="facebook icon"></a>
-            <a  class="footer__social-link"href="https://www.facebook.com/"><img src="./assets/icons/Icon-instagram.svg" alt="instagram icon"></a>
-            <a class="footer__social-link" href="https://www.facebook.com/"><img src="./assets/icons/Icon-twitter.svg" alt="twitter icon"></a>
-        </div>
-        <p class="footer__copy">© simret Design 2022  | Photography, design and website construction by simret Design 2022</p>
-    </footer> 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-	<!---->
+        </section>
+          <footer class="footer">
+            <div class="footer__social">
+                <a  class="footer__social-link" href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a  class="footer__social-link"href="https://www.facebook.com/"><i class="fa-brands fa-instagram-square"></i></a>
+                <a class="footer__social-link" href="https://www.facebook.com/"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p class="footer__copy">© simret Design 2022  | Photography, design and website construction by simret Design 2022</p> 
+        </footer> 
+
+    
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>     
     <script src="./js/index.js"></script>
