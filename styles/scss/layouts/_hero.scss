@@ -134,7 +134,6 @@
       letter-spacing: .5px;
       margin: 0 auto 4rem;
 }
-
 .service__container{
   max-width: 56.25em;
   display: flex;
@@ -384,7 +383,7 @@
     height: 80vh;
     padding: 0;
     &__title{
-      margin:  0 auto;
+      margin: $m-base auto 0;
       text-align: center;
       font-size: 1.9rem;
       position: relative;
@@ -490,6 +489,7 @@ brightness(228%) contrast(100%);
   margin: 0 auto;
   max-height:70% ;
   text-align: center;
+  overflow-y: auto;
   }
   &-name{
    margin: 0;

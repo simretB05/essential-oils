@@ -1248,7 +1248,7 @@ template {
   padding: 0;
 }
 .testimonials__title {
-  margin: 0 auto;
+  margin: 1rem auto 0;
   text-align: center;
   font-size: 1.9rem;
   position: relative;
@@ -1371,6 +1371,7 @@ template {
   margin: 0 auto;
   max-height: 70%;
   text-align: center;
+  overflow-y: auto;
 }
 .main-testimonials__card-name {
   margin: 0;
@@ -1535,6 +1536,10 @@ template {
   height: 600px;
 }
 
+.slider-card__list-title {
+  color: hsl(265.71deg, 36.21%, 45.49%);
+}
+
 .slider-card__list-link {
   text-decoration: none;
   color: #0e0e0e;
@@ -1613,14 +1618,14 @@ template {
 }
 
 .products {
-  text-align: center;
-  background-color: #f6f6f6;
-  margin: 0;
+  margin: 2rem auto;
+  width: 70%;
   position: relative;
+  display: flex;
 }
 .products__title {
   font-family: "Kumbh Sans";
-  font-weight: 300;
+  font-weight: 700;
   margin: 0;
   font-size: rem;
   color: hsl(265.71deg, 36.21%, 45.49%);
@@ -1642,17 +1647,8 @@ template {
   width: 100%;
 }
 .products__discription {
-  color: #0e0e0e;
-  color: rgb(110, 108, 108);
-  font-family: "Kumbh Sans";
+  margin-bottom: 4rem;
 }
-.products__discription-subTitle {
-  font-size: 2rem;
-  text-align: center;
-  width: 70%;
-  margin: 5rem auto;
-}
-
 .pure {
   width: 100%;
   height: 100%;
@@ -1662,6 +1658,7 @@ template {
   font-size: 1rem;
   padding: 1rem;
   color: hsl(265.71deg, 36.21%, 45.49%);
+  text-align: center;
   font-family: "Kumbh Sans";
 }
 
@@ -1670,9 +1667,20 @@ template {
   margin: 0 auto;
   font-family: "Kumbh Sans";
 }
+@media screen and (min-width: 768px) {
+  .pure-card__img {
+    width: 36%;
+  }
+}
 @media screen and (min-width: 1020px) {
   .pure-card__img {
-    width: 70%;
+    width: 40%;
+    height: 79%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .pure-card__img {
+    width: 20%;
     height: 79%;
   }
 }
@@ -1700,15 +1708,29 @@ template {
   font-family: "Kumbh Sans";
   width: 100%;
   text-align: center;
-  color: #565657;
+  padding: 1rem 2rem;
+  color: rgb(110, 108, 108);
+}
+@media screen and (min-width: 768px) {
+  .pure-card__copy {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
 .pure-card__table {
   width: 50%;
   height: 40%;
   border: 1px solid black;
+  padding: 1rem;
   text-align: center;
   margin-top: 1rem;
   color: #565657;
+}
+@media screen and (min-width: 768px) {
+  .pure-card__table {
+    width: 30%;
+    height: 20%;
+  }
 }
 .counter-section {
   font-family: "Kumbh Sans";
@@ -1758,6 +1780,16 @@ template {
   align-items: center;
   justify-content: space-around;
 }
+@media screen and (min-width: 768px) {
+  .counter__container {
+    width: 13%;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .counter__container {
+    width: 8%;
+  }
+}
 .counter__text {
   color: hsl(13.85deg, 35.14%, 92.75%);
   font-weight: 700;
@@ -1800,49 +1832,60 @@ template {
 .cart:hover {
   opacity: 0.5;
 }
+@media screen and (min-width: 768px) {
+  .cart {
+    margin: 0;
+    width: 22%;
+    margin-left: 12px;
+  }
+}
 @media screen and (min-width: 1020px) {
   .cart {
     margin: 0;
-    width: 11%;
+    width: 14%;
+    margin-left: 14px;
   }
 }
 @media screen and (min-width: 1440px) {
   .cart {
-    width: 11%;
+    width: 8%;
   }
 }
 
-details {
-  max-width: 600px;
-  margin: auto;
-  border-top: 1px solid rgba(145, 148, 161, 0.5);
-}
-
-.summary {
+.more-discription {
   width: 90%;
   margin: auto;
 }
 
-summary {
+.main-details {
+  max-width: 600px;
+  margin: auto;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(145, 148, 161, 0.5);
+}
+
+.details {
+  max-width: 600px;
+  margin: auto;
+  border-bottom: 1px solid rgba(145, 148, 161, 0.5);
+}
+
+.summary {
   position: relative;
-}
-
-summary:hover {
-  color: hsl(265.71deg, 36.21%, 45.49%);
-}
-
-details > summary {
   display: flex;
   justify-content: space-between;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   cursor: pointer;
   list-style: none;
+  text-transform: uppercase;
+  font-family: "Kumbh Sans";
+  color: hsl(265.71deg, 36.21%, 45.49%);
   padding: 1.6rem;
 }
-
-details > summary::after {
+.summary:hover {
+  color: #0e0e0e;
+}
+.summary::after {
   content: url(/assets/icons/icon-arrow.svg);
   width: 1.5rem;
   height: 1.5rem;
@@ -1851,57 +1894,83 @@ details > summary::after {
   position: absolute;
   right: 0;
 }
-
-details[open] > summary::after {
-  content: url(/assets/icons/icon-arrow-red.svg);
-  transform: rotate(180deg);
-}
-
-svg:hover {
-  fill: #0e0e0e;
-}
-
-details > div > p {
+.summary__body {
   color: #9194a1;
   font-family: "Kumbh Sans";
   text-align: center;
   padding: 1rem;
 }
 
-.section {
+.details[open] .summary::after {
+  content: url(/assets/icons/icon-arrow-red.svg);
+  transform: rotate(180deg);
+}
+
+svg:hover {
+  fill: hsl(223deg, 64%, 98%);
+}
+
+.form-container {
+  font-family: "Kumbh Sans";
+  padding: 2rem 0;
+  background-color: hsl(0deg, 0%, 96.86%);
+}
+.form-container__title {
+  font-family: "Kumbh Sans";
+  font-weight: 700;
+  margin: 0;
+  font-size: 1.4rem;
+  color: hsl(265.71deg, 36.21%, 45.49%);
+}
+.form-container__title::before {
+  content: "";
+  position: absolute;
+  background-color: hsl(265.71deg, 36.21%, 45.49%);
+  display: block;
+  height: 1px;
   width: 100%;
-  height: 800px;
+}
+.form-container__title::after {
+  content: "";
+  position: absolute;
+  background-color: hsl(265.71deg, 36.21%, 45.49%);
+  display: block;
+  height: 1px;
+  width: 100%;
+}
+.form-container__copy {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 0;
+  text-align: center;
+  text-transform: capitalize;
+  color: rgb(110, 108, 108);
 }
 
 .form {
-  width: 88%;
-  margin: 4rem auto;
-  padding: 2rem 2rem;
-  border: 1px solid #0e0e0e;
-}
-.form__topic {
-  font-family: "Kumbh Sans";
-  font-size: 2rem;
-  margin: 2rem;
-  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  margin: 0 auto;
+  padding: 1rem 2rem;
 }
 .form__input-box {
-  padding: 2rem 0;
-  font-family: "Kumbh Sans";
+  padding: 1rem 0;
 }
-.form__input-box-text {
-  padding: 1rem;
-  font-family: "Kumbh Sans";
+.form__input-text {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: hsl(0deg, 0%, 93.33%);
+  border: none;
+  color: rgb(110, 108, 108);
 }
 .form__message-box {
-  font-family: "Kumbh Sans";
   display: flex;
   flex-direction: column;
 }
-.form__input-text {
-  border-top: none;
-  border-left: none;
-  border-right: none;
+.form__input-textArea {
+  padding: 0.8rem;
+  background-color: hsl(0deg, 0%, 93.33%);
+  border: none;
 }
 .form__submit-btn {
   width: 100px;
