@@ -415,9 +415,8 @@
       }
     }
     &-nav{ 
-      z-index: 6;
       width: 40%;
-      height: 100px;
+      height: 90px;
       @include  flex-space-bteween;
       
   }
@@ -428,6 +427,8 @@
     padding: .5rem;
     border-radius: .6rem;
     background-color: $c-light-body;
+    margin: $m-base 0;
+
     &:hover{
       background-color:#6E4A9E ;
     }
@@ -453,6 +454,7 @@ brightness(228%) contrast(100%);
   height: 264px;
   display: flex;
   padding: $p-base;
+  margin-bottom: 1rem;
 @include tablet-query{
   width: 60%;
   font-size: 1.2rem;

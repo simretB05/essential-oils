@@ -144,6 +144,7 @@
             transform: none;
             transition: none;
         }
+    
         &__item{
             font-weight:$fw-black;
             padding: $p-base;
@@ -154,78 +155,84 @@
                 flex-direction: row;
                 justify-content: flex-end;
             }
-            &-link{
-                @include font-family-normal ;
-                font-size: .7rem;
-                letter-spacing: 1.5px;
-                color:$c-banana-sim-black;
-                font-family: $fw-black;
-                text-transform: uppercase;
-                text-decoration:none;
-                position: relative;
-                // padding: $p-base*1.37 0;
-                &-link::after{
-                    content:"";
-                    width: 100%;
-                    height: 2.16px;
-                    background-color: $c-dark-green;
-                    position: absolute;
-                    left: 0;
-                    transform: scaleX(0);
-                    transition:transform ease-in;
-                    transition: transform 0.5s;
-                    }
-                    &-link::after{
-                    bottom: 0;
-                    }
-                    &-link:hover::after{
-                    transform: scaleX(1);
-                    }
-                    &-link:active{
-                    color: $c-dark-green;
-                }
-               
+        }
+        &__item-link{
+            @include font-family-normal ;
+            font-size: .7rem;
+            letter-spacing: 1.5px;
+            color:$c-banana-sim-black;
+            font-family: $fw-black;
+            text-transform: uppercase;
+            text-decoration:none;
+            position: relative;
+            padding: $p-base 0;
+            @include laptop-query{
+                padding: $p-base*2.06 0;
+
             }
-            &-link--rose{
-                color: $c-light-rose;
-                text-decoration: none;
-                @include font-family-normal;
-                @include laptop-query{
-                    color: $c-dark-green;
-                }
-            }
-            &-login{
-                @include flex-center;
-                @include paperStyleShadow;
-                background-color:$c-dark-green;
-                border-radius: .563rem;
-                border: none;
-                margin: $m-base;
-                padding: .567rem;
-                @include laptop-query{
-                    margin: 0;
-                    background-color: transparent;
-                    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-                    border: none;
-                    color: $c-dark-green;
-                }
-            }
-            &-imgCard{
-                display: none;
-                @include laptop-query{
-                    display: block;
-                }
-            }
-            &-img{
-                width:30px;
-                height:30px;
-                border-radius: 50px;
-                display: none;
-                @include laptop-query{
-                    display: block;
-                }
+            :hover{
+                color: $c-dark-green;
+
             }
         }
+        &__item-link::after{
+                content:"";
+                width: 100%;
+                height: 2.16px;
+                background-color: $c-dark-green;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                transform: scaleX(0);
+                transition:transform ease-in;
+                transition: transform 0.5s;
+        }
+        &__item-link:hover::after{
+                transform: scaleX(1);
+                }
+                &-link:active{
+                color: $c-dark-green;
+        }
+        &__item-link--rose{
+            color: $c-light-rose;
+            text-decoration: none;
+            @include font-family-normal;
+            @include laptop-query{
+                color: $c-dark-green;
+            }
+        }
+        &__item-login{
+            @include flex-center;
+            @include paperStyleShadow;
+            background-color:$c-dark-green;
+            border-radius: .563rem;
+            border: none;
+            margin: $m-base;
+            padding: .567rem;
+            @include laptop-query{
+                margin: 0;
+                background-color: transparent;
+                box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+                border: none;
+                color: $c-dark-green;
+            }
+        }
+        &__item-imgCard{
+            display: none;
+            @include laptop-query{
+                display: block;
+            }
+        }
+        &__item-img{
+            width:30px;
+            height:30px;
+            border-radius: 50px;
+            display: none;
+            @include laptop-query{
+                display: block;
+            }
+        }
+    
     }
 }
 

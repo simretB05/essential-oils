@@ -125,8 +125,8 @@ const toggleScroll = () => {
 
 }
 const sliderImages = document.querySelector(".slider").children;
-const prev = document.querySelector(".hero__prev-btn");
-const next = document.querySelector(".hero__next-btn");
+const prevNav = document.querySelector(".hero__prev-btn");
+const nextNav = document.querySelector(".hero__next-btn");
 const testimonials = document.querySelector(".main-testimonials").children;
 const angleRight = document.querySelector(".testimonials-nav__angle-right")
 const angleLeft = document.querySelector(".testimonials-nav__angle-left")
@@ -134,12 +134,12 @@ const totalComments = testimonials.length
 /************adding next and previous ******/
 const totalImages = sliderImages.length;
 let index = 0;
-prev.addEventListener('click', (e) => {
+prevNav.addEventListener('click', (e) => {
     // console.log(e)
     nextImage('next');
 
 });
-next.addEventListener('click', (e) => {
+nextNav.addEventListener('click', (e) => {
     e.preventDefault();
     nextImage('next');
 });
