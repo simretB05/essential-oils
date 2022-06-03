@@ -1915,12 +1915,25 @@ svg:hover {
   padding: 2rem 0;
   background-color: hsl(0deg, 0%, 96.86%);
 }
+@media screen and (min-width: 1020px) {
+  .form-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 .form-container__title {
   font-family: "Kumbh Sans";
   font-weight: 700;
   margin: 0;
   font-size: 1.4rem;
   color: hsl(265.71deg, 36.21%, 45.49%);
+  width: 80%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1020px) {
+  .form-container__title {
+    margin: 0 auto;
+  }
 }
 .form-container__title::before {
   content: "";
@@ -1928,7 +1941,7 @@ svg:hover {
   background-color: hsl(265.71deg, 36.21%, 45.49%);
   display: block;
   height: 1px;
-  width: 100%;
+  width: 80%;
 }
 .form-container__title::after {
   content: "";
@@ -1936,7 +1949,7 @@ svg:hover {
   background-color: hsl(265.71deg, 36.21%, 45.49%);
   display: block;
   height: 1px;
-  width: 100%;
+  width: 80%;
 }
 .form-container__copy {
   width: 80%;
@@ -1945,6 +1958,11 @@ svg:hover {
   text-align: center;
   text-transform: capitalize;
   color: rgb(110, 108, 108);
+}
+@media screen and (min-width: 768px) {
+  .form-container__mainContent {
+    display: flex;
+  }
 }
 
 .form {
@@ -2002,6 +2020,7 @@ svg:hover {
 }
 .address-title {
   font-size: 1.5rem;
+  color: hsl(265.71deg, 36.21%, 45.49%);
 }
 .address-list {
   padding: 0;
@@ -2045,6 +2064,7 @@ svg:hover {
 }
 .location__title {
   text-align: center;
+  color: hsl(265.71deg, 36.21%, 45.49%);
 }
 .location-card {
   width: 100%;

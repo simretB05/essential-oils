@@ -2,19 +2,28 @@
     @include font-family-normal;
     padding: $p-base*2 0;
     background-color: $c-light-gray-back;
+    @include laptop-query{
+    width: 100%;
+    margin: 0 auto;
+    }
     &__title{
         @include font-family-normal;
         font-weight: $fw-bold;
         margin: 0;
         font-size: 1.4rem;
         color: $c-dark-green;
+        width: 80%;
+        margin: 0 auto;
+        @include laptop-query{
+            margin: 0 auto ;
+        }
         &::before{
             content: "";
             position: absolute;
             background-color: $c-dark-green;
             display: block;
             height: 1px;
-            width: 100%;
+            width: 80%;
         }
         &::after{
             content: "";
@@ -22,9 +31,10 @@
             background-color: $c-dark-green;
             display: block;
             height: 1px;
-            width: 100%;
+            width: 80%;
         
         }
+       
     }
     &__copy{
         width: 80%;
@@ -34,6 +44,12 @@
         text-transform:capitalize;
         color: $c-light-body;
     
+    }
+    &__mainContent{
+        @include tablet-query{
+        display: flex;
+        }
+        
     }
 }
 .form{
@@ -92,6 +108,7 @@
     margin: 0 auto;
     &-title{
         font-size: 1.5rem;
+        color: $c-dark-green;
     }
     &-list{
         padding: 0;
@@ -135,6 +152,7 @@
     margin: 0 auto;
     &__title{
         text-align: center;
+        color: $c-dark-green;
     }
     &-card{
         width: 100%;
