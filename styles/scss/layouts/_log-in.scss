@@ -5,7 +5,7 @@
 .login-form{
   @include font-family-normal;
   color: $c-banana-sim-black;
-  width: 300px;
+  width: 25.8125rem;
   height: 500px;
   position: relative;
   margin: 6% auto;
@@ -44,24 +44,22 @@
     left: 0;
     width: 130px;
     height:100%;
-    background: linear-gradient(to right,$c-dark-light-green,$c-dark-green);
+    background: $c-dark-green;
     border-radius: 30px;
 }
 }
 .form-input{
     top:180px;
     position: absolute;
-    width: 200px;
+    width: 70%;
     transition: .5s;
 transform: translateX(0);
 &__filed{
     width:100%;
-    padding:10px 0;
+    padding:$p-base*.4 ;
     margin: 5px 0;
-    border-top:0;
-    border-left: 0;
-    border-right:0;
-    border-bottom: 1px solid $c-dark-light-green;
+    
+    border: 1px solid $c-dark-light-green;
     outline: none;
     background-color: transparent;
 }
@@ -88,8 +86,10 @@ transform: translateX(0);
     display: block;
     margin:  auto;
     margin: 1rem;
-    background: linear-gradient(to right,$c-dark-light-green,$c-dark-green);
     border: 0;
+    color: $c-white;
+    background-color: $c-dark-green;
+
     outline: none;
     border-radius: 30px;
 }
@@ -100,14 +100,18 @@ transform: translateX(0);
 }
 #regiter-btn{
     left: 420px;
+    
 }
 .move-out{
     transform: translateX(-300px) ease-out;
     opacity: 0;
+    
 }
 .move-in{
     transform: translateX(-400px) ;
     opacity: 1;
+   
+
 }
 .slide{
     transform: translateX(120px);

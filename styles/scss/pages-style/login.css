@@ -2186,7 +2186,7 @@ svg:hover {
 .login-form {
   font-family: "Kumbh Sans";
   color: #0e0e0e;
-  width: 300px;
+  width: 25.8125rem;
   height: 500px;
   position: relative;
   margin: 6% auto;
@@ -2225,25 +2225,22 @@ svg:hover {
   left: 0;
   width: 130px;
   height: 100%;
-  background: linear-gradient(to right, hsla(277deg, 91%, 48%, 0.757), hsl(265.71deg, 36.21%, 45.49%));
+  background: hsl(265.71deg, 36.21%, 45.49%);
   border-radius: 30px;
 }
 
 .form-input {
   top: 180px;
   position: absolute;
-  width: 200px;
+  width: 70%;
   transition: 0.5s;
   transform: translateX(0);
 }
 .form-input__filed {
   width: 100%;
-  padding: 10px 0;
+  padding: 0.4rem;
   margin: 5px 0;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 1px solid hsla(277deg, 91%, 48%, 0.757);
+  border: 1px solid hsla(277deg, 91%, 48%, 0.757);
   outline: none;
   background-color: transparent;
 }
@@ -2270,8 +2267,9 @@ svg:hover {
   display: block;
   margin: auto;
   margin: 1rem;
-  background: linear-gradient(to right, hsla(277deg, 91%, 48%, 0.757), hsl(265.71deg, 36.21%, 45.49%));
   border: 0;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(265.71deg, 36.21%, 45.49%);
   outline: none;
   border-radius: 30px;
 }
