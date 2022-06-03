@@ -2192,7 +2192,6 @@ svg:hover {
   margin: 6% auto;
   background-color: hsl(0deg, 0%, 100%);
   padding: 0.6rem;
-  border-radius: 15px;
   border: 1px solid hsl(265.71deg, 36.21%, 45.49%);
   overflow: hidden;
 }
