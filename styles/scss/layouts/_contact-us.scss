@@ -37,12 +37,13 @@
        
     }
     &__copy{
-        width: 80%;
-        margin: 0 auto;
-        padding: $p-base*3 0;
+        width: 90%;
+        font-size: 0.91rem;
+        font-weight: 300;
         text-align: center;
-        text-transform:capitalize;
         color: $c-light-body;
+        letter-spacing: 0.5px;
+        margin: $m-base*3 auto $m-base*4;
     
     }
     &__mainContent{
@@ -128,7 +129,11 @@
                 background-color: $c-dark-green;
 
             }  
-            &-copy{
+            &-copy{     
+                font-size: 0.91rem;
+                font-weight: 300;
+                color: $c-light-body;
+                letter-spacing: 0.5px;
                 flex-direction: column;
                 padding: 0;
                 margin: 0;
