@@ -2186,7 +2186,7 @@ svg:hover {
 .login-form {
   font-family: "Kumbh Sans";
   color: #0e0e0e;
-  width: 25.8125rem;
+  width: 17.8125rem;
   height: 500px;
   position: relative;
   margin: 6% auto;
@@ -2194,6 +2194,11 @@ svg:hover {
   padding: 0.6rem;
   border: 1px solid hsl(265.71deg, 36.21%, 45.49%);
   overflow: hidden;
+}
+@media screen and (min-width: 1020px) {
+  .login-form {
+    width: 25.8125rem;
+  }
 }
 .login-form__box {
   width: 240px;
