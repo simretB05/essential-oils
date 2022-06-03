@@ -35,7 +35,7 @@
     text-transform: capitalize;
     @include font-family-normal;
     position: absolute;
-    margin: $m-base*20.5 auto;
+    margin: $m-base*23 auto;
     padding: 1.9rem;
       background-color:rgba(255,255,255,.7) ;
       text-align: center;
@@ -65,7 +65,7 @@
 }
 .slider__card__list-img{
   width: 100%;
-  height: 511px;
+  height: 570px;
   @include tablet-query{
     height: 561px;
   }
@@ -92,7 +92,7 @@ background-color: transparent;
   @include flex-around;
   padding: 1rem;
   position: absolute;
-  top: 79%;
+  top: 89%;
   @include paperStyleShadow;
   border: none;
   background-color:rgba(244, 223, 223, 0.6);
