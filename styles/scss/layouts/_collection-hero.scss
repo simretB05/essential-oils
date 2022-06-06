@@ -252,7 +252,10 @@ brightness(228%) contrast(100%);
         width: 30%;
         height: 20%;
       }
-
+      @include laptop-l-query{
+        width: 14%;
+        height: 79%;
+    }
       &-row{
       }
       &-data{
@@ -373,7 +376,7 @@ brightness(228%) contrast(100%);
 
     }
     @include laptop-l-query {
-        width: 8%;
+        width: 10%;
     }
 }
 .more-discription {

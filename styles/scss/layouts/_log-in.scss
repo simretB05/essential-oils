@@ -60,7 +60,6 @@ transform: translateX(0);
     width:100%;
     padding:$p-base*.4 ;
     margin: 5px 0;
-    
     border: 1px solid $c-dark-light-green;
     outline: none;
     background-color: transparent;
@@ -91,29 +90,23 @@ transform: translateX(0);
     border: 0;
     color: $c-white;
     background-color: $c-dark-green;
-
     outline: none;
     border-radius: 30px;
 }
 }
 #login-btn{
     left: 20px;
-   
 }
 #regiter-btn{
     left: 420px;
-    
 }
 .move-out{
     transform: translateX(-300px) ease-out;
     opacity: 0;
-    
 }
 .move-in{
     transform: translateX(-400px) ;
     opacity: 1;
-   
-
 }
 .slide{
     transform: translateX(120px);

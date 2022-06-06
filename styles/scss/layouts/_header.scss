@@ -45,7 +45,6 @@
                 height:2px;
                 background-color: $c-dark-desaturated-blue;
                 box-shadow:  0 2px 5px  rbga(255,101,47,.2);
-              
             }
             &-burger::before{
                 transform: translateY(-5px);
@@ -71,6 +70,7 @@
                 font-weight: 900 !important;
                 text-transform:capitalize;
                 text-decoration: none;
+                color: $c-dark-green;
                 }
         }
     }
@@ -144,7 +144,6 @@
             transform: none;
             transition: none;
         }
-    
         &__item{
             font-weight:$fw-black;
             padding: $p-base;
@@ -168,11 +167,9 @@
             padding: $p-base 0;
             @include laptop-query{
                 padding: $p-base*2.06 0;
-
             }
             :hover{
                 color: $c-dark-green;
-
             }
         }
         &__item-link::after{
@@ -247,7 +244,6 @@
 .navToggle-active{
     transform: translateX(0);
     transition: transform 1s ease;
-
     @include laptop-query{
         display: none;
         transform:none;
@@ -258,7 +254,6 @@
     transform: translateX(-200px);
     opacity: .9;
     transition: transform 1s ease-in-out;
-
     @include laptop-query{
         display: none;
         transform:none;
