@@ -143,8 +143,9 @@
      margin: 0 auto;
   }
   @include laptop-query{
-      max-width: 75%;
+      max-width: 100%;
       height: 500px;
+      flex-wrap: nowrap;
   }
 }
 .service-card{
@@ -168,7 +169,7 @@
       margin: 1rem auto 1rem;
   }
   @include laptop-query{
-    flex: 0 0 27%;
+    flex: 0 0 24%;
     padding: 0 1rem;
     height: 15rem;
     margin: 1rem auto 1rem;
@@ -271,6 +272,14 @@
       justify-content: center;
       align-items: center;
   }
+  @include laptop-query{
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row-reverse;
+}
+
 }
 .card{
   display: flex;
@@ -282,6 +291,14 @@
   position: relative;
   min-height: 117.78px;
   @include paperStyleShadow;
+  &:nth-child(odd){
+    background-color: #6e4a9e;
+
+   }
+  &:nth-child(even){
+    background-color: #6d6c6f;
+
+  }
   &:hover{
       filter: grayscale(0%);
   }
@@ -290,15 +307,21 @@
       margin: $m-base auto;
   }
   @include laptop-query{
+    width: 48%;
       flex-direction: row-reverse;
       &:nth-child(even){
           flex-direction: row;
       }
   }
+  @include laptop-l-query{
+   width: 30%;
+
+}
   &__img{
   width: 100%;
   max-height: 215.7px;
   @include laptop-query{
+    width:53%;
       margin: $m-base;
   }
   &:hover{
@@ -313,13 +336,6 @@
       max-height:100%;
       width: 100%;
       color: $c-white;
-      background-color: #6e4a9e;
-      // &:nth-of-type(1){
-      
-      //  }
-      &:nth-child(2){
-        background-color: #6d6c6f;
-      }
       @include laptop-query{
           height: 215.7px;
           margin: $m-base;
@@ -343,24 +359,15 @@
       border-radius: 8px;
       padding:$p-base*.3 $p-base;
       position: absolute;
-      top: 57%;
-      left: 15%;
+      top: 51%;
+      left: 7%;
       display: block;
       background-color:$c-light-rose;
       color: $c-banana-sim-black;
       font-weight: $fw-bold;
       z-index: 3;
       
-      @include laptop-query{
-          &__btn:nth-child(odd){
-            top: 69%;
-            left: 4%;
-         }
-         &__btn:nth-child(even){
-          top: 69%;
-          left: 84%;
-         }
-  }
+   
 }
   &__btn:hover{
       background-color: $c-dark-green;
@@ -371,12 +378,13 @@
       text-transform: capitalize;
             }
 }
-// .card__body:nth-of-type(odd){
-//   background-color: #6d6c6f;
-//  }
-// .card__body:nth-child(even){
-//     background-color: #6e4a9e;
-//    }
+.card__btn--pure,.card__btn--lemon,.card__btn--thieves{
+  @include laptop-query{
+    top: 51%;
+      left: 69%;
+      
+ }
+}
 .testimonials{
   color :$c-white;
   @include flex-center;

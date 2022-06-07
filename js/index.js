@@ -186,11 +186,9 @@ const setStaggerAnimation = () => {
 
     //  start animation values
     const fromValues = {
-        opacity: 0.1,
+        opacity: 0,
         y: -50
-
     }
-
     //  end animation values
     const toValues = {
         opacity: 1,
@@ -208,27 +206,33 @@ const setStaggerAnimation = () => {
             amount: 2,
         }
     }
-    const fromValuesTwo = {
-        opacity: 0.002,
-        X: 150
 
+    //services card animation
+    const fromValuesTwo = {
+        opacity: 0,
+        y: -10,
+        scale: 0,
     }
 
     //  end animation values
     const toValuesTwo = {
         opacity: 1,
-        X: (index) => {
+        scale: 1,
+        y: (index) => {
             //  If laptop size
             //  Display in declining pattern
             if (currentWidth >= 1020)
-                return index * 50
+                return index * 90
 
             // Else, keeps all cards in same row
             return 0
         },
         stagger: {
-            each: 0.1,
-            amount: 3,
+            ease: "power1",
+            each: 1,
+            amount: .5,
+            scrub: 1,
+
         }
     }
     gsap.set('.card', fromValues)
@@ -264,7 +268,26 @@ const setStaggerAnimation = () => {
             gsap.set('.service-card', fromValuesTwo)
         }
     })
+
+    gsap.to(".hero__title", {
+        opacity: 0,
+        y: -8870,
+        scrollTrigger: {
+            trigger: '.hero__title',
+            start: 'top 50%',
+            end: 'center 50%',
+            markers: true,
+            scrub: 1
+        },
+        y: 0,
+        duration: 1,
+    })
+
+
+
 }
+
+
 
 var resizeTimeout = null
 
@@ -284,7 +307,7 @@ const setResizeListener = () => {
          * Only allow animation to run when resize ends for 2 seconds
          */
         resizeTimeout = setTimeout(() => {
-            clearResizeTimeout()
+            // clearResizeTimeout()
             setStaggerAnimation()   // Play animation // Re-position cards
         }, 2000)
     })

@@ -983,8 +983,9 @@ template {
 }
 @media screen and (min-width: 1020px) {
   .service__container {
-    max-width: 75%;
+    max-width: 100%;
     height: 500px;
+    flex-wrap: nowrap;
   }
 }
 
@@ -1012,7 +1013,7 @@ template {
 }
 @media screen and (min-width: 1020px) {
   .service-card {
-    flex: 0 0 27%;
+    flex: 0 0 24%;
     padding: 0 1rem;
     height: 15rem;
     margin: 1rem auto 1rem;
@@ -1132,6 +1133,15 @@ template {
     align-items: center;
   }
 }
+@media screen and (min-width: 1020px) {
+  .card-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+  }
+}
 
 .card {
   display: flex;
@@ -1146,6 +1156,12 @@ template {
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
   border: 2px solid hsl(0deg, 0%, 100%);
 }
+.card:nth-child(odd) {
+  background-color: #6e4a9e;
+}
+.card:nth-child(even) {
+  background-color: #6d6c6f;
+}
 .card:hover {
   filter: grayscale(0%);
 }
@@ -1157,10 +1173,16 @@ template {
 }
 @media screen and (min-width: 1020px) {
   .card {
+    width: 48%;
     flex-direction: row-reverse;
   }
   .card:nth-child(even) {
     flex-direction: row;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .card {
+    width: 30%;
   }
 }
 .card__img {
@@ -1169,6 +1191,7 @@ template {
 }
 @media screen and (min-width: 1020px) {
   .card__img {
+    width: 53%;
     margin: 1rem;
   }
 }
@@ -1183,10 +1206,6 @@ template {
   max-height: 100%;
   width: 100%;
   color: hsl(0deg, 0%, 100%);
-  background-color: #6e4a9e;
-}
-.card__body:nth-child(2) {
-  background-color: #6d6c6f;
 }
 @media screen and (min-width: 1020px) {
   .card__body {
@@ -1212,23 +1231,13 @@ template {
   border-radius: 8px;
   padding: 0.3rem 1rem;
   position: absolute;
-  top: 57%;
-  left: 15%;
+  top: 51%;
+  left: 7%;
   display: block;
   background-color: hsl(13.85deg, 35.14%, 92.75%);
   color: #0e0e0e;
   font-weight: 700;
   z-index: 3;
-}
-@media screen and (min-width: 1020px) {
-  .card__btn__btn:nth-child(odd) {
-    top: 69%;
-    left: 4%;
-  }
-  .card__btn__btn:nth-child(even) {
-    top: 69%;
-    left: 84%;
-  }
 }
 .card__btn:hover {
   background-color: hsl(265.71deg, 36.21%, 45.49%);
@@ -1237,6 +1246,13 @@ template {
   text-decoration: none;
   color: #0e0e0e;
   text-transform: capitalize;
+}
+
+@media screen and (min-width: 1020px) {
+  .card__btn--pure, .card__btn--lemon, .card__btn--thieves {
+    top: 51%;
+    left: 69%;
+  }
 }
 
 .testimonials {
