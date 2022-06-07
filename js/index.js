@@ -271,12 +271,11 @@ const setStaggerAnimation = () => {
 
     gsap.to(".hero__title", {
         opacity: 0,
-        y: -8870,
+
         scrollTrigger: {
             trigger: '.hero__title',
             start: 'top 50%',
             end: 'center 50%',
-            markers: true,
             scrub: 1
         },
         y: 0,
