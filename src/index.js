@@ -1,3 +1,5 @@
+
+
 // gsap.rregisterPlugin(scrollTrigger)
 
 // function init() {
@@ -116,6 +118,7 @@ const testimonials = document.querySelector(".main-testimonials").children;
 const angleRight = document.querySelector(".testimonials-nav__angle-right")
 const angleLeft = document.querySelector(".testimonials-nav__angle-left")
 const totalComments = testimonials.length
+
 /************adding next and previous ******/
 const totalImages = sliderImages.length;
 let index = 0;
@@ -184,11 +187,15 @@ gsap.registerPlugin(ScrollTrigger)
 const setStaggerAnimation = () => {
     ScrollTrigger.refresh()
 
+
+
+
     //  start animation values
     const fromValues = {
         opacity: 0,
         y: -50
     }
+
     //  end animation values
     const toValues = {
         opacity: 1,
@@ -268,22 +275,6 @@ const setStaggerAnimation = () => {
             gsap.set('.service-card', fromValuesTwo)
         }
     })
-
-    gsap.to(".hero__title", {
-        opacity: 0,
-
-        scrollTrigger: {
-            trigger: '.hero__title',
-            start: 'top 50%',
-            end: 'center 50%',
-            scrub: 1
-        },
-        y: 0,
-        duration: 1,
-    })
-
-
-
 }
 
 

@@ -483,7 +483,7 @@ template {
   height: 36px;
   padding: 0;
   background-color: hsl(13.85deg, 35.14%, 92.75%);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease;
   cursor: pointer;
 }
 @media screen and (min-width: 1020px) {
@@ -498,7 +498,7 @@ template {
   width: 17px;
   height: 2px;
   background-color: hsl(212deg, 27%, 19%);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease;
 }
 .header-nav__toggle-burger::before, .header-nav__toggle ::after {
   content: "";
@@ -613,7 +613,7 @@ template {
   flex-direction: column;
   padding-top: 6rem;
   transform: translateX(-300px);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 @media screen and (min-width: 1020px) {
   .navbar__list {
@@ -785,8 +785,8 @@ template {
   top: 100%;
   position: absolute;
   background: hsl(265.71deg, 36.21%, 45.49%);
-  -webkit-animation: slidex 2s;
-          animation: slidex 2s;
+  -webkit-animation: slidex 1s;
+          animation: slidex 1s;
 }
 @media screen and (min-width: 1020px) {
   .overlay::before {

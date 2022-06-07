@@ -1,3 +1,5 @@
+
+
 let i = 0;//current slide
 let j = 4;// total slides
 
@@ -25,14 +27,15 @@ let radioToogle = (num) => {
   });
   document.querySelector(".radio-container button:nth-child(" + num + ")").style.backgroundColor = "#6E4A9E";
 }
-// togling rodio buttons
+  // togling rodio buttons
 
-// let imagNav = (index) => {
-//   images.forEach(image => {
-//     image.classList.remove("show-img")
-//   });
-//   document.getElementById("img" + index).classList.add("show-img")
-// i = index - 1;
-// radioToogle(index);
-// }
+  // let imagNav = (index) => {
+  //   images.forEach(image => {
+  //     image.classList.remove("show-img")
+  //   });
+  //   document.getElementById("img" + index).classList.add("show-img")
+  // i = index - 1;
+  // radioToogle(index);
+  // }
+
 

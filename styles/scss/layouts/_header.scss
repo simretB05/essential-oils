@@ -22,7 +22,7 @@
             height: 36px;
             padding: 0;
             background-color: $c-light-rose;
-            transition: all .5s ease-in-out;
+            transition: all .5s ease;
             cursor: pointer;
             @include laptop-query{
                 display: none
@@ -34,7 +34,7 @@
             width: 17px;
             height:2px;
             background-color: $c-dark-desaturated-blue;
-            transition: all .5s ease-in-out;
+            transition: all .5s ease;
             }
             &-burger::before,::after{
                 content: '';
@@ -133,7 +133,7 @@
         flex-direction: column;
         padding-top:$p-base*6 ;
         transform: translateX(-300px);
-        transition: transform .5s ease-in-out;
+        transition: transform 1s ease-in-out;
         @include laptop-query{
             padding: 0;
             position: static;
@@ -232,7 +232,6 @@
     
     }
 }
-
 .navbar__submenu{
     list-style: none;
     display: flex;
@@ -279,7 +278,7 @@
         position: absolute;
         background: $c-dark-green;
         // z-index: 180;
-        animation: slidex 2s;
+        animation: slidex 1s;
         @include laptop-query{
             display: none;
             animation: none
