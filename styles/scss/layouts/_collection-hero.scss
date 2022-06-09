@@ -433,5 +433,39 @@ brightness(228%) contrast(100%);
 svg:hover {
   fill: $c-Light-grayish-blue;
 }
-
-
+.review-holder{
+width: 89%;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+@include tablet-query{
+ max-width: 46%;
+}
+@include laptop-query{
+ max-width: 48%;
+}
+@include laptop-l-query{
+  max-width: 26%;
+}
+}
+.reviews{
+  width: 43%;
+  margin: 0;
+  @include font-family-normal;
+ @include flex-space-bteween;
+}
+.reviews span{
+  margin: 0  auto;
+  text-transform: capitalize;
+  color: $c-banana-sim-black;
+  letter-spacing: 1px;
+}
+.stars_list{
+  display: flex;
+  list-style: none;
+}
+.stars_list li i{
+  color: $c-dark-green;
+  font-size: 15px;
+  padding: 0 5px;
+}

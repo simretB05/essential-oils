@@ -1,6 +1,7 @@
 .header{
     width: 100%;
     height: 5rem;
+    @include font-family-normal;
     background-color: $c-light-rose;
     @include flex-space-bteween;
     position: fixed;
@@ -193,7 +194,6 @@
         &__item-link--rose{
             color: $c-light-rose;
             text-decoration: none;
-            @include font-family-normal;
             @include laptop-query{
                 color: $c-dark-green;
             }
@@ -229,7 +229,29 @@
                 display: block;
             }
         }
-    
+    }
+    &__cart{
+        display: flex;
+        &-text{
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            text-align: center;
+            top: 18px;
+            right: 19px;
+            color:$c-dark-green;
+            font-size: 12px;
+            font-weight: 900;
+            z-index: 4;
+            margin: 0;
+            @include laptop-query{
+                top: 18px;
+                right: 35px;
+            }
+        }
+        &-img{
+            fill:$c-dark-green
+        }
     }
 }
 .navbar__submenu{
@@ -250,7 +272,7 @@
     }
 }
 .navToggle-nonActive{
-    transform: translateX(-200px);
+    transform: translateX(-300px);
     opacity: .9;
     transition: transform 1s ease-in-out;
     @include laptop-query{
@@ -293,7 +315,9 @@
         }
     }
 }
-
+.hide {
+    display: none;
+}
 // .overlay-remove {
 //     &::before {
 //         content: "";

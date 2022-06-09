@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/97c0fa5216.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
   <link rel="stylesheet" href="../styles/scss/pages-style/collection.css">
   <title>essential oils</title>
 </head>
@@ -34,11 +36,37 @@
                 <li class="navbar__list__item navbar__list__item-imgCard"><img class="navbar__list__item-img"src="../assets/images/avator-image.png" alt=""></li>
             </ul>
             <div class="navbar__cart">
+                <p class="navbar__cart-text">0</p>
                 <img class="navbar__cart-img" src="../assets/icons/icon-cart.svg" alt="">
             </div>
         </nav>
        </header> 
     <section class="content">
+        <section class="shoping-cart">
+            <div class="shoping-cart__popup">
+              <h3 class="shoping-cart__titlecart">Cart
+              </h3>
+              <hr class="shoping-cart__hr">
+              <div class="shoping-cart__main-cont">
+                <div class="shoping-cart__container">
+                  <div class="shoping-cart__img-container">
+                    <img class="shoping-cart__img" src="./assets/images/image-product-1-thumbnail.jpg" alt="">
+                  </div>
+                  <div class="shoping-cart__text-container">
+                    <h3 class="shoping-cart__title">Autumn Limited Edition...</h3>
+                    <p class="shoping-cart__text"> $<span class="shoping-cart__price">0</span> x <span
+                        class="shoping-cart__number"> </span> $<span class="shoping-cart__span"></span>.00</p>
+                  </div>
+                  <button class="shoping-cart__delete"><img src="./assets/icons/icon-delete.svg" alt=""></button>
+                </div>
+                <button class="shoping-cart__btn">Checkout</button>
+              </div>
+              <div class="shoping-cart__empty">
+                <h3 class="shoping-cart__title">your cart is empty</h3>
+              </div>
+            </div>
+            </div>
+          </section>
         <div class="collection">
             <div class="collection-slider">
                 <div class="collection__navigation">
@@ -87,7 +115,19 @@
         </div>
         <div class="products__discription"> 
          <div id="pure" class="pure">
-            <h3 class="pure__title">Purification Essential oil</h3>
+            <div class="review-holder">
+                <h3 class="pure__title">Purification Essential oil</h3>
+                <div class="reviews">
+                    <ul class="stars_list">
+                        <span>reviews</span>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                    </ul>
+                </div>
+            </div>
             <div class="pure-card">
                 <div class="pure-card__img">
                     <img class="pure-card__img-container" src="../assets/images/summer4.jpg" alt="">
@@ -113,18 +153,10 @@
                             </tr>
                             <tr>
                                 <td class="pure-card__table-data">
-                                    <p>wholesale</p>
-                                </td>
-                                <td class="pure-card__table-data">
-                                    <p>$19.75</p>
-                                </td>
-                                </tr>
-                            <tr>
-                                <td class="pure-card__table-data">
                                     <p>retail</p>
                                 </td>
                                     <td class="pure-card__table-data">
-                                    <p>$25.99</p>
+                                    <p class="pure__price">$25.99</p>
                                 </td>
                             </tr>
                     </tbody>
@@ -134,11 +166,11 @@
             <div class="counter-section">
                   <div class="counter__container">
                     <button class="counter__btn-minus">
-                      <img src="../assets/icons/icon-plus.svg" alt="">
+                      <img src="../assets/icons/icon-minus.svg" alt="">
                     </button>
                     <p class="counter__text">0</p>
                     <button class="counter__btn-plus">
-                      <img src="../assets/icons/icon-minus.svg" alt="">
+                      <img src="../assets/icons/icon-plus.svg" alt="">
                     </button>
                   </div>
                 
@@ -183,7 +215,19 @@
           </div>
         </div>
         <div id="lav" class="pure">
-            <h3 class="pure__title">Lavender Essential oil</h3>
+            <div class="review-holder">
+                <h3 class="pure__title">Lavender Essential oil</h3>
+                <div class="reviews">
+                    <ul class="stars_list">
+                        <span>reviews</span>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                    </ul>
+                </div>
+            </div>
             <div class="pure-card">
                 <div class="pure-card__img">
                     <img class="pure-card__img-container" src="../assets/images/images6.jpg" alt="lavandar bottle image">                </div>
@@ -278,7 +322,19 @@
             </div>
         </div>
         <div id="lemon" class="pure">
-            <h3 class="pure__title">Lemon Essential oil</h3>
+            <div class="review-holder">
+                <h3 class="pure__title">Lemon Essential oil</h3>
+                <div class="reviews">
+                    <ul class="stars_list">
+                        <span>reviews</span>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                        <li><i class="ri-star-fill"></i></li>
+                    </ul>
+                </div>
+            </div>
             <div class="pure-card">
                 <div class="pure-card__img">
                     <img class="pure-card__img-container" src="../assets/images/LemonEOHeader.jpg" alt="">
@@ -325,14 +381,13 @@
             <div class="counter-section">
                   <div class="counter__container">
                     <button class="counter__btn-minus">
-                      <img src="../assets/icons/icon-plus.svg" alt="">
+                      <img src="../assets/icons/icon-minus.svg" alt="">
                     </button>
                     <p class="counter__text">0</p>
                     <button class="counter__btn-plus">
-                      <img src="../assets/icons/icon-minus.svg" alt="">
+                      <img src="../assets/icons/icon-plus.svg" alt="">
                     </button>
                   </div>
-                
                 <button class="cart">
                   <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
                     <path

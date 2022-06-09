@@ -187,9 +187,6 @@ gsap.registerPlugin(ScrollTrigger)
 const setStaggerAnimation = () => {
     ScrollTrigger.refresh()
 
-
-
-
     //  start animation values
     const fromValues = {
         opacity: 0,
@@ -313,3 +310,4 @@ const clearResizeTimeout = () => {
 
 setStaggerAnimation()
 setResizeListener()
+
