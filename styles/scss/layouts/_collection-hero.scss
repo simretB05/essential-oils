@@ -192,10 +192,10 @@ brightness(228%) contrast(100%);
     }
 }
 
-.pure-card{
+.product-card{
         &__img{
             width: 70%;
-            margin: 0 auto;
+            margin: $m-base auto;
             @include font-family-normal;
             @include tablet-query{
               width: 36%;
@@ -321,22 +321,28 @@ brightness(228%) contrast(100%);
           width:8%;
         }
     }
-    &__text {
-        color: $c-light-rose;
-        font-weight: $fw-bold;
+    &__text{
+      width: 22%;
+      background-color: $c-dark-green;
+      border: none;
+      text-align: center;
+      color: $c-light-rose;
+      font-weight: $fw-bold;
         
     }
-    &__btn-plus {
-        border: none;
-        @include flex-center;
-        background-color: transparent;
-        filter: invert(100%) sepia(125%) saturate(88%) hue-rotate(18deg)
-        brightness(228%) contrast(100%);
-        &:hover {
-            opacity: 0.5;
-        }
+    &__btn-plus{
+          width: 12%;
+          border: none;
+          // @include flex-center;
+          background-color: transparent;
+          filter: invert(100%) sepia(125%) saturate(88%) hue-rotate(18deg)
+          brightness(228%) contrast(100%);
+          &:hover {
+              opacity: 0.5;
+          }
     }
     &__btn-minus {
+      width: 12%;
         border: none;
         @include flex-center;
         background-color: transparent;

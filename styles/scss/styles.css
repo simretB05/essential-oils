@@ -858,16 +858,16 @@ template {
 }
 
 .shoping-cart {
-  display: block;
   margin: auto;
-  max-width: 60%;
+  width: 66%;
   height: 100vh;
   background-color: hsl(13.85deg, 35.14%, 92.75%);
   font-family: "Kumbh Sans";
   position: absolute;
   top: 80px;
-  left: 172px;
+  left: 125px;
   z-index: 4;
+  display: none;
 }
 @media screen and (min-width: 768px) {
   .shoping-cart {
@@ -962,6 +962,20 @@ template {
   margin: 0 auto;
   padding: 1rem;
   text-transform: capitalize;
+}
+
+.popup-show {
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  text-align: center;
+  top: 27px;
+  color: white;
+  background-color: hsl(26deg, 100%, 55%);
+  border-radius: 50%;
+  font-weight: 700;
+  z-index: 4;
+  display: block;
 }
 
 .hero {
@@ -1856,41 +1870,41 @@ template {
   font-family: "Kumbh Sans";
 }
 
-.pure-card__img {
+.product-card__img {
   width: 70%;
-  margin: 0 auto;
+  margin: 1rem auto;
   font-family: "Kumbh Sans";
 }
 @media screen and (min-width: 768px) {
-  .pure-card__img {
+  .product-card__img {
     width: 36%;
   }
 }
 @media screen and (min-width: 1020px) {
-  .pure-card__img {
+  .product-card__img {
     width: 40%;
     height: 79%;
   }
 }
 @media screen and (min-width: 1440px) {
-  .pure-card__img {
+  .product-card__img {
     width: 20%;
     height: 79%;
   }
 }
-.pure-card__img-container {
+.product-card__img-container {
   font-family: "Kumbh Sans";
   margin: 0 auto;
   width: 100%;
   border: 1px solid #0e0e0e;
 }
 @media screen and (min-width: 1020px) {
-  .pure-card__img-container {
+  .product-card__img-container {
     width: 100%;
     height: 79%;
   }
 }
-.pure-card__container {
+.product-card__container {
   width: 100%;
   font-family: "Kumbh Sans";
   display: flex;
@@ -1898,7 +1912,7 @@ template {
   justify-content: center;
   align-items: center;
 }
-.pure-card__copy {
+.product-card__copy {
   font-family: "Kumbh Sans";
   width: 100%;
   text-align: center;
@@ -1906,12 +1920,12 @@ template {
   color: rgb(110, 108, 108);
 }
 @media screen and (min-width: 768px) {
-  .pure-card__copy {
+  .product-card__copy {
     width: 60%;
     margin: 0 auto;
   }
 }
-.pure-card__table {
+.product-card__table {
   width: 50%;
   height: 40%;
   border: 1px solid black;
@@ -1921,13 +1935,13 @@ template {
   color: #565657;
 }
 @media screen and (min-width: 768px) {
-  .pure-card__table {
+  .product-card__table {
     width: 30%;
     height: 20%;
   }
 }
 @media screen and (min-width: 1440px) {
-  .pure-card__table {
+  .product-card__table {
     width: 14%;
     height: 79%;
   }
@@ -1991,14 +2005,16 @@ template {
   }
 }
 .counter__text {
+  width: 22%;
+  background-color: hsl(265.71deg, 36.21%, 45.49%);
+  border: none;
+  text-align: center;
   color: hsl(13.85deg, 35.14%, 92.75%);
   font-weight: 700;
 }
 .counter__btn-plus {
+  width: 12%;
   border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: transparent;
   filter: invert(100%) sepia(125%) saturate(88%) hue-rotate(18deg) brightness(228%) contrast(100%);
 }
@@ -2006,6 +2022,7 @@ template {
   opacity: 0.5;
 }
 .counter__btn-minus {
+  width: 12%;
   border: none;
   display: flex;
   align-items: center;

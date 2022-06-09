@@ -45,17 +45,13 @@ let radioToogle = (num) => {
 
 let navbarText = document.querySelector(".navbar__text")
 const popup = document.querySelector('.shoping-cart')
-let add = document.querySelector(".counter__btn-plus")[0];
-let remove = document.querySelector(".counter__btn-minus");
+let add = document.getElementsByClassName("counter__btn-plus");
+let remove = document.getElementsByClassName("counter__btn-minus");
 let counterInteger = document.querySelector(".counter__text")
-let intCart = document.querySelector('.navbar__text')
+let intCart = document.querySelector('.navbar__cart-text')
 let cartBtn = document.querySelector('.navbar__cart-img')
 let mainPop = document.querySelector('.shoping-cart__main-cont')
 let empty = document.querySelector('.shoping-cart__empty')
-
-
-
-
 
 
 let integer = 0;
@@ -63,23 +59,14 @@ let integer = 0;
 
 let products = [];
 
-let item = function (itemNo, product, wholeSalePrice, retail, count) {
+let item = function (itemNo, product, retail, count) {
   this.itemNo = itemNo
   this.product = product
   this.retail = retail
   this.count = count
 };
 /***********add to  cart ****************/
-function addToCartClicked(event) {
-  let button = event.target
-  let shopItem = button.parentElement.parentElement
-  let title = shopItem.getElementsByClassName('pure__title')[0].innerText
-  let price = shopItem.getElementsByClassName('pure__price')[0].innerText
-  // let imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
-  addItemToCart(title, price)
-  updateCartTotal()
-}
-function addItemToCart(itemNo, product, wholeSalePrice, retail, count) {
+function addItemToCart(itemNo, product, retail, count) {
   for (let i in products) {
     if (products[i].itemNo === itemNo) {
       products[i].count++;
@@ -88,94 +75,56 @@ function addItemToCart(itemNo, product, wholeSalePrice, retail, count) {
       return;
     }
   }
-  let newItem = new item(itemNo, retail, wholeSalePrice, product, count);
+  let newItem = new item(itemNo, retail, product, count);
 
   products.push(newItem);
-
-
-  // add.forEach(itemAdd => {
-  add.addEventListener("click", (e) => {
-    // if (integer < 0) {        // empty.classList.add('hide')
-
-    //     int.textContent = 0
-    //     removeItemFromCart("discription")
-    //     empty.classList.add("show-up")
-    //     removeItemFromCart("discription", 125.00, 1)
-
-    // // }
-    // else {
-    for (let x = 0; x < add.length; x++) {
-      if (integer += 1) {
-        counterInteger.textContent = integer
-        console.log(integer)
-        empty.classList.add("hide")
-        addItemToCart(itemNo, retail, wholeSalePrice, product, count)
-
-      }
-
-      else {
-        if (integer < 0) {
-          int.textContent === 0
-          empty.classList.add("hide")
-
-        }
-
-      }
-    }
-  });
-
 }
 
+//adding to cart
+for (let i = 0; i < add.length; i++) {
+  let button = add[i];
+  button.addEventListener('click', (e) => {
+    let buttonClicked = e.target;
+    let addInput = buttonClicked.parentElement.children[1];
+    let inputValue = addInput.value;
+    let newValue = parseInt(inputValue) + 1;
+    addInput.value = newValue;
+
+  })
+  addItemToCart('5ml', '$25.99', 1)
+}
 // /***********remove from cart  ****************/
+for (let i = 0; i < remove.length; i++) {
+  let button = remove[i];
+  button.addEventListener('click', (e) => {
+    let buttonClicked = e.target;
+    console.log(buttonClicked);
+    let addInput = buttonClicked.parentElement.children[1];
+    let inputValue = addInput.value;
+    let newValue = parseInt(inputValue) - 1;
+    newValue >= 0 ? addInput.value = newValue : newValue == 0;
+    console.log(newValue)
 
-// // function removeItemFromCart(discription, price, count) {
+  })
+}
 
-// //     for (var i in products) {
-// //         // if (products[i].count === 0) {
-// //         //     products[i].discription === discription
-// //         //     products.splice(i, 1);
-// //         //     return false
-// //         // }
+cartBtn.addEventListener('click', () => {
+  intCart.classList.toggle('show');
+  popup.classList.toggle('show')
+  mainPop.classList.add("show-popup");
+  empty.classList.add("hide")
+  empty.classList.remove("show-up")
+  if (integer > 1) {
+    mainPop.classList.add("show-popup");
+    empty.classList.add("hide")
+    empty.classList.remove("show-up")
 
-
-// //         if (products[i].discription === discription) {
-
-// //             products[i].count--;// cart[i].count = cart[i].count -1
-// //             if (products[i].count <= 0) {
-// //                 products.splice(i, 1);
-// //             }
-// //         }
-
-// //     }
-// // }
-
-
-
-// // remove.addEventListener("click", (e) => {
-// //     e.preventDefault();
-
-// //     integer -= 1
-
-// //     if (integer < 0) {
-// //         integer = 0
-// //         mainPop.classList.remove("show-popup");
-// //         empty.classList.add("hide");
-
-// //     }
-// //     else {
-// //         // mainPop.classList.remove("show-popup");
-// //         empty.classList.add("hide");
-// //         mainPop.classList.remove("show-popup")
-
-// //     }
-
-// //     int.textContent = integer
-// //     intCart.textContent = integer
-// //     mainPop.classList.add("show-popup")
-// //     empty.classList.remove("show-up")
-// //     removeItemFromCart("discription", 125.00, 1)
-// // });
-
+  }
+  else if (integer < 1) {
+    mainPop.classList.remove("show-popup");
+    empty.classList.add("show-up")
+  }
+});
 
 // // function initialise() {
 // //     loadCart();
