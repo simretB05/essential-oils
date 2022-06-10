@@ -55,14 +55,13 @@
   &__main-cont {
       display: flex;
       flex-direction: column;
-      padding: $p-base 0;
+      padding: $p-base*.7;
       // display: none;
   }
   &__container {
       display: flex;
       flex-direction: column;
       margin-bottom: 1rem;
-      padding: 1.5rem 1.5rem 0 1.5rem;
   }
 &__img-container{
     display: flex;
@@ -71,7 +70,7 @@
 }
 
   &__title {
-      font-size: 16px;
+      font-size: .8rem;
       color: $c-dark-green;
       font-weight: $fw-normal;
   }
@@ -84,12 +83,11 @@
       color: $c-banana-sim-black;
   }
   &__img {
-      width: 48px;
+      width: 69px;
       border-radius: 5px;
   }
  &__counter{
     margin-bottom: $m-base;
-    padding-left: $p-base*9.9;
 
  }
   &__btn {
