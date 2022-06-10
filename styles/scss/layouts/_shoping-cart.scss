@@ -60,18 +60,22 @@
   }
   &__container {
       display: flex;
+      flex-direction: column;
       margin-bottom: 1rem;
       padding: 1.5rem 1.5rem 0 1.5rem;
   }
+&__img-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
   &__title {
-      padding: 0 1rem;
       font-size: 16px;
       color: $c-dark-green;
       font-weight: $fw-normal;
   }
   &__text {
-      padding: 0 1rem;
       color: $c-dark-green;
       font-weight: $fw-normal;
   }
@@ -83,11 +87,11 @@
       width: 48px;
       border-radius: 5px;
   }
-  &__delete {
-      border: none;
-      padding: 0 0 0 3rem;
-      background-color: transparent;
-  }
+ &__counter{
+    margin-bottom: $m-base;
+    padding-left: $p-base*9.9;
+
+ }
   &__btn {
       background-color: $c-Orange;
       border: none;

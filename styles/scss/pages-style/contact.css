@@ -2397,17 +2397,21 @@ svg:hover {
 }
 .shoping-cart__container {
   display: flex;
+  flex-direction: column;
   margin-bottom: 1rem;
   padding: 1.5rem 1.5rem 0 1.5rem;
 }
+.shoping-cart__img-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 .shoping-cart__title {
-  padding: 0 1rem;
   font-size: 16px;
   color: hsl(265.71deg, 36.21%, 45.49%);
   font-weight: 300;
 }
 .shoping-cart__text {
-  padding: 0 1rem;
   color: hsl(265.71deg, 36.21%, 45.49%);
   font-weight: 300;
 }
@@ -2419,10 +2423,9 @@ svg:hover {
   width: 48px;
   border-radius: 5px;
 }
-.shoping-cart__delete {
-  border: none;
-  padding: 0 0 0 3rem;
-  background-color: transparent;
+.shoping-cart__counter {
+  margin-bottom: 1rem;
+  padding-left: 9.9rem;
 }
 .shoping-cart__btn {
   background-color: hsl(26deg, 100%, 55%);

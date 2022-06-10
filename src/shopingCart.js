@@ -1,6 +1,6 @@
 productsInCart = [];
 
-const parentElement = document.querySelector('.shoping-cart__main-cont');
+const parentElement = document.querySelector('.buyItems');
 const cartSumPrice = document.querySelector('.navbar__cart-text');
 const products = document.querySelectorAll(".products__discription");
 console.log(products)
@@ -17,19 +17,23 @@ const updateShoppingCartHTML = function () {  // 3
   localStorage.setItem('shoppingCart', JSON.stringify(productsInCart));
   if (productsInCart.length > 0) {
     let result = productsInCart.map(product => {
-      return `
-				<li class="buyItem">
-					<img src="${product.image} ">
-					<div>
-						<h5>${product.name}</h5>
-						<h6>$${product.price}</h6>
-						<div>
+      return `<div class="shoping-cart__main-cont">
+        <div class="shoping-cart__container">
+          <div class="shoping-cart__img-container">
+            <img class="shoping-cart__img" src="${product.image}" alt=" essential oil image">
+          
+          <div class="shoping-cart__text-container">
+            <h3 class="shoping-cart__title">${product.name}</h3>
+            <p class="shoping-cart__text">$<span class="shoping-cart__price">${product.price}</span> x <span
+                class="shoping-cart__number"> </span> $<span class="shoping-cart__span"></span>.00</p>
+          </div>
+          </div>
+          <div class="shoping-cart__counter">
 							<button class="button-minus" data-id=${product.id}>-</button>
 							<span class="countOfProduct">${product.count}</span>
 							<button class="button-plus" data-id=${product.id}>+</button>
-						</div>
 					</div>
-				</li>`
+      </div>`
     });
     parentElement.innerHTML = result.join('');
     document.querySelector('.checkout').classList.remove('hidden');
@@ -61,14 +65,15 @@ products.forEach(item => {   // 1
       const productID = e.target.dataset.productId;
       const productName = item.querySelector('.pure__title').textContent;
       const productPrice = item.querySelector('.product__price').textContent;
+      console.log(productPrice)
       const productImage = item.querySelector('img').src;
       let product = {
         name: productName,
         image: productImage,
         id: productID,
-        count: 1,
-        price: +productPrice,
-        basePrice: +productPrice,
+        count: 0,
+        price: productPrice,
+        // basePrice: +productPrice,
       }
       updateProductsInCart(product);
       updateShoppingCartHTML();
