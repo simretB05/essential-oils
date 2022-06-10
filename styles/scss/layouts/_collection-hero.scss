@@ -281,7 +281,7 @@ brightness(228%) contrast(100%);
   @include font-family-normal;
     margin: $m-base;
     @include flex-center;
-    flex-direction: row;
+    flex-direction: column;
     @include laptop-query {
         display: flex;
         justify-content: center;
@@ -358,7 +358,7 @@ brightness(228%) contrast(100%);
     background-color: $c-banana-mania;
     border: none;
     margin: 1rem 0;
-    width: 38%;
+    width: 77%;
     height: 38px;
     display: flex;
     justify-content: center;
@@ -439,10 +439,10 @@ brightness(228%) contrast(100%);
 svg:hover {
   fill: $c-Light-grayish-blue;
 }
-.review-holder{
+.product-section{
 width: 89%;
 margin: 0 auto;
-display: flex;
+@include flex-center;
 flex-direction: column;
 @include tablet-query{
  max-width: 46%;
@@ -455,10 +455,17 @@ flex-direction: column;
 }
 }
 .reviews{
-  width: 43%;
+  width: 77%;
   margin: 0;
   @include font-family-normal;
  @include flex-space-bteween;
+ @include tablet-query{
+  width: 88%
+}
+ @include laptop-query{
+  width: 53%;
+ }
+
 }
 .reviews span{
   margin: 0  auto;
