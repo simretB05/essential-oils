@@ -39,18 +39,26 @@
             </div>
         </nav>
         <div class="shoping-cart">
-            <div class="shoping-cart__popup">
-              <h3 class="shoping-cart__titlecart">Cart
-              </h3>
-              <hr class="shoping-cart__hr">
-              <div class="shoping-cart__main-cont">
-                <div class="shoping-cart__container">
-                  <div class="shoping-cart__img-container">
-                  </div>
-                  <div id="buyItems">
-                </div>
-            </div>
-        </div>
+			<div class="shoping-cart__popup">
+				<h3 class="shoping-cart__titlecart">Your Cart Items
+				</h3>
+				<hr class="shoping-cart__hr">
+			  <ul class="shoping-cart__items">
+				
+				</ul>
+				<hr class="shoping-cart__hr">
+
+				<button class="shoping-cart__checkOutBtn checkOut">Checkout</button>
+			</div>
+			<div class="pay-options">
+        <ul class="pay-options__list">
+					<li class="pay-option__item"><i class="fa-brands fa-paypal"></i></li>
+					<li class="pay-option__item"><i class="fa-brands fa-apple-pay"></i></li>
+					<li class="pay-option__item"><i class="fa-brands fa-google-pay"></i></li>
+					<li class="pay-option__item"><i class="fa-brands fa-cc-visa"></i></li>
+				</ul>
+			</div>
+	</div>
     </header>
         <section class="content">
             <div class="main-content">
@@ -214,5 +222,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>     
     <script src="./src/index.js"></script>
+    <script src="./src/shopingCart.js"></script>
+
 </body>
 </html>
