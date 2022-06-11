@@ -95,7 +95,7 @@
             border: 1px solid $c-dark-green;
             padding: 0 $p-base*.4;
   }
-  &__CheckOutBtn{
+  &__checkOutBtn{
     background-color: $c-dark-green;
     border: none;
     border-radius: 7px;
@@ -109,6 +109,9 @@
       margin: 0 auto;
       padding: 1rem;
       text-transform: capitalize;
+      color:$c-light-body;
+      font-weight: $fw-normal;
+      text-align: center;
   }
 }
 .popup-show {
@@ -151,4 +154,7 @@
     margin: 0;
     padding: 0;
 
+}
+.hidden{
+    display: none;
 }

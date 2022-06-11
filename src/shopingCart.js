@@ -24,8 +24,10 @@ const updateShoppingCartHTML = function () {  // 3
                                 <div class="shoping-cart__text-container">
                                 <h3 class="shoping-cart__title">${product.name}</h3>
                                 <p class="shoping-cart__text"><span class="shoping-cart__price">${product.price}</span> x <span
-                                class="shoping-cart__number"> </span> <span class="shoping-cart__span"></span>${product.count}</p>
-                            </div>
+                                class="shoping-cart__number" </span> <span class="shoping-cart__span"></span>${product.count}
+                                </span><span class="shoping-cart__total">${product.count * product.price}</span></p>
+
+                                </div>
                         </div>
                         <div>
                             <button class="shoping-cart__btn__minus" data-id=${product.id}>-</button>
@@ -37,13 +39,13 @@ const updateShoppingCartHTML = function () {  // 3
         console.log(result);
         parentElement.innerHTML = result.join('');
         console.log(result);
-        document.querySelector('.checkout').classList.remove('hidden');
+        document.querySelector('.checkOut').classList.remove('hidden');
         cartSumPrice.innerHTML = '$' + countTheSumPrice();
 
     }
     else {
-        document.querySelector('.checkout').classList.add('hidden');
-        parentElement.innerHTML = '<h4 class="empty">Your shopping cart is empty simret</h4>';
+        document.querySelector('.checkOut').classList.add('hidden');
+        parentElement.innerHTML = '<h4 class="shoping-cart__empty">cart is empty</h4>';
         cartSumPrice.innerHTML = '';
     }
 }
@@ -53,12 +55,12 @@ function updateProductsInCart(product) { // 2
         if (productsInCart[i].id == product.id) {
             productsInCart[i].count += 1;
             productsInCart[i].price = productsInCart[i].basePrice * productsInCart[i].count;
+            // productTotal[i].total = productsInCart[i].length * productsInCart[i].count;
             return;
         }
     }
     productsInCart.push(product);
 }
-
 
 products.forEach(item => {   // 1
     item.addEventListener('click', (e) => {
@@ -66,6 +68,8 @@ products.forEach(item => {   // 1
             const productID = e.target.dataset.productId;
             const productName = item.querySelector('.pure__title').textContent;
             const productPrice = item.querySelector('.product__price').textContent;
+            // const totalPrice = item.querySelector('.shoping-cart__total').textContent;
+
             console.log(productPrice)
             const productImage = item.querySelector('img').src;
             let product = {
@@ -74,6 +78,7 @@ products.forEach(item => {   // 1
                 id: productID,
                 count: 0,
                 price: productPrice,
+                // total: totalPrice,
                 // basePrice: +productPrice,
             }
             updateProductsInCart(product);
