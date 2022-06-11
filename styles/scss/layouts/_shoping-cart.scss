@@ -7,8 +7,9 @@
   position: absolute;
   top: 80px;
   left: 125px;
-  z-index: 4;
-  // display: none;
+  z-index: -1;
+  transform: translateX(300px);
+  transition: transform 1s ease;
   @include tablet-query {
       margin: 0 auto;
       width: 56%;
@@ -157,4 +158,9 @@
 }
 .hidden{
     display: none;
+}
+.removeShopingCart{
+    transform: translateX(0);
+    transition: transform 1s ease-in-out;
+   
 }

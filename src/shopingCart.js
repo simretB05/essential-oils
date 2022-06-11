@@ -3,6 +3,10 @@ productsInCart = [];
 const parentElement = document.querySelector('.shoping-cart__items');
 const cartSumPrice = document.querySelector('.navbar__cart-text');
 const products = document.querySelectorAll(".products__discription");
+const shopingCart = document.querySelector('.shoping-cart')
+
+let cartItem = document.querySelector('.navbar__cart');
+
 console.log(products)
 
 const countTheSumPrice = function () { // 4
@@ -112,3 +116,11 @@ parentElement.addEventListener('click', (e) => { // Last
 });
 
 updateShoppingCartHTML();
+
+cartItem.addEventListener("click", () => {
+    console.log('clicked')
+    shopingCart.classList.toggle('removeShopingCart')
+
+
+
+})
