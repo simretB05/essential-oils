@@ -1,17 +1,14 @@
 .shoping-cart {
   margin: auto;
   width: 66%;
-  // display: none;
   height: 100vh;
   background-color: $c-light-rose;
   @include font-family-normal;
-  // border-radius: 15px;
   position: absolute;
   top: 80px;
   left: 125px;
   z-index: 4;
   // display: none;
-
   @include tablet-query {
       margin: 0 auto;
       width: 56%;
@@ -19,7 +16,6 @@
       left: 336px;
   }
   @include laptop-query {
-      // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
       width: 36%;
       top: 7.6%;
       /* right: -102%; */
@@ -36,7 +32,6 @@
       flex-direction: column;
       justify-content: center;
       align-content: center;
-      // padding: 0 $p-base;
   }
   &__titlecart {
       font-weight: $fw-black;
@@ -51,6 +46,9 @@
       color: $c-dark-green;
       margin: 0;
       opacity: 0.3;
+  }
+  &__items{
+      padding: 0;
   }
   &__main-cont {
       display: flex;
@@ -88,17 +86,24 @@
   }
  &__counter{
     margin-bottom: $m-base;
-
  }
-  &__btn {
-      background-color: $c-Orange;
-      border: none;
-      border-radius: 7px;
-      padding: 1.1rem;
-      color: $c-dark-green;
-      font-weight: $fw-bold;
-      margin: 0 1.5rem;
-      font-size: 1rem;
+  &__btn__minus, &__btn__plus {
+    text-align: center;
+    border: 1px solid $c-dark-green;
+  }
+  &__countOfProduct{
+            border: 1px solid $c-dark-green;
+            padding: 0 $p-base*.4;
+  }
+  &__CheckOutBtn{
+    background-color: $c-dark-green;
+    border: none;
+    border-radius: 7px;
+    padding: .6rem;
+    color: $c-white;
+    font-weight: $fw-black;
+    margin: 1.5rem;
+    font-size: .9rem;
   }
   &__empty {
       margin: 0 auto;
@@ -126,4 +131,24 @@
 .buyItem img{
     width: 50px;
     height: 50px;
+}
+.pay-options{
+    width: 70%;
+    margin: 0 auto;
+
+&__list{
+    @include flex-space-bteween;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+
+}
+}
+.fa-paypal,.fa-apple-pay,.fa-google-pay,.fa-cc-visa{
+    color: $c-dark-green;
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+
 }

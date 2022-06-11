@@ -2390,6 +2390,9 @@ svg:hover {
   margin: 0;
   opacity: 0.3;
 }
+.shoping-cart__items {
+  padding: 0;
+}
 .shoping-cart__main-cont {
   display: flex;
   flex-direction: column;
@@ -2425,15 +2428,23 @@ svg:hover {
 .shoping-cart__counter {
   margin-bottom: 1rem;
 }
-.shoping-cart__btn {
-  background-color: hsl(26deg, 100%, 55%);
+.shoping-cart__btn__minus, .shoping-cart__btn__plus {
+  text-align: center;
+  border: 1px solid hsl(265.71deg, 36.21%, 45.49%);
+}
+.shoping-cart__countOfProduct {
+  border: 1px solid hsl(265.71deg, 36.21%, 45.49%);
+  padding: 0 0.4rem;
+}
+.shoping-cart__CheckOutBtn {
+  background-color: hsl(265.71deg, 36.21%, 45.49%);
   border: none;
   border-radius: 7px;
-  padding: 1.1rem;
-  color: hsl(265.71deg, 36.21%, 45.49%);
-  font-weight: 700;
-  margin: 0 1.5rem;
-  font-size: 1rem;
+  padding: 0.6rem;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 900;
+  margin: 1.5rem;
+  font-size: 0.9rem;
 }
 .shoping-cart__empty {
   margin: 0 auto;
@@ -2463,4 +2474,25 @@ svg:hover {
 .buyItem img {
   width: 50px;
   height: 50px;
+}
+
+.pay-options {
+  width: 70%;
+  margin: 0 auto;
+}
+.pay-options__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.fa-paypal, .fa-apple-pay, .fa-google-pay, .fa-cc-visa {
+  color: hsl(265.71deg, 36.21%, 45.49%);
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
 }/*# sourceMappingURL=contact.css.map */
