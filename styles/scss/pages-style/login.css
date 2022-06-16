@@ -844,6 +844,11 @@ template {
   }
 }
 
+.removeShopingCart {
+  transform: translateX(0);
+  transition: transform 1s ease-in-out;
+}
+
 .hide {
   display: none;
 }
@@ -2336,14 +2341,15 @@ svg:hover {
 }
 
 .shoping-cart {
+  padding: 1rem;
   margin: auto;
-  width: 73%;
+  width: 80%;
   height: 100vh;
   background-color: hsl(13.85deg, 35.14%, 92.75%);
   font-family: "Kumbh Sans";
   position: absolute;
   top: 80px;
-  left: 125px;
+  left: 20%;
   z-index: -1;
   transform: translateX(300px);
   transition: transform 1s ease;
@@ -2351,25 +2357,26 @@ svg:hover {
 @media screen and (min-width: 768px) {
   .shoping-cart {
     margin: 0 auto;
-    width: 56%;
+    width: 42%;
     top: 80px;
-    left: 336px;
+    left: 446px;
+    transform: translateX(320px);
   }
 }
 @media screen and (min-width: 1020px) {
   .shoping-cart {
-    width: 36%;
-    top: 7.6%;
+    transform: translateX(440px);
+    width: 32%;
+    top: 99.6%;
     /* right: -102%; */
-    left: 64%;
+    left: 68%;
     margin: 0;
   }
 }
 @media screen and (min-width: 1440px) {
   .shoping-cart {
-    min-width: 25%;
-    top: 5.6%;
-    left: 68%;
+    transform: translateX(600px);
+    top: 99.6%;
   }
 }
 .shoping-cart__popup {
@@ -2398,7 +2405,6 @@ svg:hover {
 .shoping-cart__main-cont {
   display: flex;
   flex-direction: column;
-  padding: 0.7rem;
 }
 .shoping-cart__container {
   display: flex;
@@ -2407,8 +2413,11 @@ svg:hover {
 }
 .shoping-cart__img-container {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: flex-start;
+}
+.shoping-cart__text-container {
+  margin: 1rem;
 }
 .shoping-cart__title {
   font-size: 0.8rem;

@@ -1,32 +1,38 @@
 .shoping-cart {
+  padding: 1rem;
   margin: auto;
-  width: 73%;
+  width: 80%;
   height: 100vh;
   background-color: $c-light-rose;
   @include font-family-normal;
   position: absolute;
   top: 80px;
-  left: 125px;
+  left: 20%;
   z-index: -1;
   transform: translateX(300px);
   transition: transform 1s ease;
   @include tablet-query {
       margin: 0 auto;
-      width: 56%;
+      width: 42%;
       top: 80px;
-      left: 336px;
+      left: 446px;
+      transform: translateX(320px);
+
   }
   @include laptop-query {
-      width: 36%;
-      top: 7.6%;
+    transform: translateX(440px);
+      width: 32%;
+      top: 99.6%;
       /* right: -102%; */
-      left: 64%;
+      left: 68%;
       margin: 0;
   }
   @include laptop-l-query {
-      min-width: 25%;
-      top: 5.6%;
-      left: 68%;
+    transform: translateX(600px);
+
+      top: 99.6%;
+
+
   }
   &__popup {
       display: flex;
@@ -54,20 +60,20 @@
   &__main-cont {
       display: flex;
       flex-direction: column;
-      padding: $p-base*.7;
+    
       // display: none;
   }
   &__container {
       display: flex;
       flex-direction: column;
-      margin-bottom: 1rem;
+      margin-bottom: $m-base;
   }
 &__img-container{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+   @include flex-start;
 }
-
+&__text-container{
+    margin: $m-base;
+}
   &__title {
       font-size: .8rem;
       color: $c-dark-green;
