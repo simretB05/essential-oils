@@ -4,10 +4,12 @@ const parentElement = document.querySelector('.shoping-cart__items');
 const cartSumPrice = document.querySelector('.navbar__cart-text');
 const products = document.querySelectorAll(".products__discription");
 const shopingCart = document.querySelector('.shoping-cart')
+const totalPrice = document.querySelector('.shoping-cart__total')
+const subTotal = document.querySelector('.shoping-cart__text')
 
 let cartItem = document.querySelector('.navbar__cart');
 
-console.log(products)
+
 
 const countTheTotalItems = function () { // 4
     let numOfItems = 0;
@@ -17,28 +19,29 @@ const countTheTotalItems = function () { // 4
     return numOfItems;
 }
 
-// const countTheSumPrice = function () { // 4
-//     let sum = 0;
-//     productsInCart.forEach(item => {
-//         sum += item.count * price[i];
-//     });
-//     return numOfItems;
-// }
+const countTheSumPrice = function () { // 4
+    let sum;
+    productsInCart.forEach(value => {
+        sum = value.count * value.price;
+    });
+    return sum;
+}
 const updateShoppingCartHTML = function () {  // 3
-    localStorage.setItem('shoppingCart', JSON.stringify(productsInCart));
+    // localStorage.setItem('shoppingCart', JSON.stringify(productsInCart));
     if (productsInCart.length > 0) {
         let result = productsInCart.map(product => {
-            console.log(product)
+            console.log(typeof (product.price))
+            console.log(typeof (product.count))
+
+
             return `<li class="shoping-cart__main-cont">
                         <div class="shoping-cart__container">
                             <div div class="shoping-cart__img-container">
                                 <img class="shoping-cart__img" src="${product.image}" alt=" essential oil image">
                                 <div class="shoping-cart__text-container">
                                 <h3 class="shoping-cart__title">${product.name}</h3>
-                                <p class="shoping-cart__text"><span class="shoping-cart__price">${product.price}</span> x <span
-                                class="shoping-cart__number"</span> <span class="shoping-cart__span"></span>${product.count}
-                                </span>
-                                <span class="shoping-cart__total">${product.basePrice * product.count}</span></p>
+                           
+                                <span class="shoping-cart__total">${product.count * product.price}</span><span class="shoping-cart__span">CAD</span></p>
                                 </div>
                         </div>
                         <div>
@@ -48,10 +51,9 @@ const updateShoppingCartHTML = function () {  // 3
                         </div>
                 </li>`
         });
-        console.log(result);
         parentElement.innerHTML = result.join('');
-        console.log(result);
         document.querySelector('.checkOut').classList.remove('hidden');
+        subTotal.classList.remove('hidden')
         cartSumPrice.innerHTML = countTheTotalItems();
 
     }
@@ -59,6 +61,8 @@ const updateShoppingCartHTML = function () {  // 3
         document.querySelector('.checkOut').classList.add('hidden');
         parentElement.innerHTML = '<h4 class="shoping-cart__empty">cart is empty</h4>';
         cartSumPrice.innerHTML = '';
+        subTotal.classList.add('hidden')
+
     }
 }
 
@@ -66,7 +70,10 @@ function updateProductsInCart(product) { // 2
     for (let i = 0; i < productsInCart.length; i++) {
         if (productsInCart[i].id == product.id) {
             productsInCart[i].count += 0;
-            productsInCart[i].price = productsInCart[i].basePrice * productsInCart[i].count;
+            productsInCart[i].id.price = product.price;
+            productsInCart[i].id.basePrice = product.basePrice;
+            productsInCart[i].totalPrice = product.price;
+
             return;
         }
     }
@@ -79,7 +86,8 @@ products.forEach(item => {   // 1
             const productID = e.target.dataset.productId;
             const productName = item.querySelector('.pure__title').textContent;
             const productPrice = item.querySelector('.product__price').textContent;
-            console.log(productPrice)
+            console.log(typeof (productPrice))
+            console.log(productName)
             const productImage = item.querySelector('img').src;
             let product = {
                 name: productName,
@@ -87,11 +95,9 @@ products.forEach(item => {   // 1
                 id: productID,
                 count: 1,
                 price: productPrice,
-                basePrice: +productPrice,
             }
-
             updateProductsInCart(product);
-            updateShoppingCartHTML(product);
+            updateShoppingCartHTML();
         }
 
     });
