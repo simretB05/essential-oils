@@ -9,14 +9,14 @@
   top: 80px;
   left: 20%;
   z-index: -1;
-  transform: translateX(300px);
+  transform: translateX(400px);
   transition: transform 1s ease;
   @include tablet-query {
       margin: 0 auto;
       width: 42%;
       top: 80px;
       left: 446px;
-      transform: translateX(320px);
+      transform: translateX(600px);
 
   }
   @include laptop-query {
@@ -28,7 +28,7 @@
       margin: 0;
   }
   @include laptop-l-query {
-    transform: translateX(600px);
+    transform: translateX(630px);
 
       top: 99.6%;
 
