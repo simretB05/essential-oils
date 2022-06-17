@@ -2344,7 +2344,7 @@ svg:hover {
   padding: 1rem;
   margin: auto;
   width: 80%;
-  height: 100vh;
+  height: 600px;
   background-color: hsl(13.85deg, 35.14%, 92.75%);
   font-family: "Kumbh Sans";
   position: absolute;
