@@ -4,12 +4,17 @@ const parentElement = document.querySelector('.shoping-cart__items');
 const cartSumPrice = document.querySelector('.navbar__cart-text');
 const products = document.querySelectorAll(".products__discription");
 const shopingCart = document.querySelector('.shoping-cart')
-const totalPrice = document.querySelector('.shoping-cart__total')
-const subTotal = document.querySelector('.shoping-cart__text')
+const totalContainer = document.querySelector('.shoping-cart__subTotal')
 
 let cartItem = document.querySelector('.navbar__cart');
 
+cartItem.addEventListener("click", () => {
+    console.log('clicked')
+    shopingCart.classList.toggle('removeShopingCart')
 
+
+
+})
 
 const countTheTotalItems = function () { // 4
     let numOfItems = 0;
@@ -19,19 +24,29 @@ const countTheTotalItems = function () { // 4
     return numOfItems;
 }
 
-const countTheSumPrice = function () { // 4
-    let sum;
-    productsInCart.forEach(value => {
-        sum = value.count * value.price;
-    });
-    return sum;
+function addNums() {
+    let grandTotal = 0
+    let subTotal = document.getElementsByClassName('shoping-cart__text')[0]
+    let totalPrice = document.getElementsByClassName('shoping-cart__total')
+    for (let i = 0; i < totalPrice.length; i++) {
+        totalPriceContent = Number(totalPrice[i].innerText.replace('$', ''))
+        grandTotal += totalPriceContent
+        grandTotal = Math.round(grandTotal * 100) / 100
+    }
+
+    subTotal.children[0].innerText = '$' + grandTotal
+
 }
+
+
 const updateShoppingCartHTML = function () {  // 3
     // localStorage.setItem('shoppingCart', JSON.stringify(productsInCart));
     if (productsInCart.length > 0) {
         let result = productsInCart.map(product => {
+
             console.log(typeof (product.price))
             console.log(typeof (product.count))
+
 
 
             return `<li class="shoping-cart__main-cont">
@@ -41,7 +56,7 @@ const updateShoppingCartHTML = function () {  // 3
                                 <div class="shoping-cart__text-container">
                                 <h3 class="shoping-cart__title">${product.name}</h3>
                            
-                                <span class="shoping-cart__total">${product.count * product.price}</span><span class="shoping-cart__span">CAD</span></p>
+                                <span class="shoping-cart__total">${(product.count * product.price).toFixed(2)}</span><span class="shoping-cart__span">CAD</span></p>
                                 </div>
                         </div>
                         <div>
@@ -49,19 +64,21 @@ const updateShoppingCartHTML = function () {  // 3
                             <span class="shoping-cart__countOfProduct">${product.count}</span>
                             <button class="shoping-cart__btn__plus" data-id=${product.id}>+</button>
                         </div>
-                </li>`
+                </li>
+                `
         });
         parentElement.innerHTML = result.join('');
         document.querySelector('.checkOut').classList.remove('hidden');
-        subTotal.classList.remove('hidden')
+        totalContainer.classList.remove('hidden')
         cartSumPrice.innerHTML = countTheTotalItems();
+
 
     }
     else {
         document.querySelector('.checkOut').classList.add('hidden');
         parentElement.innerHTML = '<h4 class="shoping-cart__empty">cart is empty</h4>';
         cartSumPrice.innerHTML = '';
-        subTotal.classList.add('hidden')
+        totalContainer.classList.add('hidden')
 
     }
 }
@@ -71,8 +88,6 @@ function updateProductsInCart(product) { // 2
         if (productsInCart[i].id == product.id) {
             productsInCart[i].count += 0;
             productsInCart[i].id.price = product.price;
-            productsInCart[i].id.basePrice = product.basePrice;
-            productsInCart[i].totalPrice = product.price;
 
             return;
         }
@@ -94,10 +109,13 @@ products.forEach(item => {   // 1
                 image: productImage,
                 id: productID,
                 count: 1,
-                price: productPrice,
+                price: parseFloat(productPrice),
+
             }
             updateProductsInCart(product);
             updateShoppingCartHTML();
+            addNums()
+
         }
 
     });
@@ -123,15 +141,10 @@ parentElement.addEventListener('click', (e) => { // Last
             }
         }
         updateShoppingCartHTML();
+        addNums()
+
     }
 });
 
 updateShoppingCartHTML();
 
-cartItem.addEventListener("click", () => {
-    console.log('clicked')
-    shopingCart.classList.toggle('removeShopingCart')
-
-
-
-})

@@ -2402,6 +2402,19 @@ svg:hover {
 .shoping-cart__items {
   padding: 0;
 }
+.shoping-cart__subTotal {
+  font-size: 1.2rem;
+}
+.shoping-cart__text {
+  font-weight: 700 !important;
+}
+.shoping-cart__price {
+  margin-left: 0.5rem;
+  color: #0e0e0e;
+}
+.shoping-cart__span {
+  margin-left: 0.5rem;
+}
 .shoping-cart__main-cont {
   display: flex;
   flex-direction: column;

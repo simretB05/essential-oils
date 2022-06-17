@@ -57,6 +57,27 @@
   &__items{
       padding: 0;
   }
+  &__subTotal{
+    font-size: 1.2rem;
+
+   
+
+  }
+  &__text{
+    font-weight: $fw-bold !important;
+
+  }
+  &__price{
+    margin-left: $m-base*.5;
+    color: $c-banana-sim-black;
+
+
+  }
+  &__span{
+    margin-left:$m-base*.5;
+
+
+  }
   &__main-cont {
       display: flex;
       flex-direction: column;
@@ -120,6 +141,7 @@
       font-weight: $fw-normal;
       text-align: center;
   }
+
 }
 .popup-show {
   position: absolute;
