@@ -2433,7 +2433,8 @@ svg:hover {
   margin: 1rem;
 }
 .shoping-cart__title {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 700 !important;
   color: hsl(265.71deg, 36.21%, 45.49%);
   font-weight: 300;
 }

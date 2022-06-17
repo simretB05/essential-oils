@@ -96,7 +96,8 @@
     margin: $m-base;
 }
   &__title {
-      font-size: .8rem;
+      font-size: 1.1rem;
+      font-weight: $fw-bold !important;
       color: $c-dark-green;
       font-weight: $fw-normal;
   }
