@@ -1,5 +1,7 @@
-productsInCart = [];
-
+let productsInCart = JSON.parse(localStorage.getItem('shopingCart'));
+if (!productsInCart) {
+    productsInCart = [];
+}
 const parentElement = document.querySelector('.shoping-cart__items');
 const cartSumPrice = document.querySelector('.navbar__cart-text');
 const products = document.querySelectorAll(".products__discription");
@@ -40,7 +42,7 @@ function addNums() {
 
 
 const updateShoppingCartHTML = function () {  // 3
-    // localStorage.setItem('shoppingCart', JSON.stringify(productsInCart));
+    localStorage.setItem('shopingCart', JSON.stringify(productsInCart));
     if (productsInCart.length > 0) {
         let result = productsInCart.map(product => {
 
