@@ -96,7 +96,7 @@
     margin: $m-base;
 }
   &__title {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: $fw-bold !important;
       color: $c-dark-green;
       font-weight: $fw-normal;
@@ -133,6 +133,10 @@
     font-weight: $fw-black;
     margin: 1.5rem;
     font-size: .9rem;
+    @include laptop-l-query{
+      margin: 10 auto;
+      width: 40%;
+    }
   }
   &__empty {
       margin: 0 auto;

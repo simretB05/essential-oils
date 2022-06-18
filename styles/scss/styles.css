@@ -2433,7 +2433,7 @@ svg:hover {
   margin: 1rem;
 }
 .shoping-cart__title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700 !important;
   color: hsl(265.71deg, 36.21%, 45.49%);
   font-weight: 300;
@@ -2470,6 +2470,12 @@ svg:hover {
   font-weight: 900;
   margin: 1.5rem;
   font-size: 0.9rem;
+}
+@media screen and (min-width: 1440px) {
+  .shoping-cart__checkOutBtn {
+    margin: 10 auto;
+    width: 40%;
+  }
 }
 .shoping-cart__empty {
   margin: 0 auto;
