@@ -1994,6 +1994,7 @@ template {
   transition: transform 0.3s ease;
   position: absolute;
   right: 0;
+  fill: hsl(34.38deg, 40.27%, 56.67%);
 }
 .summary__body {
   color: #9194a1;
@@ -2005,6 +2006,7 @@ template {
 .details[open] .summary::after {
   content: url(/assets/icons/icon-arrow-red.svg);
   transform: rotate(180deg);
+  fill: black;
 }
 
 svg:hover {

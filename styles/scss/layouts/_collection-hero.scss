@@ -423,6 +423,7 @@ brightness(228%) contrast(100%);
   transition: transform 0.3s ease;
   position: absolute;
   right: 0;
+  fill: hsl(34.38,40.27%,56.67%);
 }
 &__body {
   color: #9194a1;
@@ -434,6 +435,7 @@ brightness(228%) contrast(100%);
 .details[open]  .summary::after {
   content: url(/assets/icons/icon-arrow-red.svg);
   transform: rotate(180deg);
+  fill: black;
 }
 
 svg:hover {
