@@ -511,7 +511,7 @@ brightness(228%) contrast(100%);
   margin: 0 auto;
   max-height:70% ;
   text-align: center;
-  overflow-y: auto;
+
   }
   &-name{
    margin: 0;
@@ -522,6 +522,10 @@ brightness(228%) contrast(100%);
   &-copy{
     width: 100%;
     text-align: center;
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+      display: none;
+    }
   }
 }
 }
