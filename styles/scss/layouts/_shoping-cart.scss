@@ -2,7 +2,7 @@
   padding: 1rem;
   margin: auto;
   width: 80%;
-  height: 900px;
+  height: 700px;
   background-color: $c-light-rose;
   @include font-family-normal;
   position: absolute;
@@ -11,6 +11,9 @@
   z-index: -1;
   transform: translateX(400px);
   transition: transform 1s ease;
+  scroll-behavior: smooth;
+  overflow: hidden scroll;
+  overscroll-behavior: contain;
   @include tablet-query {
       margin: 0 auto;
       width: 42%;
