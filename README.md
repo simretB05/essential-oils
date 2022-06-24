@@ -1,1 +1,1 @@
-# Essential oils is a blog type website for people who would like to know more about Essential oils and their use. also the website can be  used as an e-commerce website. if people are intrested in buying the oils. 
+# Essential oils website servers as an e-commerce website for users who would like to know more about Essential oils. 
