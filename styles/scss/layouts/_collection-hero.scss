@@ -132,9 +132,7 @@ background-color: transparent;
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@include flex-center;
   margin: $m-base;
   filter: invert(100%) sepia(125%) saturate(88%) hue-rotate(18deg)
 brightness(228%) contrast(100%);

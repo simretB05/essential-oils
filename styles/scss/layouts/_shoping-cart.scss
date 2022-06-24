@@ -46,12 +46,20 @@
     height: 30px;
     border: none;
     position: absolute;
-    right: 286px;
-    top: 14px;
+    right: 264px;
+    top: 2px;
     border: 1px solid $c-light-rose;
     border-radius: 50%;
     background-color: $c-light-rose;
     box-shadow: 2px 7px 10px  rgba(25, 24, 24, 0.2);
+    @include tablet-query{
+      top: 4px;
+      right: 286px;
+    }
+    @include tablet-l-query{
+      top: 4px;
+      right: 421px;
+    }
 
   &__close-img{
 
