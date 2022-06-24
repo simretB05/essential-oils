@@ -510,6 +510,8 @@ flex-direction: column;
 }
 .review-total{
   text-decoration: underline;
+  font-weight: $fw-normal;
+
 }
 .ri-star-fill{
 padding:0 .3rem ;
@@ -531,4 +533,6 @@ padding:0 .3rem ;
 }
 .review-login{
   text-decoration: underline;
+  font-weight: $fw-normal;
+
 }

@@ -2104,6 +2104,7 @@ svg:hover {
 
 .review-total {
   text-decoration: underline;
+  font-weight: 300;
 }
 
 .ri-star-fill {
@@ -2133,6 +2134,7 @@ svg:hover {
 
 .review-login {
   text-decoration: underline;
+  font-weight: 300;
 }
 
 .form-container {
