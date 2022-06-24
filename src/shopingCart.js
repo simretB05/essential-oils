@@ -8,11 +8,17 @@ const products = document.querySelectorAll(".products__discription");
 const shopingCart = document.querySelector('.shoping-cart')
 const totalContainer = document.querySelector('.shoping-cart__subTotal')
 const cartClose = document.querySelector('.shoping-cart__close-img')
+const closeBtn = document.querySelector('.shoping-cart__close')
 
 cartClose.addEventListener('click', () => {
-    console.log('clicked')
-    shopingCart.classList.add('closeActive')
-    shopingCart.classList.add('removeShopingCart')
+    setTimeout(() => {
+        console.log('clicked')
+        shopingCart.classList.add('closeActive')
+        shopingCart.classList.add('removeShopingCart')
+        closeBtn.classList.toggle('bounce')
+    }, 1000)
+
+
 
 })
 
@@ -22,6 +28,12 @@ cartItem.addEventListener("click", () => {
 
     shopingCart.classList.add('removeShopingCart')
     shopingCart.classList.remove('closeActive')
+
+    setTimeout(() => {
+        closeBtn.classList.toggle('bounce')
+
+    }, 500)
+
 
 
 
