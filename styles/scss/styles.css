@@ -1738,9 +1738,6 @@ template {
   height: 1px;
   width: 100%;
 }
-.products__discription {
-  margin-bottom: 4rem;
-}
 .pure {
   width: 100%;
   height: 100%;
@@ -2059,8 +2056,9 @@ svg:hover {
 .reviews span {
   margin: 0 auto;
   text-transform: capitalize;
-  color: #0e0e0e;
+  color: hsl(210deg, 4%, 67%);
   letter-spacing: 1px;
+  font-family: "Kumbh Sans";
 }
 
 .stars_list {
@@ -2072,6 +2070,69 @@ svg:hover {
   color: hsl(265.71deg, 36.21%, 45.49%);
   font-size: 15px;
   padding: 0 5px;
+}
+
+.reviwe {
+  color: hsl(265.71deg, 36.21%, 45.49%);
+  padding: 1rem;
+}
+.reviwe-title {
+  font-family: "Kumbh Sans";
+  letter-spacing: 0.7px;
+  color: hsl(213deg, 9%, 39%);
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 300;
+}
+.reviwe-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Kumbh Sans";
+  letter-spacing: 0.7px;
+}
+
+.stars__list {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  font-family: "Kumbh Sans";
+  letter-spacing: 0.7px;
+}
+
+.review-total {
+  text-decoration: underline;
+}
+
+.ri-star-fill {
+  padding: 0 0.3rem;
+}
+
+.bar__ver--right {
+  border-left: 1px solid hsl(210deg, 4%, 67%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15px;
+  flex-direction: row;
+  margin-left: 0.5rem;
+}
+
+.bar__ver--left {
+  border-left: 1px solid hsl(210deg, 4%, 67%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15px;
+  flex-direction: row;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.review-login {
+  text-decoration: underline;
 }
 
 .form-container {

@@ -170,7 +170,6 @@ brightness(228%) contrast(100%);
     }
   }
   &__discription{
-    margin-bottom: $m-base*4;
     @include laptop-query{
     }
   }
@@ -331,7 +330,6 @@ brightness(228%) contrast(100%);
     &__btn-plus{
           width: 12%;
           border: none;
-          // @include flex-center;
           background-color: transparent;
           filter: invert(100%) sepia(125%) saturate(88%) hue-rotate(18deg)
           brightness(228%) contrast(100%);
@@ -470,8 +468,10 @@ flex-direction: column;
 .reviews span{
   margin: 0  auto;
   text-transform: capitalize;
-  color: $c-banana-sim-black;
+  color: $c-grayish-blue;
   letter-spacing: 1px;
+  @include font-family-normal;
+
 }
 .stars_list{
   display: flex;
@@ -481,4 +481,54 @@ flex-direction: column;
   color: $c-dark-green;
   font-size: 15px;
   padding: 0 5px;
+}
+.reviwe{
+  color:$c-dark-green;
+  padding: 1rem;
+
+  &-title{
+    @include font-family-normal;
+    letter-spacing: 0.7px;
+    color:$c-dark-grayish-blue;
+    font-size: 2rem;
+    margin: 0;
+    font-weight: $fw-normal;
+
+  }
+  &-main{
+    @include flex-center;
+    @include font-family-normal;
+    letter-spacing: 0.7px;
+  }
+}
+.stars__list{
+  padding: 0;
+  @include flex-center;
+  list-style: none;
+  @include font-family-normal;
+  letter-spacing: 0.7px;
+}
+.review-total{
+  text-decoration: underline;
+}
+.ri-star-fill{
+padding:0 .3rem ;
+}
+.bar__ver--right {
+  border-left: 1px solid $c-grayish-blue;
+  @include flex-center;
+  height: 15px;
+  flex-direction: row;
+  margin-left: .5rem;
+}
+.bar__ver--left {
+  border-left: 1px solid $c-grayish-blue;
+  @include flex-center;
+  height: 15px;
+  flex-direction: row;
+  margin-right: .5rem ;
+  margin-left: .5rem;
+}
+.review-login{
+  text-decoration: underline;
 }
