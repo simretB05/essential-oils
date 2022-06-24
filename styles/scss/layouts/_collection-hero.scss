@@ -231,6 +231,11 @@ brightness(228%) contrast(100%);
             text-align: center;
             padding:  $p-base $p-base*2;
             color: $c-light-body;
+            font-size: 0.91rem;
+            font-weight: $fw-normal;
+            text-align: center;
+            color: $c-light-body;
+            letter-spacing: 0.5px;
             @include tablet-query{
               width: 60%;
               margin: 0 auto;
@@ -426,6 +431,11 @@ brightness(228%) contrast(100%);
   @include font-family-normal;
   text-align: center;
   padding: $p-base;
+    font-size: 0.91rem;
+    font-weight: $fw-normal;
+    text-align: center;
+    color: rgb(110, 108, 108);
+    letter-spacing: 0.5px;
 }
 }
 .details[open]  .summary::after {

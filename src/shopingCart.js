@@ -7,12 +7,22 @@ const cartSumPrice = document.querySelector('.navbar__cart-text');
 const products = document.querySelectorAll(".products__discription");
 const shopingCart = document.querySelector('.shoping-cart')
 const totalContainer = document.querySelector('.shoping-cart__subTotal')
+const cartClose = document.querySelector('.shoping-cart__close-img')
+
+cartClose.addEventListener('click', () => {
+    console.log('clicked')
+    shopingCart.classList.add('closeActive')
+    shopingCart.classList.add('removeShopingCart')
+
+})
 
 let cartItem = document.querySelector('.navbar__cart');
 
 cartItem.addEventListener("click", () => {
-    console.log('clicked')
-    shopingCart.classList.toggle('removeShopingCart')
+
+    shopingCart.classList.add('removeShopingCart')
+    shopingCart.classList.remove('closeActive')
+
 
 
 

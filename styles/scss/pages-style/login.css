@@ -1799,6 +1799,11 @@ template {
   text-align: center;
   padding: 1rem 2rem;
   color: rgb(110, 108, 108);
+  font-size: 0.91rem;
+  font-weight: 300;
+  text-align: center;
+  color: rgb(110, 108, 108);
+  letter-spacing: 0.5px;
 }
 @media screen and (min-width: 768px) {
   .product-card__copy {
@@ -1998,6 +2003,11 @@ template {
   font-family: "Kumbh Sans";
   text-align: center;
   padding: 1rem;
+  font-size: 0.91rem;
+  font-weight: 300;
+  text-align: center;
+  color: rgb(110, 108, 108);
+  letter-spacing: 0.5px;
 }
 
 .details[open] .summary::after {
@@ -2452,16 +2462,33 @@ svg:hover {
     top: 99.6%;
   }
 }
-.shoping-cart__popup {
+.shoping-cart__close {
+  display: block;
+  background-color: transparent;
+  color: hsl(265.71deg, 36.21%, 45.49%);
+  position: relative;
+}
+.shoping-cart__close button {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  position: absolute;
+  right: 272px;
+  top: -14px;
+  border: 1px solid hsl(13.85deg, 35.14%, 92.75%);
+  border-radius: 50%;
+  background-color: hsl(13.85deg, 35.14%, 92.75%);
+  box-shadow: 2px 7px 10px rgba(25, 24, 24, 0.2);
 }
 .shoping-cart__titlecart {
   font-weight: 900;
   color: hsl(265.71deg, 36.21%, 45.49%);
   padding: 1rem 0 1.5rem 1.5rem;
+  font-weight: 300;
+  text-align: center;
 }
 .shoping-cart__hr {
   display: block;
@@ -2504,10 +2531,10 @@ svg:hover {
 }
 .shoping-cart__text-container {
   margin: 1rem;
+  font-weight: 300;
 }
 .shoping-cart__title {
   font-size: 1rem;
-  font-weight: 700 !important;
   color: hsl(265.71deg, 36.21%, 45.49%);
   font-weight: 300;
 }
@@ -2517,7 +2544,8 @@ svg:hover {
 }
 .shoping-cart__span {
   font-weight: 700;
-  color: #0e0e0e;
+  color: hsl(265.71deg, 36.21%, 45.49%);
+  font-weight: 300;
 }
 .shoping-cart__img {
   width: 69px;
@@ -2611,6 +2639,19 @@ svg:hover {
 .removeShopingCart {
   transform: translateX(0);
   transition: transform 1s ease-in-out;
+}
+
+.closeActive {
+  transform: translateX(360px);
+  opacity: 1;
+  transition: transform 1s ease-in-out;
+}
+@media screen and (min-width: 1020px) {
+  .closeActive {
+    display: none;
+    transform: none;
+    translate: none;
+  }
 }
 
 .main-login {
