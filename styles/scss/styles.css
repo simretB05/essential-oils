@@ -2427,7 +2427,6 @@ svg:hover {
   position: absolute;
   top: 80px;
   left: 20%;
-  z-index: -1;
   transform: translateX(400px);
   transition: transform 1s ease;
   scroll-behavior: smooth;
