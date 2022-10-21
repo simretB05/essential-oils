@@ -1,0 +1,23 @@
+.images {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__image {
+        // width: 50%;
+        height: 100%;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    @include laptop-query {
+        &__image {
+            width: auto;
+            flex: 1;
+        }
+    }
+}
