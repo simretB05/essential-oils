@@ -53,22 +53,7 @@
 // });
 // another cool way
 // login and register toggling
-const loginRegister = document.querySelector('.login-form__toggleRegister-btn')
-const login = document.querySelector('.login-form__toggleLogin-btn')
-const loginForm = document.getElementById('login-btn')
-const registerForm = document.getElementById('regiter-btn')
-const loginBtn = document.querySelector('.login-form__boxBtn')
 
-loginRegister?.addEventListener('click', () => {
-    registerForm.classList.add('move-in')
-    loginForm.classList.add('move-out')
-    loginBtn.classList.add('slide')
-});
-login?.addEventListener('click', () => {
-    registerForm.classList.remove('move-in')
-    loginForm.classList.remove('move-out')
-    loginBtn.classList.remove('slide')
-});
 
 const toggle = () => {
     const toggleBtn = document.querySelector('.header-nav__toggle-burger');

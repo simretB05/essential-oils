@@ -2,7 +2,7 @@
   padding: 1rem;
   margin: auto;
   width: 100%;
-  height: 100vh;
+  height: 100vw;
   background-color: $c-light-rose;
   @include font-family-normal;
   position: absolute;
@@ -19,6 +19,8 @@
 }
 
   @include tablet-query {
+    width: 100%;
+    height: 100vw;
       margin: 0 auto;
       width: 42%;
       top: 80px;
@@ -61,7 +63,6 @@
     }
 
   &__close-img{
-
 
     }
   }
@@ -158,6 +159,7 @@
             border: 1px solid $c-dark-green;
             padding: 0 $p-base*.4;
   }
+
   &__checkOutBtn{
     background-color: $c-dark-green;
     border: none;
@@ -165,8 +167,9 @@
     padding: .6rem;
     color: $c-white;
     font-weight: $fw-black;
-    margin: 1.5rem;
-    font-size: .9rem;
+    margin: 1.5rem auto;
+    font-size: 0.9rem;
+    width: 130px;
     @include laptop-l-query{
       margin: 10 auto;
       width: 40%;
@@ -205,14 +208,16 @@
 }
 .pay-options{
     width: 70%;
-    margin: 0 auto;
+   
 
 &__list{
     @include flex-space-bteween;
     list-style: none;
     padding: 0;
     width: 100%;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 }
 .fa-paypal,.fa-apple-pay,.fa-google-pay,.fa-cc-visa{
@@ -220,7 +225,7 @@
     width: 35px;
     height: 35px;
     margin: 0;
-    padding: 0;
+    padding:0;
 
 }
 .hidden{

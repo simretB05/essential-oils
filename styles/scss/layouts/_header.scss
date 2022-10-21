@@ -328,30 +328,30 @@
 .hide {
     display: none;
 }
-// .overlay-remove {
-//     &::before {
-//         content: "";
-//         opacity: 0.77;
-//         min-width: 100%;
-//         height: 100vh;
-//         display: block;
-//         right: 0;
-//         top: 100%;
-//         position: absolute;
-//         background: $c-dark-green;
-//         // z-index: 180;
-//         animation: slid-out 2s ease-out;
-//         @include laptop-query{
-//             display: none;
-//             animation: none
-//         }
-//         @keyframes slide-out {
-//             from {
-//                 transform: translateX(-100px);
-//             }
-//             to {
-//                 transform: translateX(0);
-//             }
-//         }
-//     }
-// }
+.overlay-remove {
+    &::before {
+        content: "";
+        opacity: 0.77;
+        min-width: 100%;
+        height: 100vh;
+        display: block;
+        right: 0;
+        top: 100%;
+        position: absolute;
+        background: $c-dark-green;
+        // z-index: 180;
+        animation: slid-out 2s ease-out;
+        @include laptop-query{
+            display: none;
+            animation: none
+        }
+        @keyframes slide-out {
+            from {
+                transform: translateX(-100px);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+    }
+}
