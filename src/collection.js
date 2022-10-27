@@ -1,4 +1,7 @@
-
+data = [{
+  name: simret
+}
+]
 let currentSlid = 0;//current slide
 let tottalSlides = 4;// total slides
 

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/97c0fa5216.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/scss/pages-style/collection.css">
+  <title>essential oils</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header-nav">
+      <button class="header-nav__toggle" aria-label="Open menu">
+        <div class="header-nav__toggle-burger"></div>
+      </button>
+      <h2 class="header-nav__logo"><a class="header-nav__logo-link" href="../home.html">essential oils</a></h2>
+    </div>
+    <nav class="navbar">
+      <ul class="navbar__list">
+        <li class="navbar__list__item"><a class="navbar__list__item-link" href="./collection.html">collection</a></li>
+          <ul class="navbar__submenu">
+            <li id="#family" class="navbar__submenu__item"><a class="navbar__submenu__item-link" href="./pages/collection.html">rozmery-oil</a></li>
+            <li id="#family" class="navbar__submenu__item"><a class="navbar__submenu__item-link" href="./pages/collection.html">Lavender-oil</a></li>
+            <li id="#family" class="navbar__submenu__item"><a class="navbar__submenu__item-link" href="./pages/collection.html">lemon-oil</a></li>
+            <li id="#family" class="navbar__submenu__item"><a class="navbar__submenu__item-link" href="./pages/collection.html">peppermint-oil</a></li>
+            <li id="#family" class="navbar__submenu__item"><a class="navbar__submenu__item-link" href="./pages/collection.html">thieve-oil</a></li>
+            <li id="#family" class="navbar__submenu__item"><a class="navbar__submenu__item-link" href="./pages/collection.html">tea tree-oil</a></li>
+          </ul>
+        <li class="navbar__list__item"><a class="navbar__list__item-link" href="./contact-us.html">contact-us</a></li>
+        <li class="navbar__list__item"><a class="navbar__list__item-link" href="./about-us.html">About-us</a></li>
+  
+        <li class="navbar__list__item navbar__list__item-login"><a class="navbar__list__item-link--rose" href="./page-login.html">log-in</a></li>
+        <li class="navbar__list__item navbar__list__item-imgCard"><img class="navbar__list__item-img"src="../assets/images/avator-image.png" alt=""></li>
+      </ul>
+      <div class="navbar__cart">
+        <p class="navbar__cart-text">0</p>
+        <img class="navbar__cart-img" src="../assets/icons/icon-cart.svg" alt="">
+      </div>
+    </nav>
+    <div class="shoping-cart">
+      <button class="shoping-cart__close"><img  class="shoping-cart__close-img" src="../assets/icons/icon-close.svg" alt="close icon"></button>
+
+      <div class="shoping-cart__popup">
+        <div class="shoping-cart__title-card">
+          <h3 class="shoping-cart__titlecart">Your Cart Items</h3>
+          <hr class="shoping-cart__hr">
+        </div>
+        <ul class="shoping-cart__items">
+
+        </ul>
+        <div class="shoping-cart__subTotal">    
+           <p class="shoping-cart__text">SubTotal<span class="shoping-cart__price">
+           </span><span class="shoping-cart__span">CAD</span></p>
+        </div>
+        <hr class="shoping-cart__hr">
+
+        <button class="shoping-cart__checkOutBtn checkOut">Checkout</button>
+      </div>
+      <div class="pay-options">
+        <ul class="pay-options__list">
+          <li class="pay-option__item"><i class="fa-brands fa-paypal"></i></li>
+          <li class="pay-option__item"><i class="fa-brands fa-apple-pay"></i></li>
+          <li class="pay-option__item"><i class="fa-brands fa-google-pay"></i></li>
+          <li class="pay-option__item"><i class="fa-brands fa-cc-visa"></i></li>
+        </ul>
+      </div>
+  </div>
+     </header> 
+  <section class="content">
+    <div class="collection">
+      <div class="collection-slider">
+        <div class="collection__navigation">
+          <button   onclick="prev()"class="collection__prev-btn"><img src="../assets/icons/icon-previous.svg" alt=""></button>
+          <button  onclick="next()" class="collection__next-btn"><img src="../assets/icons/icon-next.svg" alt=""></button>
+        </div>
+        <ul class="slider-card">
+            <li class="slider-card__list show-img" id="img1">
+              <div class="slider-card__list-item">
+                <h3 class="slider-card__list-title">make this summer sizzle with our new incentive!</h3>
+                <button><a class="slider-card__list-link" href="#"> Learn More</a></button>
+               </div>
+              <img class="slider__card__list-img"  src="../assets/images/happy-190806.jpg" alt="sunflower picture">
+            </li>
+            <li class="slider-card__list" id="img2">
+              <div class="slider-card__list-item">
+                <h3 class="slider-card__list-title">June Gift shope with purchase</h3>
+                <button><a class="slider-card__list-link" href="#"> Learn More</a></button>
+               </div>
+              <img class="slider__card__list-img"  src="../assets/images/sun.jpg" alt="sunflower picture"></li> 
+            </ul>
+            <li class="slider-card__list" id="img3">
+              <div class="slider-card__list-item">
+                <h3 class="slider-card__list-title">natural, fresh and clean!</h3>
+                <button><a class="slider-card__list-link" href="#"> Learn More</a></button>
+               </div>
+              <img  class="slider__card__list-img" src="../assets/images/hero-white-flowers.jpg" alt="flower picture">
+            </li>
+            <li class="slider-card__list" id="img4">
+              <div class="slider-card__list-item">
+                <h3 class="slider-card__list-title">mother's day saving's all summer long, </h3>
+                <button><a class="slider-card__list-link" href="#">Shope Now!</a></button>
+               </div>
+              <img  class="slider__card__list-img"  src="../assets/images/Essential-Oils2.jpg" alt="oil bottle picture">
+            </li>
+          </ul>
+        <div class="radio-container">
+          <button onclick="imagNav(1)" class="radio-container__btn"  id="radio1"></button>
+          <button onclick="imagNav(2)" class="radio-container__btn"  id="radio2"></button>
+          <button  onclick="imagNav(3)"class="radio-container__btn"  id="radio3"></button>
+          <button onclick="imagNav(4)" class="radio-container__btn"  id="radio4"></button>
+         </div>
+      </div> 
+    </div>
+    <div class="products"> <h1 class="products__title">Products</h1>
+    </div>
+    <div class="products__discription"> 
+     <div id="pure" class="pure">
+      <div class="product-section">
+        <h3 class="pure__title">Peppermint Essential Oil</h3>
+      </div>
+      <div class="product-card">
+        <div class="product-card__img">
+          <img class="product-card__img-container" src="../assets/images/images11.jpg" alt="">
+        </div>
+        <div class="product-card__container">
+          <table class="product-card__table">
+            <tbody class="product-card__body">
+              <tr class="product-card__table-row" >
+                <td class="product-card__table-data">
+                  <p>Item No.</p>
+                </td>
+                <td class="product-card__table-data">
+                   <p class="product-card__table-itemNo">1111</p>
+                 </td>
+              </tr>
+              <tr>
+                <td class="product-card__table-data">
+                  <p>Item</p>
+                </td>
+                <td class="product-card__table-data">
+                  <p class="product-card__table-size">5ml</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="product-card__table-data">
+                  <p>Retail</p>
+                </td>
+                  <td class="product-card__table-data">
+                  <p class="product__price">25.99 CAD</p>
+                </td>
+              </tr>
+          </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="counter-section">
+        <button class="cart addToCart"  data-product-id="1">
+          <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+            vfill="#6e4a9e" fill-rule="nonzero" />
+          </svg>
+          Add to cart
+        </button>
+        </div>
+        <p class="product-card__copy">The sweet refreshing scent of Purification® instantly deodorizes unpleasant odors in the air. This blend also contains citronella oil.</p>
+        <div class="more-discription">
+        <details class="main-details">
+            <summary class="summary"> more discription</summary>
+            <details class="details">
+              <summary class="summary">About</summary>
+              <div class="summary__content">
+                <p class="summary__body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est sapiente in tempore rerum quasi, quo maxime repellendus enim tempora fuga, optio ipsam veniam totam accusantium nostrum quibusdam vitae at hic.</p>
+              </div>
+            </details>
+            <details class="details">
+              <summary class="summary">Features</summary>
+              <div class="summary__content">
+                <p class="summary__body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est sapiente in tempore rerum quasi, quo maxime repellendus enim tempora fuga, optio ipsam veniam totam accusantium nostrum quibusdam vitae at hic.</p>
+              </div>
+            </details>
+            <details class="details">
+              <summary class="summary">Direction</summary>
+              <div class="summary-content">
+                <p class="summary__body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est sapiente in tempore rerum quasi, quo maxime repellendus enim tempora fuga, optio ipsam veniam totam accusantium nostrum quibusdam vitae at hic.</p>
+              </div>
+            </details>
+            <details class="details">
+              <summary class="summary">Suggested use</summary>
+              <div class="summary-content">
+                <p class="summary__body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est sapiente in tempore rerum quasi, quo maxime repellendus enim tempora fuga, optio ipsam veniam totam accusantium nostrum quibusdam vitae at hic.</p>
+              </div>
+            </details>
+        </details>
+      </div>
+    </div>
+    <div class="products__discription"> 
+      <div id="pure" class="pure">
+         <div class="product-section">
+           <h3 class="pure__title">Lavender Essential Oil</h3>
+         </div>
+         <div class="product-card">
+           <div class="product-card__img">
+          <img class="pure-card__img-container" src="../assets/images/lav.jpg" alt="lavander oil bottle">                   </div>
+           <div class="product-card__container">
+             <table class="product-card__table">
+               <tbody class="product-card__body">
+                 <tr class="product-card__table-row" >
+                   <td class="product-card__table-data">
+                     <p>Item No.</p>
+                   </td>
+                   <td class="product-card__table-data">
+                    <p>2222</p>
+                  </td>
+                 </tr>
+                 <tr>
+                   <td class="product-card__table-data">
+                     <p>Item</p>
+                   </td>
+                   <td class="product-card__table-data">
+                     <p>7ml</p>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td class="product-card__table-data">
+                     <p>Retail</p>
+                   </td>
+                     <td class="product-card__table-data">
+                     <p class="product__price">10.59 CAD</p>
+                   </td>
+                 </tr>
+             </tbody>
+             </table>
+           </div>
+         </div>
+         <div class="counter-section">
+           <button class="cart addToCart"  data-product-id="2">
+           <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+             <path
+             d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+             vfill="#6e4a9e" fill-rule="nonzero" />
+           </svg>
+           Add to cart
+           </button>
+         </div>
+         <p class="product-card__copy">The sweet refreshing scent of Purification® instantly deodorizes unpleasant odors in the air. This blend also contains citronella oil.</p>
+         <div class="more-discription">
+           <details class="main-details">
+             <summary class="summary"> more discription</summary>
+             <details class="details">
+               <summary class="summary">About</summary>
+               <div class="summary__content">
+                 <p class="summary__body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est sapiente in tempore rerum quasi, quo maxime repellendus enim tempora fuga, optio ipsam veniam totam accusantium nostrum quibusdam vitae at hic.</p>
+               </div>
+             </details>
+             <details class="details">
+               <summary class="summary">Features</summary>
+               <div class="summary__content">
+                 <p class="summary__body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est sapiente in tempore rerum quasi, quo maxime repellendus enim tempora fuga, optio ipsam veniam totam accusantium nostrum quibusdam vitae at hic.</p>
+               </div>
+             </details>
+             <details class="details">
+               <summary class="summary">Direction</summary>
+               <div class="summary-content">
+                 <p class="summary__body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est sapiente in tempore rerum quasi, quo maxime repellendus enim tempora fuga, optio ipsam veniam totam accusantium nostrum quibusdam vitae at hic.</p>
+               </div>
+             </details>
+             <details class="details">
+               <summary class="summary">Suggested use</summary>
+               <div class="summary-content">
+                 <p class="summary__body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est sapiente in tempore rerum quasi, quo maxime repellendus enim tempora fuga, optio ipsam veniam totam accusantium nostrum quibusdam vitae at hic.</p>
+               </div>
+             </details>
+         </details>
+       </div>
+       </div>
+       <div class="products__discription"> 
+      <div id="pure" class="pure">
+         <div class="product-section">
+           <h3 class="pure__title">Lemon Essential oil</h3>
+         </div>
+         <div class="product-card">
+           <div class="product-card__img">
+             <img class="product-card__img-container" src="../assets/images/lemon.jpg" alt="lemon oil bottle">
+           </div>
+           <div class="product-card__container">
+             <table class="product-card__table">
+               <tbody class="product-card__body">
+                 <tr class="product-card__table-row" >
+                   <td class="product-card__table-data">
+                     <p>Item No.</p>
+                   </td>
+                   <td class="product-card__table-data">
+                    <p>3333</p>
+                  </td>
+                 </tr>
+                 <tr>
+                   <td class="product-card__table-data">
+                     <p>Item</p>
+                   </td>
+                   <td class="product-card__table-data">
+                     <p>3ml</p>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td class="product-card__table-data">
+                     <p>Retail</p>
+                   </td>
+                     <td class="product-card__table-data">
+                     <p class="product__price">12.99  CAD</p>
+                   </td>
+                 </tr>
+             </tbody>
+             </table>
+           </div>
+         </div>
+         <div class="counter-section">
+        <button class="cart addToCart"  data-product-id="3">
+           <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+             <path
+             d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+             vfill="#6e4a9e" fill-rule="nonzero" />
+           </svg>
+           Add to cart
+           </button>
+         </div>
+         <p class="product-card__copy">Cold pressed from the fresh fruit peel of lemons grown in Argentina and the United States, lemon oil has refreshing and cooling properties. Its fresh, citrus scent is an instant pick-me-up.</p>
+         <div class="more-discription">
+           <details class="main-details">
+             <summary class="summary"> more discription</summary>
+             <details class="details">
+               <summary class="summary">About</summary>
+               <div class="summary__content">
+                 <p class="summary__body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est sapiente in tempore rerum quasi, quo maxime repellendus enim tempora fuga, optio ipsam veniam totam accusantium nostrum quibusdam vitae at hic.</p>
+               </div>
+             </details>
+             <details class="details">
+               <summary class="summary">Features</summary>
+               <div class="summary__content">
+                 <p class="summary__body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est sapiente in tempore rerum quasi, quo maxime repellendus enim tempora fuga, optio ipsam veniam totam accusantium nostrum quibusdam vitae at hic.</p>
+               </div>
+             </details>
+             <details class="details">
+               <summary class="summary">Direction</summary>
+               <div class="summary-content">
+                 <p class="summary__body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est sapiente in tempore rerum quasi, quo maxime repellendus enim tempora fuga, optio ipsam veniam totam accusantium nostrum quibusdam vitae at hic.</p>
+               </div>
+             </details>
+             <details class="details">
+               <summary class="summary">Suggested use</summary>
+               <div class="summary-content">
+                 <p class="summary__body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est sapiente in tempore rerum quasi, quo maxime repellendus enim tempora fuga, optio ipsam veniam totam accusantium nostrum quibusdam vitae at hic.</p>
+               </div>
+             </details>
+         </details>
+       </div>
+       </div>
+     
+  </div> 
+  <div id="reviews-section" class="reviwe">
+    <h3 class="reviwe-title"><span class="reviwe-title__namber">124</span> Reviews</h3>
+    <div class="reviwe-main">
+      <ul class="stars__list">
+        <li><i class="ri-star-fill"></i></li>
+        <li><i class="ri-star-fill"></i></li>
+        <li><i class="ri-star-fill"></i></li>
+        <li><i class="ri-star-fill"></i></li>
+        <li><i class="ri-star-fill"></i></li>
+        <li class="review-total">4.9</li>
+      </ul>
+    
+        <span class="bar__ver bar__ver--left"></span>
+        <h3 class="review-login"><a href="../pages/page-login.html"> Log-in To Review </h3></a>
+        <span class="bar__ver bar__ver--right"></span>
+ 
+      <hr>
+
+    </div>
+  </div>
+  </section>
+  <footer class="footer">
+    <div class="footer__social">
+      <a  class="footer__social-link" href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+      <a  class="footer__social-link"href="https://www.facebook.com/"><i class="fa-brands fa-instagram-square"></i></a>
+      <a class="footer__social-link" href="https://www.facebook.com/"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+    <p class="footer__copy">© Simret Design 2022  | Photography, design and website construction by simret Design 2022</p> 
+  </footer> 
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!---->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>    
+  <script src="../src/collection.js"></script>
+  <script src="../src/index.js"></script>
+  <script src="../src/shopingCart.js"></script>
+
+</body>
+</html>
