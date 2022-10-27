@@ -1,13 +1,13 @@
 .shoping-cart {
   padding: 1rem;
   margin: auto;
-  width: 73%;
+  width: 100%;
   height: 68vh;
   background-color: $c-light-rose;
   @include font-family-normal;
   position: absolute;
-  top: 80px;
-  left: 20%;
+  top: 79px;
+    left: 9%;
   transform: translateX(400px);
   transition: transform 1s ease;
   scroll-behavior: smooth;
@@ -162,6 +162,8 @@
     background-color: $c-dark-green;
     border: none;
     border-radius: 7px;
+    width: 32%;
+    text-align: center;
     padding: .6rem;
     color: $c-white;
     font-weight: $fw-black;

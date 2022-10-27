@@ -2392,13 +2392,13 @@ svg:hover {
 .shoping-cart {
   padding: 1rem;
   margin: auto;
-  width: 73%;
+  width: 100%;
   height: 68vh;
   background-color: hsl(13.85deg, 35.14%, 92.75%);
   font-family: "Kumbh Sans";
   position: absolute;
-  top: 80px;
-  left: 20%;
+  top: 79px;
+  left: 9%;
   transform: translateX(400px);
   transition: transform 1s ease;
   scroll-behavior: smooth;
@@ -2552,6 +2552,8 @@ svg:hover {
   background-color: hsl(265.71deg, 36.21%, 45.49%);
   border: none;
   border-radius: 7px;
+  width: 32%;
+  text-align: center;
   padding: 0.6rem;
   color: hsl(0deg, 0%, 100%);
   font-weight: 900;
