@@ -2392,8 +2392,8 @@ svg:hover {
 .shoping-cart {
   padding: 1rem;
   margin: auto;
-  width: 100%;
-  height: 100vh;
+  width: 73%;
+  height: 68vh;
   background-color: hsl(13.85deg, 35.14%, 92.75%);
   font-family: "Kumbh Sans";
   position: absolute;
